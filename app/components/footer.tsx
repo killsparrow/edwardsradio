@@ -14,7 +14,7 @@ export default function Footer() {
               <img src="/apple-music-white.gif" alt="Apple Music" className="h-8 w-auto" />
             </a>
             <a
-              href="https://open.spotify.com/album/1AlZ78Yf8rnRN8q3HflC5l?si=zYjWEdIiRDue7xdTT-81lg"
+              href="https://open.spotify.com/artist/2rHb13sKpZjRPoBEkiRah5?si=aNHeDBdCTOeoRQsTcY2rIw"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex"
             >
