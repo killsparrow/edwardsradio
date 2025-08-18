@@ -1,4 +1,13 @@
 import Video from "../components/video";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Video',
+  description: 'Stream Video singles from Edwards Radio.',
+  alternates: { canonical: '/video' },
+  openGraph: { url: '/video' },
+};
+
 
 export default function Music() {
   return (

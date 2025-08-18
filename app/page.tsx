@@ -1,5 +1,10 @@
+import SeoJsonLd from "./components/SeoJsonLd";
+
+
 export default function Home() {
   return (
+    <>
+    <SeoJsonLd />
     <div className="relative min-h-dvh bg-black text-white overflow-hidden">
       <div className="absolute top-0 left-[10%] w-[30%] max-h-[30vh] z-0">
         <img src="/strings-scaled.gif" alt="" className="w-full h-auto" />
@@ -56,5 +61,6 @@ export default function Home() {
         />
       </div>
     </div>
+    </>
   );
 }

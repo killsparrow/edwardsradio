@@ -1,6 +1,14 @@
 import FeralNights from "../components/feralNights";
 import ThisEndlessLifePlayer from "../components/thisEndlessLife";
 import WarpathToYourOwnGhost from "../components/WarpathToYourOwnGhost";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Music',
+  description: 'Stream albums and singles from Edwards Radio.',
+  alternates: { canonical: '/music' },
+  openGraph: { url: '/music' },
+};
 
 export default function Music() {
   return (
