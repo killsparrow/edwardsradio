@@ -42,7 +42,7 @@ export default function Hero() {
         </p>
         <WeightofIllusion />
         <p className="mt-4 max-w-[60ch] leading-relaxed text-white/90">
-        Full Album release Oct 17th.
+        Full Album release November 7, 2025.
         </p>
       </div>
 
