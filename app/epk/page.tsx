@@ -27,7 +27,7 @@ const EPK_CONTENT = {
   songTitle: "The Weight of Illusion",
   singleReleaseDate: "Friday, October 10, 2025",
   ffo: ["Sparklehorse", "Watchhouse", "Jeff Tweedy", "Will Johnson"],
-  genreMood: "indie folk, warm, unguarded, nocturnal",
+  genreMood: "indie folk, warm, unguarded",
   shortBlurb:
     "Edwards Radio is Evan Parker. The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
   longStory:
