@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 const EPK_CONTENT = {
   artist: "Edwards Radio",
   songTitle: "The Weight of Illusion",
-  releaseDate: "Friday, October 10, 2025",
+  singleReleaseDate: "Friday, October 10, 2025",
   ffo: ["Sparklehorse", "Watchhouse", "Jeff Tweedy", "Will Johnson"],
   genreMood: "indie folk, warm, unguarded, nocturnal",
   shortBlurb:
     "Edwards Radio is Evan Parker. The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
   longStory:
-  "All songs are written and recorded at home. DIY is central to the project—minimal sheen, no added polish. Using analog gear alongside a simple DAW setup, Evan Parker captures raw, usable takes with minimal effects and mixing. Drawing from influences like John Prine, Watchhouse, Sparklehorse, and Will Johnson, the songs move between plainspoken folk-country storytelling and atmospheric indie textures. Vocals stay upfront; production leaves space and imperfection intact. These songs translate directly to solo acoustic performance, underscoring that the recordings reflect the material rather than obscure it. In a landscape of glossy marketing and hyper-real sound, The Weight of Illusion takes a different path.",
+    "All songs are written and recorded at home. DIY is central to the project—minimal sheen, no added polish. Using analog gear alongside a simple DAW setup, Evan Parker captures raw, usable takes with minimal effects and mixing. Drawing from influences like John Prine, Watchhouse, Sparklehorse, and Will Johnson, the songs move between plainspoken folk-country storytelling and atmospheric indie textures. Vocals stay upfront; production leaves space and imperfection intact. These songs translate directly to solo acoustic performance, underscoring that the recordings reflect the material rather than obscure it. In a landscape of glossy marketing and hyper-real sound, The Weight of Illusion takes a different path.",
   credits:
     "Writing, performance, recording, mixing, and mastering by Evan Parker (Edwards Radio).",
   bpm: "170",
@@ -49,9 +49,9 @@ const EPK_CONTENT = {
   embargoNote: "For review only. Please don’t publish before [Release Date].",
   bios: {
     short75:
-    "Edwards Radio is Florida songwriter Evan Parker. He records at home with a small setup—folksongs meet indie atmosphere, vocals upfront, space intact. The music is DIY by design: written, performed, mixed, and mastered solo, with minimal polish. Simple takes, analog warmth, honest lyrics. If you want small, human songs without the sheen, start here.",
+      "Edwards Radio is Florida songwriter Evan Parker. He records at home with a small setup—folksongs meet indie atmosphere, vocals upfront, space intact. The music is DIY by design: written, performed, mixed, and mastered solo, with minimal polish. Simple takes, analog warmth, honest lyrics. If you want small, human songs without the sheen, start here.",
     long150:
-    "Edwards Radio is Evan Parker, a DIY songwriter recording at home in Florida. These songs exist between folk storytelling and indie texture—vocals upfront, plenty of space, edges left visible. Parker writes, plays, records, mixes, and masters everything himself, working with a simple DAW and select analog gear. The approach is straightforward: capture a take that feels true, then resist the urge to overwork it. The result is warm, unguarded, and rough around the edges—in a way that feels alive.",
+      "Edwards Radio is Evan Parker, a DIY songwriter recording at home in Florida. These songs exist between folk storytelling and indie texture—vocals upfront, plenty of space, edges left visible. Parker writes, plays, records, mixes, and masters everything himself, working with a simple DAW and select analog gear. The approach is straightforward: capture a take that feels true, then resist the urge to overwork it. The result is warm, unguarded, and rough around the edges—in a way that feels alive.",
   },
   images: ["/evan-parker1.jpg", "/evan-parker2.jpg", "/evan-parker3.jpg"],
   files: {
@@ -60,6 +60,8 @@ const EPK_CONTENT = {
     lyricsPdf: "", // direct PDF link
     coverArt: "", // direct cover art link
   },
+  albumTitle: "The Weight of Illusion",
+  albumReleaseDate: "Friday, November 7, 2025", // add this
 };
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_EPK_KEY || "";
@@ -155,8 +157,15 @@ export default async function Page({
             {c.artist}
           </h1>
           <p className="mt-2 text-white/80">
-            <span className="font-medium">Single:</span> {c.songTitle}<br />
-            <span className="font-medium">Public Release:</span> {c.releaseDate}
+            <span className="font-medium">Single:</span> {c.songTitle}
+            <br />
+            <span className="font-medium">Single Release:</span>{" "}
+            {c.singleReleaseDate}
+            <br />
+            <span className="font-medium">Album:</span> {c.albumTitle}
+            <br />
+            <span className="font-medium">Album Release:</span>{" "}
+            {c.albumReleaseDate}
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-sm text-white/80">
@@ -175,7 +184,7 @@ export default async function Page({
             )}
             {c.downloadsFolder && (
               <ActionLink href={c.downloadsFolder}>
-                ⬇️ Downloads (WAV/MP3/Lyrics/Art)
+                ⬇️ Downloads (MP3/Cover/Photos)
               </ActionLink>
             )}
             {c.coverArtUrl && (

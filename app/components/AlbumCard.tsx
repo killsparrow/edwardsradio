@@ -75,7 +75,7 @@ const albums = [
     title: "The Weight of Illusion",
     artist: "Edwards Radio",
     coverImage: "/theweightofillusion.jpg?w=600&h=600&fit=crop",
-    releaseDate: "Oct 17, 2025",
+    releaseDate: "Nov 7, 2025",
     // No links property for this album
   },
   {
