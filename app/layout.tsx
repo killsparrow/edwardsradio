@@ -1,3 +1,4 @@
+//app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -14,36 +15,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   title: {
-    default: 'Edwards Radio',
-    template: '%s | Edwards Radio',
+    default: "Edwards Radio",
+    template: "%s | Edwards Radio",
   },
   description:
-    'Edwards Radio — alt-country/indie artist blending lo-fi and analog. Music, videos, and contact info.',
-  alternates: { canonical: '/' },
+    "Edwards Radio — alt-country/indie artist blending lo-fi and analog. Music, videos, and contact info.",
+  alternates: { canonical: "/" },
   openGraph: {
-    type: 'website',
-    url: '/',
-    title: 'Edwards Radio',
+    type: "website",
+    url: "/",
+    title: "Edwards Radio",
     description:
-      'Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.',
-    siteName: 'Edwards Radio',
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Edwards Radio' }],
+      "Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.",
+    siteName: "Edwards Radio",
+    images: [
+      { url: "/og.jpg", width: 1200, height: 630, alt: "Edwards Radio" },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@evanparkermusic', // change if you want; or remove
-    title: 'Edwards Radio',
+    card: "summary_large_image",
+    site: "@evanparkermusic", // change if you want; or remove
+    title: "Edwards Radio",
     description:
-      'Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.',
-    images: ['/og.jpg'],
+      "Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.",
+    images: ["/og.jpg"],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   robots: {
     index: true,
@@ -52,28 +56,28 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#000000',
+  themeColor: "#000000",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+// app/layout.tsx
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/mnf3rqw.css"></link>
+        <link rel="stylesheet" href="https://use.typekit.net/mnf3rqw.css" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={[geistSans.variable, geistMono.variable, "antialiased"].join(" ")}>
         <Nav />
-        {children}
+        {/* 👇 snap container lives here; isolates Nav/Footer */}
+        <main className="h-dvh overflow-y-auto snap-y snap-mandatory">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
   );
 }
+

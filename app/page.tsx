@@ -1,66 +1,111 @@
 import SeoJsonLd from "./components/SeoJsonLd";
-
+import Section from "./components/Section";
+import Hero from "./components/Hero";
+import MusicPage from "./components/AlbumCard";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    <SeoJsonLd />
-    <div className="relative min-h-dvh bg-black text-white overflow-hidden">
-      <div className="absolute top-0 left-[10%] w-[30%] max-h-[30vh] z-0">
-        <img src="/strings-scaled.gif" alt="" className="w-full h-auto" />
-      </div>
+      <SeoJsonLd />
 
-      {/* main content centered in the visible space (viewport minus 40vh footer art) */}
-      <main className="relative z-10 p-8 flex items-center justify-center min-h-[calc(100dvh-10vh)]">
-        <section className="w-full max-w-4xl flex flex-col md:flex-row items-center gap-12 bg-black/40">
-          <div className="flex-none w-[300px] px-8">
-            <img
-              src="/edwards-radio.png"
-              alt="Edwards Radio"
-              className="block w-full h-auto"
-            />
+      <div className="relative text-white">
+        <Hero />
+
+        {/* MUSIC */}
+        <Section id="music">
+          {/* Background */}
+
+          <MusicPage />
+        </Section>
+
+        {/* ABOUT */}
+        <Section id="about" className="bg-[#242320] py-20">
+          <div className="w-full max-w-6xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+              {/* Portrait */}
+              <div className="flex-1">
+                <Image
+                  src="/evan-parker3.jpg"
+                  alt="Evan Parker (Edwards Radio)"
+                  width={600}
+                  height={800}
+                  sizes="(min-width: 1024px) 600px, 90vw"
+                  className="rounded-2xl shadow-xl object-cover w-full h-auto"
+                  priority
+                />
+              </div>
+
+              {/* Copy */}
+              <div className="flex-1 max-w-lg text-left leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+                  <span className="text-white/80">Edwards Radio</span>.
+                </h2>
+
+                <p className="mt-5 text-white/80">
+                  Edwards Radio is Evan Parker. <i>The Weight of Illusion</i> presents
+                  lyric-driven songs with restrained production—intimate vocals,
+                  spacious guitars, and measured arrangements. Recorded and
+                  mixed in Florida; mastered for digital release.
+                </p>
+                 <p className="mt-5 text-white/80">Written, recorded, and mastered by Edwards Radio.<br />All rights reserved &copy;2025.</p>
+
+                <div className="mt-8 flex gap-4">
+      
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center rounded-2xl px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
+                  >
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
+        </Section>
 
-          {/* Right: fills remaining space */}
-          <div className="flex-1 min-w-0 text-left leading-relaxed">
-            <h1>Edwards Radio</h1>
-            <h2>Warpath to Your Own Ghost.</h2>
-            <p>
-              Edwards Radio is an alt-country/indie artist with a sound that
-              blends Lo-fi production techniques with analogue gear and a
-              dedication to DIY production.
-              </p>
-              <p>Follow Edwards Radio on&nbsp;
-              <a
-                href="https://www.instagram.com/evanparkermusic/"
-                className="text-[#d0bd3b] underline"
-                target="_blank"
-              >
-                Instagram
-              </a>{" "}
-              and{" "}
-              <a
-                className="text-[#d0bd3b] underline"
-                href="https://edwardsradio.bandcamp.com"
-                target="_blank"
-              >
-                Bandcamp
-              </a>{" "}
-              to stay up to date with his latest releases and news.
-            </p>
+        {/* VIDEO */}
+        {/* <Section id="video" className="bg-black">
+          <div className="relative z-10 w-full max-w-4xl mx-auto p-8">
+            <div className="w-full max-w-4xl flex flex-col md:flex-row items-start gap-12 bg-black/40">
+              <div className="flex-none w-[300px] px-8">
+                <img
+                  src="/edwards-radio.png"
+                  alt="Edwards Radio"
+                  className="block w-full h-auto"
+                />
+              </div>
+              <div className="flex-1 min-w-0 text-left leading-relaxed">
+                <h2 className="text-3xl font-bold">Video</h2>
+                <div className="mt-6">
+                  <Video />
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
+        </Section> */}
 
-      {/* bottom art (doesn't block clicks) */}
-      <div className="fixed inset-x-0 bottom-0 max-h-[40%] pointer-events-none z-0">
-        <img
-          src="/bottom-scaled.gif"
-          alt=""
-          className="w-full h-full object-cover object-bottom"
-        />
+        {/* CONTACT */}
+        <Section id="contact" className="bg-black">
+          <div className="relative z-10 w-full max-w-4xl mx-auto p-8">
+            <div className="w-full max-w-4xl flex flex-col md:flex-row items-start gap-12 bg-black/40">
+              <div className="flex-1 min-w-0 text-left leading-relaxed">
+                <h2 className="text-3xl font-bold">Contact</h2>
+                <p className="mt-4">
+                  Press, management, and other inquiries:{" "}
+                  <a
+                    href="mailto:parkerevan@icloud.com"
+                    className="text-[#d0bd3b] underline"
+                  >
+                    Evan Parker
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </Section>
       </div>
-    </div>
     </>
   );
 }

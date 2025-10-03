@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-16 flex items-center justify-between gap-6">
           {/* Albums (left) */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-12">
             <a
               href="https://music.apple.com/us/artist/edwards-radio/1519077170"
               target="_blank" rel="noopener noreferrer"
