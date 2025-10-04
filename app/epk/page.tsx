@@ -24,19 +24,35 @@ export const metadata: Metadata = {
 // ======== CONTENT (edit this) ========
 const EPK_CONTENT = {
   artist: "Edwards Radio",
-  songTitle: "The Weight of Illusion",
-  singleReleaseDate: "Friday, October 10, 2025",
+  albumTitle: "The Weight of Illusion",
+  albumReleaseDate: "Friday, November 7, 2025",
+  
+  // Singles
+  singles: [
+    {
+      title: "The Weight of Illusion",
+      releaseDate: "Friday, October 10, 2025",
+      bpm: "170",
+      key: "D",
+      isrc: "QT3F72597193",
+    },
+    {
+      title: "Goodbye May",
+      releaseDate: "Friday, October 17, 2025",
+      bpm: "160",
+      key: "A", 
+      isrc: "Unavailable",
+    },
+  ],
+  
   ffo: ["Sparklehorse", "Watchhouse", "Jeff Tweedy", "Will Johnson"],
   genreMood: "indie folk, warm, unguarded",
   shortBlurb:
-    "Edwards Radio is Evan Parker. The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
+    "Edwards Radio is Evan Parker. His debut album The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
   longStory:
     "All songs are written and recorded at home. DIY is central to the project—minimal sheen, no added polish. Using analog gear alongside a simple DAW setup, Evan Parker captures raw, usable takes with minimal effects and mixing. Drawing from influences like John Prine, Watchhouse, Sparklehorse, and Will Johnson, the songs move between plainspoken folk-country storytelling and atmospheric indie textures. Vocals stay upfront; production leaves space and imperfection intact. These songs translate directly to solo acoustic performance, underscoring that the recordings reflect the material rather than obscure it. In a landscape of glossy marketing and hyper-real sound, The Weight of Illusion takes a different path.",
   credits:
     "Writing, performance, recording, mixing, and mastering by Evan Parker (Edwards Radio).",
-  bpm: "170",
-  key: "D",
-  isrc: "[ISRC if you have it]",
   coverArtUrl: "/download/theweightofillusion.jpg",
   privateStream:
     "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
@@ -46,7 +62,7 @@ const EPK_CONTENT = {
     website: "https://www.edwardsradio.com",
     instagram: "https://www.instagram.com/evanparkermusic",
   },
-  embargoNote: "For review only. Please don’t publish before [Release Date].",
+  embargoNote: "For review only. Please don't publish before release dates.",
   bios: {
     short75:
       "Edwards Radio is Florida songwriter Evan Parker. He records at home with a small setup—folksongs meet indie atmosphere, vocals upfront, space intact. The music is DIY by design: written, performed, mixed, and mastered solo, with minimal polish. Simple takes, analog warmth, honest lyrics. If you want small, human songs without the sheen, start here.",
@@ -60,8 +76,6 @@ const EPK_CONTENT = {
     lyricsPdf: "", // direct PDF link
     coverArt: "", // direct cover art link
   },
-  albumTitle: "The Weight of Illusion",
-  albumReleaseDate: "Friday, November 7, 2025", // add this
 };
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_EPK_KEY || "";
@@ -140,8 +154,6 @@ export default async function Page({
   }
 
   const c = EPK_CONTENT;
-  const shortBlurb = c.shortBlurb.replaceAll("[Song Title]", c.songTitle);
-  const longStory = c.longStory.replaceAll("[Song Title]", c.songTitle);
 
   return (
     <div className="min-h-screen bg-[#111] text-white my-12">
@@ -157,16 +169,20 @@ export default async function Page({
             {c.artist}
           </h1>
           <p className="mt-2 text-white/80">
-            <span className="font-medium">Single:</span> {c.songTitle}
-            <br />
-            <span className="font-medium">Single Release:</span>{" "}
-            {c.singleReleaseDate}
-            <br />
             <span className="font-medium">Album:</span> {c.albumTitle}
             <br />
             <span className="font-medium">Album Release:</span>{" "}
             {c.albumReleaseDate}
           </p>
+          
+          <div className="mt-4 space-y-2">
+            <p className="text-sm font-medium text-white/60">Singles:</p>
+            {c.singles.map((single, i) => (
+              <p key={i} className="text-sm text-white/70">
+                {single.title} — {single.releaseDate}
+              </p>
+            ))}
+          </div>
 
           <div className="mt-4 flex flex-wrap gap-2 text-sm text-white/80">
             <span className="rounded-lg bg-white/5 px-3 py-1">
@@ -222,7 +238,7 @@ export default async function Page({
                 <span className="text-xs text-white/50">(Select and copy)</span>
               }
             >
-              <p>{shortBlurb}</p>
+              <p>{c.shortBlurb}</p>
             </Section>
 
             <Section
@@ -231,7 +247,7 @@ export default async function Page({
                 <span className="text-xs text-white/50">(Select and copy)</span>
               }
             >
-              <p>{longStory}</p>
+              <p>{c.longStory}</p>
             </Section>
           </div>
         </div>
@@ -242,17 +258,33 @@ export default async function Page({
             <p>{c.credits}</p>
           </Section>
           <Section title="Track details">
-            <ul className="m-0 list-none p-0 text-sm">
-              <li>
-                <span className="text-white/60">BPM:</span> {c.bpm}
-              </li>
-              <li>
-                <span className="text-white/60">Key:</span> {c.key}
-              </li>
-              {/* <li>
-                <span className="text-white/60">ISRC:</span> {c.isrc}
-              </li> */}
-            </ul>
+            <div className="space-y-4">
+              {c.singles.map((single, i) => (
+                <div key={i}>
+                  <p className="font-medium text-white/90 mb-1">{single.title}</p>
+                  <ul className="m-0 list-none p-0 text-sm pl-4">
+                    <li>
+                      <span className="text-white/60">Release:</span> {single.releaseDate}
+                    </li>
+                    {single.bpm && (
+                      <li>
+                        <span className="text-white/60">BPM:</span> {single.bpm}
+                      </li>
+                    )}
+                    {single.key && (
+                      <li>
+                        <span className="text-white/60">Key:</span> {single.key}
+                      </li>
+                    )}
+                    {single.isrc && (
+                      <li>
+                        <span className="text-white/60">ISRC:</span> {single.isrc}
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </Section>
           <Section title="Contact">
             <ul className="m-0 list-none p-0 text-sm">
@@ -363,7 +395,7 @@ export default async function Page({
         {/* {c.embargoNote && (
           <div className="mt-8">
             <Section title="Embargo">
-              <p className="text-amber-300/90">{c.embargoNote.replaceAll("[Release Date]", c.releaseDate)}</p>
+              <p className="text-amber-300/90">{c.embargoNote}</p>
             </Section>
           </div>
         )} */}
