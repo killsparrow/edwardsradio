@@ -176,7 +176,7 @@ export default async function Page({
           </p>
           
           <div className="mt-4 space-y-2">
-            <p className="text-sm font-medium text-white/60">Singles:</p>
+            <p className="text-sm font-medium text-white/60">Singles &amp; Release Dates:</p>
             {c.singles.map((single, i) => (
               <p key={i} className="text-sm text-white/70">
                 {single.title} — {single.releaseDate}
