@@ -48,7 +48,7 @@ const EPK_CONTENT = {
   ffo: ["Sparklehorse", "Watchhouse", "Jeff Tweedy", "Will Johnson"],
   genreMood: "indie folk, warm, unguarded",
   shortBlurb:
-    "Edwards Radio is Evan Parker. His debut album The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
+    "Edwards Radio is Evan Parker. His album The Weight of Illusion delivers lyric-driven songs with restrained production—intimate vocals, spacious guitars, and measured arrangements. Recorded and mixed in Florida by Parker; mastered for digital release.",
   longStory:
     "All songs are written and recorded at home. DIY is central to the project—minimal sheen, no added polish. Using analog gear alongside a simple DAW setup, Evan Parker captures raw, usable takes with minimal effects and mixing. Drawing from influences like John Prine, Watchhouse, Sparklehorse, and Will Johnson, the songs move between plainspoken folk-country storytelling and atmospheric indie textures. Vocals stay upfront; production leaves space and imperfection intact. These songs translate directly to solo acoustic performance, underscoring that the recordings reflect the material rather than obscure it. In a landscape of glossy marketing and hyper-real sound, The Weight of Illusion takes a different path.",
   credits:
