@@ -94,7 +94,7 @@ export default function Home() {
                 <p className="mt-4">
                   Press, management, and other inquiries:{" "}
                   <a
-                    href="mailto:parkerevan@icloud.com"
+                    href="mailto:info@edwardsradio.com"
                     className="text-[#d0bd3b] underline"
                   >
                     Evan Parker

@@ -58,7 +58,7 @@ const EPK_CONTENT = {
     "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
   downloadsFolder: "/download/edwards-radio.zip",
   contact: {
-    email: "parkerevan@icloud.com",
+    email: "info@edwardsradio.com",
     website: "https://www.edwardsradio.com",
     instagram: "https://www.instagram.com/evanparkermusic",
   },
