@@ -4,6 +4,9 @@ import Hero from "./components/Hero";
 import MusicPage from "./components/AlbumCard";
 import Image from "next/image";
 
+
+
+
 export default function Home() {
   return (
     <>
