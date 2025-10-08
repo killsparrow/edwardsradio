@@ -45,7 +45,7 @@ export default function SeoJsonLd() {
           "https://www.instagram.com/evanparkermusic/",
           "https://edwardsradio.bandcamp.com/",
           "https://music.apple.com/us/artist/edwards-radio/1519077170",
-          "https://open.spotify.com/artist/your-spotify-id",
+          "https://open.spotify.com/artist/2rHb13sKpZjRPoBEkiRah5?si=j24WCIFaRD2_9TIOJktIUA",
         ],
       },
       // Albums
