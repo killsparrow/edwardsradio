@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="https://use.typekit.net/mnf3rqw.css" />
       </head>
       <body className={[geistSans.variable, geistMono.variable, "antialiased"].join(" ")}>
+          {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-717XZM5WPX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-717XZM5WPX');
+          `}
+        </Script>
+
         <Nav />
         {/* 👇 snap container lives here; isolates Nav/Footer */}
         <main className="h-dvh overflow-y-auto snap-y snap-mandatory">
