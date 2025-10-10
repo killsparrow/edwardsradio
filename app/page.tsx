@@ -46,12 +46,8 @@ export default function Home() {
                 </h2>
 
                 <p className="mt-5 text-white/80">
-                  Edwards Radio is Evan Parker. <i>The Weight of Illusion</i> presents
-                  lyric-driven songs with restrained production—intimate vocals,
-                  spacious guitars, and measured arrangements. Recorded and
-                  mixed in Florida; mastered for digital release.
+                  Edwards Radio is the musical project of Florida-based songwriter Evan Parker. With The Weight of Illusion marking his third full-length release, Parker has carved out a distinctive sonic space where the raw sincerity of folk intersects with the textured depth of indie rock. Recorded and mixed entirely in his Florida home studio, the album showcases Parker’s evolving craft as both a songwriter and producer, capturing analog moments with a DIY/lo-fi spirit that never sacrifices emotional impact
                 </p>
-                 <p className="mt-5 text-white/80">Written, recorded, and mastered by Edwards Radio.<br />All rights reserved &copy;2025.</p>
 
                 <div className="mt-8 flex gap-4">
       
