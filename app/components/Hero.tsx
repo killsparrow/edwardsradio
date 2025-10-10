@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { FaSpotify, FaYoutube, FaApple, FaBandcamp } from "react-icons/fa";
 import WeightofIllusion from "./WeightofIllusion";
 
 export default function Hero() {
@@ -41,7 +42,51 @@ export default function Hero() {
           Alt-country / indie with lo-fi edges and analog heart.
         </p>
         <WeightofIllusion />
-        <p className="mt-4 max-w-[60ch] leading-relaxed text-white/90">
+        
+        {/* Social Links */}
+        <div className="flex gap-6 mt-6 items-center">
+          <a 
+            href="https://open.spotify.com/track/507ZXeupiS82LXhAFnufHA?si=ce1bafcd1f8d4533" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Listen on Spotify"
+            className="text-white opacity-90 hover:opacity-100 transition-opacity"
+          >
+            <FaSpotify className="w-8 h-8" />
+          </a>
+          
+          <a 
+            href="https://www.youtube.com/watch?v=laT2K-8_1aA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Watch on YouTube"
+            className="text-white opacity-90 hover:opacity-100 transition-opacity"
+          >
+            <FaYoutube className="w-8 h-8" />
+          </a>
+          
+          <a 
+            href="https://music.apple.com/us/album/the-weight-of-illusion-single/1844234216" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Listen on Apple Music"
+            className="text-white opacity-90 hover:opacity-100 transition-opacity"
+          >
+            <FaApple className="w-8 h-8" />
+          </a>
+
+          <a 
+            href="https://edwardsradio.bandcamp.com/album/the-weight-of-illusion" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Listen on Bandcamp"
+            className="text-white opacity-90 hover:opacity-100 transition-opacity"
+          >
+            <FaBandcamp className="w-8 h-8" />
+          </a>
+        </div>
+        
+        <p className="mt-6 max-w-[60ch] leading-relaxed text-white/90">
         Full Album release November 7, 2025.
         </p>
       </div>

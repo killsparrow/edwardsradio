@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaSpotify, FaApple } from 'react-icons/fa'; // brand icons
+import { FaSpotify, FaApple, FaYoutube, FaBandcamp } from 'react-icons/fa';
 
 // Individual album card
 function AlbumCard({ 
@@ -16,11 +16,15 @@ function AlbumCard({
   links?: {
     spotify?: string;
     apple?: string;
+    youtube?: string;
+    bandcamp?: string;
   };
 }) {
   const platforms = links ? [
     { name: 'Spotify', url: links?.spotify, icon: <FaSpotify size={22} /> },
+    { name: 'YouTube', url: links?.youtube, icon: <FaYoutube size={22} /> },
     { name: 'Apple Music', url: links?.apple, icon: <FaApple size={22} /> },
+    { name: 'Bandcamp', url: links?.bandcamp, icon: <FaBandcamp size={22} /> },
   ].filter(platform => platform.url) : [];
 
   return (
@@ -76,7 +80,12 @@ const albums = [
     artist: "Edwards Radio",
     coverImage: "/theweightofillusion.jpg?w=600&h=600&fit=crop",
     releaseDate: "Nov 7, 2025",
-    // No links property for this album
+    links: {
+      spotify: "https://open.spotify.com/track/507ZXeupiS82LXhAFnufHA?si=ce1bafcd1f8d4533",
+      youtube: "https://www.youtube.com/watch?v=laT2K-8_1aA",
+      apple: "https://music.apple.com/us/album/the-weight-of-illusion-single/1844234216",
+      bandcamp: "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
+    },
   },
   {
     title: "This Endless Life",
