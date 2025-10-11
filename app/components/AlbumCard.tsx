@@ -1,4 +1,6 @@
+// AlbumCard.tsx
 import React from 'react';
+import Link from 'next/link';
 import { FaSpotify, FaApple, FaYoutube, FaBandcamp } from 'react-icons/fa';
 
 // Individual album card
@@ -54,16 +56,16 @@ function AlbumCard({
             {/* Streaming Links */}
             <div className="flex gap-5 mt-4">
               {platforms.map((platform) => (
-                <a
+                <Link
                   key={platform.name}
-                  href={platform.url}
+                  href={platform.url!}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#d0bd3b] transition"
                   title={platform.name}
                 >
                   {platform.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </>
