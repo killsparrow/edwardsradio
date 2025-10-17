@@ -43,12 +43,14 @@ export default function Hero() {
         <p className="mt-4 max-w-[60ch] leading-relaxed text-white/90">
           Alt-country / indie with lo-fi edges and analog heart.
         </p>
+
         <WeightofIllusion />
+    
         
         {/* Social Links */}
         <div className="flex gap-6 mt-6 items-center">
           <Link 
-            href="https://open.spotify.com/track/507ZXeupiS82LXhAFnufHA?si=ce1bafcd1f8d4533" 
+            href="https://open.spotify.com/artist/2rHb13sKpZjRPoBEkiRah5" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Listen on Spotify"
@@ -58,7 +60,7 @@ export default function Hero() {
           </Link>
           
           <Link 
-            href="https://www.youtube.com/watch?v=laT2K-8_1aA" 
+            href="https://www.youtube.com/channel/UCpV9lWCaMT8DgOfTwG9CNLg" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Watch on YouTube"
@@ -68,7 +70,7 @@ export default function Hero() {
           </Link>
           
           <Link 
-            href="https://music.apple.com/us/album/the-weight-of-illusion-single/1844234216" 
+            href="https://music.apple.com/us/artist/edwards-radio/1519077170" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Listen on Apple Music"
