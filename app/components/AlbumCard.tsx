@@ -75,6 +75,9 @@ function AlbumCard({
   );
 }
 
+
+
+
 // Album data
 const albums = [
   {
@@ -83,9 +86,9 @@ const albums = [
     coverImage: "/theweightofillusion.jpg?w=600&h=600&fit=crop",
     releaseDate: "Nov 7, 2025",
     links: {
-      spotify: "https://open.spotify.com/track/507ZXeupiS82LXhAFnufHA?si=ce1bafcd1f8d4533",
-      youtube: "https://www.youtube.com/watch?v=laT2K-8_1aA",
-      apple: "https://music.apple.com/us/album/the-weight-of-illusion-single/1844234216",
+      spotify: "https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw",
+      youtube: "https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs",
+      apple: "https://music.apple.com/us/album/the-weight-of-illusion/1848579138",
       bandcamp: "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
     },
   },

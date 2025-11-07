@@ -50,7 +50,7 @@ export default function Hero() {
         {/* Social Links */}
         <div className="flex gap-6 mt-6 items-center">
           <Link 
-            href="https://open.spotify.com/artist/2rHb13sKpZjRPoBEkiRah5" 
+            href="https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Listen on Spotify"
@@ -60,7 +60,7 @@ export default function Hero() {
           </Link>
           
           <Link 
-            href="https://www.youtube.com/channel/UCpV9lWCaMT8DgOfTwG9CNLg" 
+            href="https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Watch on YouTube"
@@ -70,7 +70,7 @@ export default function Hero() {
           </Link>
           
           <Link 
-            href="https://music.apple.com/us/artist/edwards-radio/1519077170" 
+            href="https://music.apple.com/us/album/the-weight-of-illusion/1848579138" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Listen on Apple Music"
@@ -89,10 +89,7 @@ export default function Hero() {
             <FaBandcamp className="w-8 h-8" />
           </Link>
         </div>
-        
-        <p className="mt-6 max-w-[60ch] leading-relaxed text-white/90">
-        Full Album release November 7, 2025.
-        </p>
+      
       </div>
 
       <a
