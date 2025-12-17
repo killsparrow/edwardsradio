@@ -26,7 +26,7 @@ const songs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Untitled',
     albumArt: '/2026.jpg',
-    audioUrl: '/audio/2026/cold-and-dreary.mp3',
+    audioUrl: '/music/2026/cold-and-dreary.mp3',
   },
   // Add more songs here
 ];
