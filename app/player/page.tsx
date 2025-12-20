@@ -12,21 +12,37 @@ export const metadata: Metadata = {
 
 // Example song data - Replace with your actual songs
 const songs: Song[] = [
-  {
+    {
     id: 1,
-    title: 'I Fell in Love',
+    title: 'Under Water',
     artist: 'Edwards Radio',
     album: 'Untitled',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/i-fell-in-love.mp3',
+    audioUrl: '/music/2026/1_underwater.mp3',
   },
-  {
+    {
     id: 2,
     title: 'Cold and Dreary',
     artist: 'Edwards Radio',
     album: 'Untitled',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/cold-and-dreary.mp3',
+    audioUrl: '/music/2026/2_cold-and-dreary.mp3',
+  },
+  {
+    id: 3,
+    title: 'Dark Side',
+    artist: 'Edwards Radio',
+    album: 'Untitled',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/i-fell-in-love.mp3',
+  },
+   {
+    id: 4,
+    title: 'Professor',
+    artist: 'Edwards Radio',
+    album: 'Untitled',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/4_professor-2.mp3',
   },
   // Add more songs here
 ];
