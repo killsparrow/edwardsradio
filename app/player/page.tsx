@@ -34,22 +34,39 @@ const songs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Untitled',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/i-fell-in-love.mp3',
+    audioUrl: '/music/2026/3_i-fell-in-love.mp3',
   },
    {
+    id: 4,
+    title: 'The Same Cheese',
+    artist: 'Edwards Radio',
+    album: 'Untitled',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/4_the-sae-cheese.mp3',
+  },
+     {
     id: 4,
     title: 'Professor',
     artist: 'Edwards Radio',
     album: 'Untitled',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/4_professor-2.mp3',
+    audioUrl: '/music/2026/5_professor.mp3',
   },
   // Add more songs here
 ];
 
 export default function PlayerPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black via-[#0a0a0a] to-black py-20 px-4">
+    <main
+      className="min-h-screen py-20 px-4 font-sans relative"
+      style={{
+        backgroundColor: 'black',
+        backgroundImage: 'url(/bottom-whale.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% auto',
+        backgroundPosition: 'bottom center',
+      }}
+    >
       <MusicPlayer songs={songs} />
     </main>
   );

@@ -134,7 +134,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
             <div className="flex items-center gap-4">
               <button
                 onClick={handlePrevious}
-                className="text-white/80 hover:text-[#00aeef] transition-colors p-1"
+                className="text-white/80 hover:text-[#d1c58b] transition-colors p-1"
                 aria-label="Previous track"
               >
                 <FaStepBackward size={20} />
@@ -142,7 +142,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
 
               <button
                 onClick={togglePlayPause}
-                className="bg-[#00aeef] hover:bg-[#0096d1] text-white rounded-full p-3 transition-all transform hover:scale-105"
+                className="bg-[#d1c58b] hover:bg-[#c1b57b] text-black rounded-full p-3 transition-all transform hover:scale-105"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} className="ml-0.5" />}
@@ -150,7 +150,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
 
               <button
                 onClick={handleNext}
-                className="text-white/80 hover:text-[#00aeef] transition-colors p-1"
+                className="text-white/80 hover:text-[#d1c58b] transition-colors p-1"
                 aria-label="Next track"
               >
                 <FaStepForward size={20} />
@@ -167,7 +167,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
                 onChange={handleSeek}
                 className="w-full h-1.5 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #00aeef 0%, #00aeef ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
+                  background: `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
                 }}
               />
               <div className="flex justify-between text-xs text-white/60">
@@ -180,7 +180,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleMute}
-                className="text-white/80 hover:text-[#00aeef] transition-colors"
+                className="text-white/80 hover:text-[#d1c58b] transition-colors"
                 aria-label={isMuted ? 'Unmute' : 'Mute'}
               >
                 {isMuted || volume === 0 ? <FaVolumeMute size={16} /> : <FaVolumeUp size={16} />}
@@ -194,7 +194,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
                 onChange={handleVolumeChange}
                 className="w-full h-1.5 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #00aeef 0%, #00aeef ${volume * 100}%, rgba(255,255,255,0.2) ${volume * 100}%, rgba(255,255,255,0.2) 100%)`
+                  background: `linear-gradient(to right, #d1c58b 0%, #d1c58b ${volume * 100}%, rgba(255,255,255,0.2) ${volume * 100}%, rgba(255,255,255,0.2) 100%)`
                 }}
               />
             </div>
@@ -211,7 +211,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
               onClick={() => selectSong(index)}
               className={`w-full p-3 rounded transition-all text-left flex items-center gap-3 ${
                 currentSongIndex === index
-                  ? 'bg-[#00aeef]/20 border border-[#00aeef]'
+                  ? 'bg-[#d1c58b]/20 border border-[#d1c58b]'
                   : 'bg-white/5 hover:bg-white/10 border border-transparent'
               }`}
               whileHover={{ scale: 1.01 }}
@@ -227,7 +227,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
               </div>
               <div className="flex-1 min-w-0">
                 <h4 className={`text-sm font-semibold truncate ${
-                  currentSongIndex === index ? 'text-[#00aeef]' : 'text-white'
+                  currentSongIndex === index ? 'text-[#426c69]' : 'text-white'
                 }`}>
                   {song.title}
                 </h4>
@@ -236,17 +236,17 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
               {currentSongIndex === index && isPlaying && (
                 <div className="flex gap-0.5 items-end h-4">
                   <motion.div
-                    className="w-0.5 bg-[#00aeef] rounded-full"
+                    className="w-0.5 bg-[#d1c58b] rounded-full"
                     animate={{ height: ['40%', '100%', '40%'] }}
                     transition={{ duration: 0.8, repeat: Infinity }}
                   />
                   <motion.div
-                    className="w-0.5 bg-[#00aeef] rounded-full"
+                    className="w-0.5 bg-[#d1c58b] rounded-full"
                     animate={{ height: ['100%', '40%', '100%'] }}
                     transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }}
                   />
                   <motion.div
-                    className="w-0.5 bg-[#00aeef] rounded-full"
+                    className="w-0.5 bg-[#d1c58b] rounded-full"
                     animate={{ height: ['40%', '100%', '40%'] }}
                     transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
                   />
@@ -297,29 +297,29 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
           border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(0, 174, 239, 0.5);
+          background: rgba(209, 197, 139, 0.5);
           border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(0, 174, 239, 0.7);
+          background: rgba(209, 197, 139, 0.7);
         }
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background: #00aeef;
+          background: #d1c58b;
           cursor: pointer;
-          box-shadow: 0 0 6px rgba(0, 174, 239, 0.5);
+          box-shadow: 0 0 6px rgba(209, 197, 139, 0.5);
         }
         .slider::-moz-range-thumb {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background: #00aeef;
+          background: #d1c58b;
           cursor: pointer;
           border: none;
-          box-shadow: 0 0 6px rgba(0, 174, 239, 0.5);
+          box-shadow: 0 0 6px rgba(209, 197, 139, 0.5);
         }
       `}</style>
     </div>
