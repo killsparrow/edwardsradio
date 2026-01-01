@@ -30,7 +30,7 @@ const songs: Song[] = [
   },
     {
     id: 3,
-    title: 'Dark Side',
+    title: 'At the Table',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
