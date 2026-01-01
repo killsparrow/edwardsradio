@@ -28,16 +28,25 @@ const songs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/2_billboard.mp3',
   },
-  {
+    {
     id: 3,
+    title: 'Dark Side',
+    artist: 'Edwards Radio',
+    album: 'Underwater',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/3_at-the-table.mp3',
+  },
+    {
+    id: 4,
     title: 'Dark Side',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/3_i-fell-in-love.mp3',
   },
+
    {
-    id: 4,
+    id: 5,
     title: 'Professor',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -45,7 +54,7 @@ const songs: Song[] = [
     audioUrl: '/music/2026/4_professor.mp3',
   },
      {
-    id: 5,
+    id: 6,
     title: 'Song of the Damned',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -53,7 +62,7 @@ const songs: Song[] = [
     audioUrl: '/music/2026/5_in-the-heart-of-the-cheese.mp3',
   },
        {
-    id: 6,
+    id: 7,
     title: 'Cold and Dreary',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -61,7 +70,7 @@ const songs: Song[] = [
     audioUrl: '/music/2026/6_cold-and-dreary.mp3',
   },
        {
-    id: 7,
+    id: 8,
     title: 'West of Texas',
     artist: 'Edwards Radio',
     album: 'Underwater',
