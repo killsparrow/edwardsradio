@@ -80,18 +80,18 @@ function AlbumCard({
 
 // Album data
 const albums = [
-    {
-    title: "underwater",
-    artist: "Edwards Radio",
-    coverImage: "/2026.jpg?w=600&h=600&fit=crop",
-    releaseDate: "Feb 7, 2026",
-    links: {
-      spotify: "https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw",
-      youtube: "https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs",
-      apple: "https://music.apple.com/us/album/the-weight-of-illusion/1848579138",
-      bandcamp: "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
-    },
-  },
+  //   {
+  //   title: "underwater",
+  //   artist: "Edwards Radio",
+  //   coverImage: "/2026.jpg?w=600&h=600&fit=crop",
+  //   releaseDate: "Feb 7, 2026",
+  //   links: {
+  //     spotify: "https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw",
+  //     youtube: "https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs",
+  //     apple: "https://music.apple.com/us/album/the-weight-of-illusion/1848579138",
+  //     bandcamp: "https://edwardsradio.bandcamp.com/album/the-weight-of-illusion",
+  //   },
+  // },
   {
     title: "The Weight of Illusion",
     artist: "Edwards Radio",
@@ -132,7 +132,7 @@ export default function MusicPage() {
     <div className="my-12 mx-auto py-12 px-4">
       <div className="max-w-7xl mx-auto">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {albums.map((album, index) => (
             <AlbumCard key={index} {...album} />
           ))}
