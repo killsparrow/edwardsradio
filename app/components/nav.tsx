@@ -36,7 +36,7 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-black/60 backdrop-blur-sm">
+    <header className="fixed top-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-14 flex items-center justify-between">
           {/* Logo on the left */}
