@@ -32,7 +32,7 @@ export default function Underwater() {
       {/* Foreground */}
       <div className="relative z-10 w-full max-w-2xl mx-auto px-8 flex flex-col justify-center min-h-dvh items-center">
         <img
-          src="/boat.png"
+          src="/boat.jpg"
           alt="Edwards Radio"
           className="block w-[280px] md:w-[320px] h-auto mb-6"
         />

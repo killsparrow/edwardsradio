@@ -3,6 +3,7 @@ import Section from "./components/Section";
 import Hero from "./components/Hero";
 import MusicPage from "./components/AlbumCard";
 import Image from "next/image";
+import Underwater from "./components/Underwater";
 
 
 
@@ -14,7 +15,7 @@ export default function Home() {
       <SeoJsonLd />
 
       <div className="relative text-white">
-  
+        <Underwater />
         <Hero />
 
         {/* MUSIC */}
