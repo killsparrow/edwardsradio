@@ -53,15 +53,23 @@ const songs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/professor.mp3',
   },
-       {
+     {
     id: 6,
-    title: 'song of the damned',
+    title: 'oliver',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/in-the-heart-of-the-cheese.mp3',
+    audioUrl: '/music/2026/at-the-bridge.mp3',
   },
-       {
+  //      {
+  //   id: 6,
+  //   title: 'song of the damned',
+  //   artist: 'Edwards Radio',
+  //   album: 'Underwater',
+  //   albumArt: '/2026.jpg',
+  //   audioUrl: '/music/2026/in-the-heart-of-the-cheese.mp3',
+  // },
+  {
     id: 7,
     title: 'cold and dreary',
     artist: 'Edwards Radio',
@@ -69,23 +77,22 @@ const songs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/cold-and-dreary.mp3',
   },
-   {
-    id: 8,
-    title: 'unforgiven',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/unforgiven.mp3',
-  },
-       {
-    id: 9,
-    title: 'west of texas',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/west-of-texas.mp3',
-  },
-  // Add more songs here
+  //  {
+  //   id: 8,
+  //   title: 'unforgiven',
+  //   artist: 'Edwards Radio',
+  //   album: 'Underwater',
+  //   albumArt: '/2026.jpg',
+  //   audioUrl: '/music/2026/unforgiven.mp3',
+  // },
+  //      {
+  //   id: 9,
+  //   title: 'west of texas',
+  //   artist: 'Edwards Radio',
+  //   album: 'Underwater',
+  //   albumArt: '/2026.jpg',
+  //   audioUrl: '/music/2026/west-of-texas.mp3',
+  // },
 ];
 
 export default function PlayerPage() {
