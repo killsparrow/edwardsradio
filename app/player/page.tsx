@@ -63,7 +63,7 @@ const songs: Song[] = [
   },
        {
     id: 7,
-    title: 'Song of the Damned',
+    title: 'song of the damned',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
@@ -110,10 +110,10 @@ export default function PlayerPage() {
       className="min-h-screen py-20 px-4 font-sans relative"
       style={{
         backgroundColor: 'black',
-        backgroundImage: 'url(/bottom-whale.png)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% auto',
-        backgroundPosition: 'bottom center',
+        // backgroundImage: 'url(/bottom-whale.png)',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundSize: '100% auto',
+        // backgroundPosition: 'bottom center',
       }}
     >
       <MusicPlayer songs={songs} />

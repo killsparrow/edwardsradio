@@ -204,7 +204,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
         {/* Playlist */}
         <div>
           <h3 className="text-lg font-bold text-white mb-3">Unreleased</h3>
-          <div className="space-y-1.5 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+          <div className="space-y-1.5">
           {songs.map((song, index) => (
             <motion.button
               key={song.id}
@@ -265,7 +265,7 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="relative aspect-square w-full max-w-sm mx-auto lg:mx-0 rounded overflow-hidden shadow-xl"
+          className="relative aspect-square w-full max-w-sm mx-auto lg:mx-0 rounded overflow-hidden shadow-xl p-4"
         >
           <Image
             src={currentSong.albumArt}
@@ -287,22 +287,8 @@ export default function MusicPlayer({ songs }: MusicPlayerProps) {
       {/* Audio Element */}
       <audio ref={audioRef} src={currentSong.audioUrl} />
 
-      {/* Custom Scrollbar Styles */}
+      {/* Custom Slider Styles */}
       <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(209, 197, 139, 0.5);
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(209, 197, 139, 0.7);
-        }
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 12px;
