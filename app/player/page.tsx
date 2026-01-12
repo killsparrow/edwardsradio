@@ -77,14 +77,14 @@ const songs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/at-the-bridge.mp3',
   },
-       {
-    id: 9,
-    title: 'west of texas',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/west-of-texas.mp3',
-  },
+  //      {
+  //   id: 9,
+  //   title: 'west of texas',
+  //   artist: 'Edwards Radio',
+  //   album: 'Underwater',
+  //   albumArt: '/2026.jpg',
+  //   audioUrl: '/music/2026/west-of-texas.mp3',
+  // },
 
   //  {
   //   id: 8,
