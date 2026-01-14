@@ -79,6 +79,15 @@ const songs: Song[] = [
     audioUrl: '/music/2026/cold-and-dreary.mp3',
   },
 
+        {
+    id: 9,
+    title: 'west of texas',
+    artist: 'Edwards Radio',
+    album: 'Underwater',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/west-of-texas.mp3',
+  },
+
 
   //      {
   //   id: 9,
