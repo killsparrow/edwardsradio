@@ -57,3 +57,26 @@ font-size: 16px;
 /* text-transform: uppercase; */
       }
 }
+
+/* Underwater page styles */
+#underwater-page,
+#underwater-page h1,
+#underwater-page h2,
+#underwater-page h3,
+#underwater-page p {
+  font-family: "neuzeit-grotesk", sans-serif !important;
+  font-style: normal;
+}
+
+#underwater-page {
+  font-weight: 400;
+}
+
+
+
+#underwater-page h1,
+#underwater-page h2,
+#underwater-page h3 {
+  font-weight: 700;
+  font-size: 30px;
+}

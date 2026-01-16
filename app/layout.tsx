@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/mnf3rqw.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/roi4zgt.css" />
       </head>
       <body className={[geistSans.variable, geistMono.variable, "antialiased"].join(" ")}>
           {/* Google Analytics */}
