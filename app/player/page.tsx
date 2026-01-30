@@ -44,8 +44,16 @@ const songs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/i-fell-in-love.mp3',
   },
-     {
+      {
     id: 5,
+    title: 'only you',
+    artist: 'Edwards Radio',
+    album: 'Underwater',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/only-you.mp3',
+  },
+     {
+    id: 6,
     title: 'professor',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -53,7 +61,7 @@ const songs: Song[] = [
     audioUrl: '/music/2026/professor.mp3',
   },
           {
-    id: 6,
+    id: 7,
     title: 'carry on dawn',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -61,7 +69,7 @@ const songs: Song[] = [
     audioUrl: '/music/2026/carry-on-dawn.mp3',
   },
              {
-    id: 7,
+    id: 8,
     title: 'oliver at the bridge',
     artist: 'Edwards Radio',
     album: 'Underwater',
@@ -71,23 +79,13 @@ const songs: Song[] = [
 
 
       {
-    id: 8,
+    id: 9,
     title: 'cold and dreary',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/cold-and-dreary.mp3',
   },
-
-        {
-    id: 9,
-    title: 'west of texas',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/west-of-texas.mp3',
-  },
-
 
   //      {
   //   id: 9,
