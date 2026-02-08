@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import MusicPlayer from '../components/MusicPlayer';
+import UnderwaterWaves from '../components/UnderwaterWaves';
 import { underwaterSongs } from '@/lib/songs';
 
 export const metadata: Metadata = {
@@ -23,11 +24,15 @@ export default function Underwater() {
         backgroundPosition: "top center",
       }}
     >
+
+      <UnderwaterWaves />
+
+      
       <div className="w-[90%] mx-auto bg-[#24252d]/70 sm: mt-48 md:mt-108 p-20">
 
         <MusicPlayer songs={underwaterSongs} showTracklist={false} />
 
-        <div className="mt-8 max-w-2xl p-4">
+        <div className="mt-8 max-w-2xl p-4 mx-auto text-center mb-8">
           <h1 className="text-[#bfb689]" >Underwater</h1>
           <h5 className="mb-4">Home recorded Demos<br />By: Edwards Radio</h5>
 
@@ -39,6 +44,9 @@ export default function Underwater() {
           <p>All songs were written and recorded by Edwards Radio - &copy; 2026.</p>
    
         </div>
+
+        <hr className="my-6 border-t border-[#494a5d]" />
+
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
