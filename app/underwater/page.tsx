@@ -37,10 +37,7 @@ export default function Underwater() {
           <h5 className="mb-4">Home recorded demos<br />By: Edwards Radio</h5>
 
           <p className="mb-4">This album was built on simple analog principles, live takes, and honest performance. No fancy fixins.</p>
-          <p className="mb-4">
-            <strong>Gear:</strong> Telecaster American Pro II, Gibson Les Paul, SM 57, Neve 1073, Neve 2264, focusright, 1975 Fender Deluxe Reverb, UAD Spark.
-          </p>
-
+  
           <p>All songs were written and recorded by Edwards Radio - &copy; 2026.</p>
    
         </div>
