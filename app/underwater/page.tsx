@@ -14,29 +14,29 @@ export const metadata: Metadata = {
 export default function Underwater() {
   return (
     <main
+    className="bg-[#2f303b] relative">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/whales.png"
+        alt=""
+        className="absolute top-[75%] right-0 w-1/4 pointer-events-none z-0"
+      />
+          <div
       id="underwater-page"
-      className="min-h-screen py-20 px-4 relative"
-      style={{
-        backgroundColor: "#2f303b",
-        backgroundImage: "url(/ship.webp)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100% auto",
-        backgroundPosition: "top center",
-      }}
+      className="min-h-screen py-20 px-4 bg-[#2f303b] relative z-10 bg-[url('/ship.webp')] bg-no-repeat bg-[center_top] bg-[length:150%_auto] md:bg-[length:100%_auto] max-w-[1300px] mx-auto"
     >
 
       <UnderwaterWaves />
 
-      
-      <div className="w-[90%] mx-auto bg-[#24252d]/70 sm: mt-48 md:mt-108 p-20">
+      <div className="w-[90%] mx-auto bg-[#24252d]/70 sm: mt-48 md:mt-108 p-10">
 
         <MusicPlayer songs={underwaterSongs} showTracklist={false} />
 
         <div className="mt-8 max-w-2xl p-4 mx-auto text-center mb-8">
           <h1 className="text-[#bfb689]" >Underwater</h1>
-          <h5 className="mb-4">Home recorded Demos<br />By: Edwards Radio</h5>
+          <h5 className="mb-4">Home recorded demos<br />By: Edwards Radio</h5>
 
-          <p className="mb-4">This album was built on simple analog principles, live takes, honest performance the tracks have no auto-tune or other fancy fixins.</p>
+          <p className="mb-4">This album was built on simple analog principles, live takes, and honest performance. No fancy fixins.</p>
           <p className="mb-4">
             <strong>Gear:</strong> Telecaster American Pro II, Gibson Les Paul, SM 57, Neve 1073, Neve 2264, focusright, 1975 Fender Deluxe Reverb, UAD Spark.
           </p>
@@ -448,6 +448,7 @@ export default function Underwater() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </main>
   );

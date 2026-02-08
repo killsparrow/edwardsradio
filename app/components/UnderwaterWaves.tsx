@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function UnderwaterWaves() {
   return (
-    <div className="absolute right-[3%] md:right-[5%] lg:right-[10%] top-[70px] md:top-24 lg:top-36 xl:top-40 w-[250px] md:w-[350px] lg:w-[450px] xl:w-[550px] h-auto">
+    <div className="absolute right-[6%] md:right-[5%] lg:right-[10%] top-[105px] md:top-24 lg:top-36 xl:top-40 w-[250px] md:w-[350px] lg:w-[450px] xl:w-[550px] h-auto">
       <motion.div
         className="absolute top-0 left-0 w-full"
         animate={{ x: 8 }}

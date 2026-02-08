@@ -109,16 +109,16 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
   };
 
   return (
-    <div className="flex flex-col gap-8 w-full mx-auto p-4">
+    <div className="flex flex-col gap-8 w-full max-w-2xl mx-auto p-0">
       {/* Compact Player Header - Bandcamp style */}
-      <div className="flex gap-3 sm:gap-4 bg-white/5 rounded-lg p-3 sm:p-4">
-        {/* Album Art - Left */}
+      <div className="flex flex-col md:flex-row gap-3 sm:gap-4 bg-white/5 rounded-lg p-6 sm:p-8">
+        {/* Album Art - Top on mobile, Left on desktop */}
         <motion.div
           key={currentSong.id}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
-          className="relative w-28 h-28 sm:w-36 sm:h-36 flex-shrink-0 rounded overflow-hidden"
+          className="relative w-60 h-60 md:w-46 md:h-46 flex-shrink-0 rounded overflow-hidden mx-auto md:mx-0"
         >
           <Image
             src={currentSong.albumArt}
@@ -130,9 +130,9 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
         </motion.div>
 
         {/* Player Controls - Right */}
-        <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex-1 flex flex-col min-w-0 items-center md:items-start">
           {/* Song Info */}
-          <div>
+          <div className="text-center md:text-left w-full">
             <h2 className="text-base sm:text-lg font-bold text-white truncate leading-snug !mb-0 pb-0">{currentSong.title}</h2>
             <p className="text-xs sm:text-sm text-white/70 truncate">{currentSong.artist} - {currentSong.album}</p>
           </div>
@@ -141,7 +141,7 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
           <div className="flex items-center gap-2 sm:gap-3 mt-0">
             <button
               onClick={handlePrevious}
-              className="text-white/80 hover:text-[#d1c58b] active:text-[#d1c58b] transition-colors p-1.5 -ml-1.5"
+              className="text-white/80 hover:text-[#d1c58b] active:text-[#d1c58b] transition-colors p-1.5"
               aria-label="Previous track"
             >
               <FaStepBackward className="w-4 h-4 sm:w-5 sm:h-5" />
