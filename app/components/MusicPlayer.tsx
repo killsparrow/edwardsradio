@@ -14,32 +14,38 @@ interface MusicPlayerProps {
 export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayerProps) {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const pendingPlayRef = useRef(false);
-  const rafRef = useRef<number>(0);
+  const progressRef = useRef<HTMLInputElement>(null);
+  const currentTimeRef = useRef<HTMLSpanElement>(null);
 
   const currentSong = songs[currentSongIndex];
 
-  // Throttled time update using rAF to avoid excessive re-renders
-  const updateTimeWithRAF = useCallback(() => {
+  // Update progress bar + time display directly in the DOM — no React re-render
+  const updateProgressDOM = useCallback(() => {
     const audio = audioRef.current;
-    if (!audio) return;
-    cancelAnimationFrame(rafRef.current);
-    rafRef.current = requestAnimationFrame(() => {
-      setCurrentTime(audio.currentTime);
-    });
+    if (!audio || !progressRef.current || !currentTimeRef.current) return;
+    const t = audio.currentTime;
+    const d = audio.duration || 1;
+    progressRef.current.value = String(t);
+    progressRef.current.style.background = `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(t / d) * 100}%, rgba(255,255,255,0.2) ${(t / d) * 100}%, rgba(255,255,255,0.2) 100%)`;
+    const min = Math.floor(t / 60);
+    const sec = Math.floor(t % 60);
+    currentTimeRef.current.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
   }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const updateDuration = () => setDuration(audio.duration);
+    const updateDuration = () => {
+      setDuration(audio.duration);
+      if (progressRef.current) progressRef.current.max = String(audio.duration);
+    };
     const handleEnded = () => {
       setCurrentSongIndex((prev) => (prev + 1) % songs.length);
       pendingPlayRef.current = true;
@@ -51,19 +57,18 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
       }
     };
 
-    audio.addEventListener('timeupdate', updateTimeWithRAF);
+    audio.addEventListener('timeupdate', updateProgressDOM);
     audio.addEventListener('loadedmetadata', updateDuration);
     audio.addEventListener('ended', handleEnded);
     audio.addEventListener('canplaythrough', handleCanPlay);
 
     return () => {
-      audio.removeEventListener('timeupdate', updateTimeWithRAF);
+      audio.removeEventListener('timeupdate', updateProgressDOM);
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleEnded);
       audio.removeEventListener('canplaythrough', handleCanPlay);
-      cancelAnimationFrame(rafRef.current);
     };
-  }, [currentSongIndex, songs.length, updateTimeWithRAF]);
+  }, [currentSongIndex, songs.length, updateProgressDOM]);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -96,7 +101,6 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = parseFloat(e.target.value);
-    setCurrentTime(time);
     if (audioRef.current) {
       audioRef.current.currentTime = time;
     }
@@ -212,17 +216,15 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
 
           {/* Progress Bar */}
           <div className="flex items-center gap-2 mt-6">
-            <span className="text-[10px] sm:text-xs text-white/60 w-7 sm:w-9 tabular-nums">{formatTime(currentTime)}</span>
+            <span ref={currentTimeRef} className="text-[10px] sm:text-xs text-white/60 w-7 sm:w-9 tabular-nums">0:00</span>
             <input
+              ref={progressRef}
               type="range"
               min="0"
               max={duration || 0}
-              value={currentTime}
+              defaultValue={0}
               onChange={handleSeek}
               className="flex-1 h-2 sm:h-1.5 bg-white/20 rounded appearance-none cursor-pointer slider"
-              style={{
-                background: `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
-              }}
             />
             <span className="text-[10px] sm:text-xs text-white/60 w-7 sm:w-9 text-right tabular-nums">{formatTime(duration)}</span>
           </div>
