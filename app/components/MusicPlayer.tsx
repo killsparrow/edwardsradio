@@ -118,7 +118,7 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
-          className="relative w-60 h-60 md:w-46 md:h-46 flex-shrink-0 rounded overflow-hidden mx-auto md:mx-0"
+          className="relative w-full max-w-[200px] md:max-w-none md:w-36 aspect-square flex-shrink-0 rounded overflow-hidden mx-auto md:mx-0"
         >
           <Image
             src={currentSong.albumArt}
@@ -149,7 +149,7 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
 
             <button
               onClick={togglePlayPause}
-              className="bg-[#d1c58b] hover:bg-[#c1b57b] active:bg-[#b1a56b] text-black rounded-full p-2.5 sm:p-3 transition-all"
+              className="bg-[#d1c58b] hover:bg-[#c1b57b] active:bg-[#b1a56b] text-[#2f303b] rounded-full p-2.5 sm:p-3 transition-all"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? <FaPause className="w-4 h-4 sm:w-5 sm:h-5" /> : <FaPlay className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5" />}

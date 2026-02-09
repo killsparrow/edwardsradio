@@ -1,13 +1,12 @@
-// Hero.tsx
+// TheWeightOfIllusionHero.tsx
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import { FaSpotify, FaYoutube, FaApple, FaBandcamp } from "react-icons/fa";
 import WeightofIllusion from "./WeightofIllusion";
+import StreamingLinks from "./StreamingLinks";
 
-export default function Hero() {
+export default function TheWeightOfIllusionHero() {
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -48,46 +47,13 @@ export default function Hero() {
     
         
         {/* Social Links */}
-        <div className="flex gap-6 mt-6 items-center">
-          <Link 
-            href="https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Listen on Spotify"
-            className="text-white hover:text-[#d0bd3b] transition"
-          >
-            <FaSpotify className="w-8 h-8" />
-          </Link>
-          
-          <Link 
-            href="https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Watch on YouTube"
-            className="text-white hover:text-[#d0bd3b] transition"
-          >
-            <FaYoutube className="w-8 h-8" />
-          </Link>
-          
-          <Link 
-            href="https://music.apple.com/us/album/the-weight-of-illusion/1848579138" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Listen on Apple Music"
-            className="text-white hover:text-[#d0bd3b] transition"
-          >
-            <FaApple className="w-8 h-8" />
-          </Link>
-
-          <Link 
-            href="https://edwardsradio.bandcamp.com/album/the-weight-of-illusion" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Listen on Bandcamp"
-            className="text-white hover:text-[#d0bd3b] transition"
-          >
-            <FaBandcamp className="w-8 h-8" />
-          </Link>
+        <div className="mt-6">
+          <StreamingLinks
+            spotify="https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw"
+            youtube="https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs"
+            apple="https://music.apple.com/us/album/the-weight-of-illusion/1848579138"
+            bandcamp="https://edwardsradio.bandcamp.com/album/the-weight-of-illusion"
+          />
         </div>
       
       </div>

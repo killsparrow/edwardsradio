@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FaSpotify, FaYoutube, FaApple, FaBandcamp } from "react-icons/fa";
 import WeightofIllusion from "./WeightofIllusion";
 
-export default function Underwater() {
+export default function UnderwaterHero() {
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");

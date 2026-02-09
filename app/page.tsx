@@ -1,6 +1,6 @@
 import SeoJsonLd from "./components/SeoJsonLd";
 import Section from "./components/Section";
-import Hero from "./components/Hero";
+import TheWeightOfIllusionHero from "./components/TheWeightOfIllusionHero";
 import MusicPage from "./components/AlbumCard";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="relative text-white">
   
-        <Hero />
+        <TheWeightOfIllusionHero />
 
         {/* MUSIC */}
         <Section id="music">

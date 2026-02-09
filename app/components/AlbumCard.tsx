@@ -1,7 +1,6 @@
 // AlbumCard.tsx
 import React from 'react';
-import Link from 'next/link';
-import { FaSpotify, FaApple, FaYoutube, FaBandcamp } from 'react-icons/fa';
+import StreamingLinks from './StreamingLinks';
 
 // Individual album card
 function AlbumCard({ 
@@ -22,24 +21,17 @@ function AlbumCard({
     bandcamp?: string;
   };
 }) {
-  const platforms = links ? [
-    { name: 'Spotify', url: links?.spotify, icon: <FaSpotify size={22} /> },
-    { name: 'YouTube', url: links?.youtube, icon: <FaYoutube size={22} /> },
-    { name: 'Apple Music', url: links?.apple, icon: <FaApple size={22} /> },
-    { name: 'Bandcamp', url: links?.bandcamp, icon: <FaBandcamp size={22} /> },
-  ].filter(platform => platform.url) : [];
-
   return (
     <div className="max-w-md mx-auto bg-black rounded-lg shadow-lg overflow-hidden">
       {/* Album Cover */}
       <div className="relative aspect-square bg-gray-200">
-        <img 
-          src={coverImage} 
+        <img
+          src={coverImage}
           alt={`${title} album cover`}
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       {/* Album Info */}
       <div className="p-6 text-white">
         <div>
@@ -48,25 +40,12 @@ function AlbumCard({
             <p className="text-sm text-gray-200 mb-4 !mt-0 !pt-0">Release date: {releaseDate}</p>
           )}
         </div>
-        
-        {/* Only show streaming section if there are links */}
-        {platforms.length > 0 && (
+
+        {links && (
           <>
             <p className='text-gray-200'>Stream or purchase:</p>
-            {/* Streaming Links */}
-            <div className="flex gap-5 mt-4">
-              {platforms.map((platform) => (
-                <Link
-                  key={platform.name}
-                  href={platform.url!}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#d0bd3b] transition"
-                  title={platform.name}
-                >
-                  {platform.icon}
-                </Link>
-              ))}
+            <div className="mt-4">
+              <StreamingLinks {...links} />
             </div>
           </>
         )}
