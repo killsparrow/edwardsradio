@@ -1,20 +1,8 @@
 //app/layout.tsx
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
-import Script from "next/script";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -70,21 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/roi4zgt.css" />
       </head>
-      <body className={[geistSans.variable, geistMono.variable, "antialiased"].join(" ")}>
-          {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-717XZM5WPX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-717XZM5WPX');
-          `}
-        </Script>
-
+      <body className="antialiased">
         <Nav />
         {/* 👇 snap container lives here; isolates Nav/Footer */}
         <main className="h-dvh overflow-y-auto snap-y snap-mandatory">

@@ -59,8 +59,8 @@ function AlbumCard({
 
 // Album data
 const albums = [
-  //   {
-  //   title: "underwater",
+  // {
+  //   title: "Underwater",
   //   artist: "Edwards Radio",
   //   coverImage: "/2026.jpg?w=600&h=600&fit=crop",
   //   releaseDate: "Feb 7, 2026",

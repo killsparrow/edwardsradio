@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { FaPlay, FaPause, FaStepForward, FaStepBackward, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -20,27 +20,50 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
   const [isMuted, setIsMuted] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
+  const pendingPlayRef = useRef(false);
+  const rafRef = useRef<number>(0);
 
   const currentSong = songs[currentSongIndex];
+
+  // Throttled time update using rAF to avoid excessive re-renders
+  const updateTimeWithRAF = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      setCurrentTime(audio.currentTime);
+    });
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
-    const handleEnded = () => handleNext();
+    const handleEnded = () => {
+      setCurrentSongIndex((prev) => (prev + 1) % songs.length);
+      pendingPlayRef.current = true;
+    };
+    const handleCanPlay = () => {
+      if (pendingPlayRef.current) {
+        pendingPlayRef.current = false;
+        audio.play().catch(() => setIsPlaying(false));
+      }
+    };
 
-    audio.addEventListener('timeupdate', updateTime);
+    audio.addEventListener('timeupdate', updateTimeWithRAF);
     audio.addEventListener('loadedmetadata', updateDuration);
     audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('canplaythrough', handleCanPlay);
 
     return () => {
-      audio.removeEventListener('timeupdate', updateTime);
+      audio.removeEventListener('timeupdate', updateTimeWithRAF);
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('canplaythrough', handleCanPlay);
+      cancelAnimationFrame(rafRef.current);
     };
-  }, [currentSongIndex]);
+  }, [currentSongIndex, songs.length, updateTimeWithRAF]);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -62,13 +85,13 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
   const handleNext = () => {
     setCurrentSongIndex((prev) => (prev + 1) % songs.length);
     setIsPlaying(true);
-    setTimeout(() => audioRef.current?.play(), 100);
+    pendingPlayRef.current = true;
   };
 
   const handlePrevious = () => {
     setCurrentSongIndex((prev) => (prev - 1 + songs.length) % songs.length);
     setIsPlaying(true);
-    setTimeout(() => audioRef.current?.play(), 100);
+    pendingPlayRef.current = true;
   };
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,7 +121,7 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
   const selectSong = (index: number) => {
     setCurrentSongIndex(index);
     setIsPlaying(true);
-    setTimeout(() => audioRef.current?.play(), 100);
+    pendingPlayRef.current = true;
   };
 
   const formatTime = (time: number) => {
@@ -255,7 +278,7 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
       )}
 
       {/* Audio Element */}
-      <audio ref={audioRef} src={currentSong.audioUrl} />
+      <audio ref={audioRef} src={currentSong.audioUrl} preload="auto" />
 
       {/* Custom Slider Styles */}
       <style jsx global>{`
