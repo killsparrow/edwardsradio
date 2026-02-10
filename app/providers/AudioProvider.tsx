@@ -21,10 +21,10 @@ interface AudioContextType {
   toggleMute: () => void;
 }
 
-const AudioContext = createContext<AudioContextType | null>(null);
+const AudioCtx = createContext<AudioContextType | null>(null);
 
 export function useAudio() {
-  const ctx = useContext(AudioContext);
+  const ctx = useContext(AudioCtx);
   if (!ctx) throw new Error('useAudio must be used within AudioProvider');
   return ctx;
 }
@@ -38,16 +38,13 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   const [isMuted, setIsMuted] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const pendingPlayRef = useRef(false);
-  const currentSrcRef = useRef<string>('');
 
   const currentSong = songs[currentSongIndex];
 
-  // Load a playlist — skip if same songs already loaded
   const loadSongs = useCallback((newSongs: Song[]) => {
     setSongs(prev => {
       if (prev.length === newSongs.length && prev.every((s, i) => s.id === newSongs[i].id)) {
-        return prev; // same playlist, no-op
+        return prev;
       }
       return newSongs;
     });
@@ -56,39 +53,23 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   // Audio event listeners
   useEffect(() => {
     const audio = audioRef.current;
-    if (!audio || !currentSong) return;
-
-    // Only change source when the URL actually differs (prevents
-    // Strict-Mode double-fire from restarting the audio stream)
-    if (currentSrcRef.current !== currentSong.audioUrl) {
-      currentSrcRef.current = currentSong.audioUrl;
-      audio.src = currentSong.audioUrl;
-    }
+    if (!audio) return;
 
     const onDuration = () => setDuration(audio.duration);
     const onEnded = () => {
       setCurrentSongIndex(prev => (prev + 1) % songs.length);
-      pendingPlayRef.current = true;
-    };
-    const onCanPlay = () => {
-      if (pendingPlayRef.current) {
-        pendingPlayRef.current = false;
-        audio.play().catch(() => setIsPlaying(false));
-      }
+      setTimeout(() => audioRef.current?.play(), 100);
     };
 
     audio.addEventListener('loadedmetadata', onDuration);
     audio.addEventListener('ended', onEnded);
-    audio.addEventListener('canplaythrough', onCanPlay);
 
     return () => {
       audio.removeEventListener('loadedmetadata', onDuration);
       audio.removeEventListener('ended', onEnded);
-      audio.removeEventListener('canplaythrough', onCanPlay);
     };
-  }, [currentSong, songs.length]);
+  }, [currentSongIndex, songs.length]);
 
-  // Sync volume
   useEffect(() => {
     if (audioRef.current) audioRef.current.volume = volume;
   }, [volume]);
@@ -109,14 +90,14 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
     if (songs.length === 0) return;
     setCurrentSongIndex(prev => (prev + 1) % songs.length);
     setIsPlaying(true);
-    pendingPlayRef.current = true;
+    setTimeout(() => audioRef.current?.play(), 100);
   }, [songs.length]);
 
   const previous = useCallback(() => {
     if (songs.length === 0) return;
     setCurrentSongIndex(prev => (prev - 1 + songs.length) % songs.length);
     setIsPlaying(true);
-    pendingPlayRef.current = true;
+    setTimeout(() => audioRef.current?.play(), 100);
   }, [songs.length]);
 
   const seekTo = useCallback((time: number) => {
@@ -126,7 +107,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   const selectSong = useCallback((index: number) => {
     setCurrentSongIndex(index);
     setIsPlaying(true);
-    pendingPlayRef.current = true;
+    setTimeout(() => audioRef.current?.play(), 100);
   }, []);
 
   const setVolumeCtx = useCallback((vol: number) => {
@@ -145,7 +126,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   }, [isMuted]);
 
   return (
-    <AudioContext.Provider value={{
+    <AudioCtx.Provider value={{
       songs,
       currentSongIndex,
       isPlaying,
@@ -162,9 +143,8 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
       setVolume: setVolumeCtx,
       toggleMute,
     }}>
-      {/* Persistent audio element — never unmounts */}
-      <audio ref={audioRef} preload="auto" />
+      <audio ref={audioRef} src={currentSong?.audioUrl} />
       {children}
-    </AudioContext.Provider>
+    </AudioCtx.Provider>
   );
 }
