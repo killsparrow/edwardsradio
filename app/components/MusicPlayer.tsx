@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { FaPlay, FaPause, FaStepForward, FaStepBackward, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -38,53 +38,39 @@ export default function MusicPlayer({ songs: songsProp, showTracklist = true }: 
 
   const progressRef = useRef<HTMLInputElement>(null);
   const currentTimeRef = useRef<HTMLSpanElement>(null);
+  const seekingRef = useRef(false);
 
   const currentSong = songs[currentSongIndex];
 
-  // Update progress bar + time display directly in the DOM — no React re-render
-  const updateProgressDOM = useCallback(() => {
-    const audio = audioRef.current;
-    if (!audio || !progressRef.current || !currentTimeRef.current) return;
-    const t = audio.currentTime;
-    const d = audio.duration || 1;
-    progressRef.current.value = String(t);
-    progressRef.current.max = String(d);
-    progressRef.current.style.background = `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(t / d) * 100}%, rgba(255,255,255,0.2) ${(t / d) * 100}%, rgba(255,255,255,0.2) 100%)`;
-    const min = Math.floor(t / 60);
-    const sec = Math.floor(t % 60);
-    currentTimeRef.current.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
-  }, [audioRef]);
-
-  // Use rAF loop instead of timeupdate events — syncs with the browser's
-  // paint cycle so DOM writes never trigger mid-frame style recalculations.
+  // Update progress bar + time display via timeupdate (~4x/sec) — no React state
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    let rafId: number;
-    const tick = () => {
-      updateProgressDOM();
-      rafId = requestAnimationFrame(tick);
+    const onTimeUpdate = () => {
+      if (seekingRef.current || !progressRef.current || !currentTimeRef.current) return;
+      const t = audio.currentTime;
+      const d = audio.duration || 1;
+      progressRef.current.value = String(t);
+      progressRef.current.max = String(d);
+      progressRef.current.style.background = `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(t / d) * 100}%, rgba(255,255,255,0.2) ${(t / d) * 100}%, rgba(255,255,255,0.2) 100%)`;
+      const min = Math.floor(t / 60);
+      const sec = Math.floor(t % 60);
+      currentTimeRef.current.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
     };
-    const start = () => { rafId = requestAnimationFrame(tick); };
-    const stop = () => cancelAnimationFrame(rafId);
 
-    audio.addEventListener('play', start);
-    audio.addEventListener('pause', stop);
-    audio.addEventListener('ended', stop);
+    audio.addEventListener('timeupdate', onTimeUpdate);
+    return () => audio.removeEventListener('timeupdate', onTimeUpdate);
+  }, [audioRef]);
 
-    if (!audio.paused) start();
+  const handleSeekStart = () => {
+    seekingRef.current = true;
+  };
 
-    return () => {
-      stop();
-      audio.removeEventListener('play', start);
-      audio.removeEventListener('pause', stop);
-      audio.removeEventListener('ended', stop);
-    };
-  }, [audioRef, updateProgressDOM]);
-
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    seekTo(parseFloat(e.target.value));
+  const handleSeekEnd = (e: React.PointerEvent<HTMLInputElement> | React.TouchEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    seekTo(parseFloat(target.value));
+    seekingRef.current = false;
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -188,7 +174,9 @@ export default function MusicPlayer({ songs: songsProp, showTracklist = true }: 
               min="0"
               max={duration || 0}
               defaultValue={0}
-              onChange={handleSeek}
+              onPointerDown={handleSeekStart}
+              onPointerUp={handleSeekEnd}
+              onTouchEnd={handleSeekEnd}
               className="flex-1 h-2 sm:h-1.5 bg-white/20 rounded appearance-none cursor-pointer slider"
             />
             <span className="text-[10px] sm:text-xs text-white/60 w-7 sm:w-9 text-right tabular-nums">{formatTime(duration)}</span>
