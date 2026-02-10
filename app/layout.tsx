@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
+import AudioProvider from "./providers/AudioProvider";
+import MiniPlayer from "./components/MiniPlayer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -51,7 +53,6 @@ export const viewport: Viewport = {
 };
 
 
-// app/layout.tsx
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -59,12 +60,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="https://use.typekit.net/roi4zgt.css" />
       </head>
       <body className="antialiased">
-        <Nav />
-        {/* 👇 snap container lives here; isolates Nav/Footer */}
-        <main className="h-dvh overflow-y-auto snap-y snap-mandatory">
-          {children}
-        </main>
-        <Footer />
+        <AudioProvider>
+          <Nav />
+          {/* 👇 snap container lives here; isolates Nav/Footer */}
+          <main className="h-dvh overflow-y-auto snap-y snap-mandatory">
+            {children}
+          </main>
+          <MiniPlayer />
+          <Footer />
+        </AudioProvider>
       </body>
     </html>
   );

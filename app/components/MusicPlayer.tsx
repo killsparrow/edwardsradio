@@ -1,25 +1,41 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { FaPlay, FaPause, FaStepForward, FaStepBackward, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Song } from '@/lib/songs';
+import { useAudio } from '../providers/AudioProvider';
 
 interface MusicPlayerProps {
   songs: Song[];
   showTracklist?: boolean;
 }
 
-export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayerProps) {
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
-  const [isMuted, setIsMuted] = useState(false);
+export default function MusicPlayer({ songs: songsProp, showTracklist = true }: MusicPlayerProps) {
+  const {
+    songs,
+    currentSongIndex,
+    isPlaying,
+    duration,
+    volume,
+    isMuted,
+    audioRef,
+    loadSongs,
+    togglePlayPause,
+    next: handleNext,
+    previous: handlePrevious,
+    seekTo,
+    selectSong,
+    setVolume,
+    toggleMute,
+  } = useAudio();
 
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const pendingPlayRef = useRef(false);
+  // Load songs into context on mount
+  useEffect(() => {
+    loadSongs(songsProp);
+  }, [songsProp, loadSongs]);
+
   const progressRef = useRef<HTMLInputElement>(null);
   const currentTimeRef = useRef<HTMLSpanElement>(null);
 
@@ -32,100 +48,47 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
     const t = audio.currentTime;
     const d = audio.duration || 1;
     progressRef.current.value = String(t);
+    progressRef.current.max = String(d);
     progressRef.current.style.background = `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(t / d) * 100}%, rgba(255,255,255,0.2) ${(t / d) * 100}%, rgba(255,255,255,0.2) 100%)`;
     const min = Math.floor(t / 60);
     const sec = Math.floor(t % 60);
     currentTimeRef.current.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
-  }, []);
+  }, [audioRef]);
 
+  // Use rAF loop instead of timeupdate events — syncs with the browser's
+  // paint cycle so DOM writes never trigger mid-frame style recalculations.
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const updateDuration = () => {
-      setDuration(audio.duration);
-      if (progressRef.current) progressRef.current.max = String(audio.duration);
+    let rafId: number;
+    const tick = () => {
+      updateProgressDOM();
+      rafId = requestAnimationFrame(tick);
     };
-    const handleEnded = () => {
-      setCurrentSongIndex((prev) => (prev + 1) % songs.length);
-      pendingPlayRef.current = true;
-    };
-    const handleCanPlay = () => {
-      if (pendingPlayRef.current) {
-        pendingPlayRef.current = false;
-        audio.play().catch(() => setIsPlaying(false));
-      }
-    };
+    const start = () => { rafId = requestAnimationFrame(tick); };
+    const stop = () => cancelAnimationFrame(rafId);
 
-    audio.addEventListener('timeupdate', updateProgressDOM);
-    audio.addEventListener('loadedmetadata', updateDuration);
-    audio.addEventListener('ended', handleEnded);
-    audio.addEventListener('canplaythrough', handleCanPlay);
+    audio.addEventListener('play', start);
+    audio.addEventListener('pause', stop);
+    audio.addEventListener('ended', stop);
+
+    if (!audio.paused) start();
 
     return () => {
-      audio.removeEventListener('timeupdate', updateProgressDOM);
-      audio.removeEventListener('loadedmetadata', updateDuration);
-      audio.removeEventListener('ended', handleEnded);
-      audio.removeEventListener('canplaythrough', handleCanPlay);
+      stop();
+      audio.removeEventListener('play', start);
+      audio.removeEventListener('pause', stop);
+      audio.removeEventListener('ended', stop);
     };
-  }, [currentSongIndex, songs.length, updateProgressDOM]);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
-  }, [volume]);
-
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const handleNext = () => {
-    setCurrentSongIndex((prev) => (prev + 1) % songs.length);
-    setIsPlaying(true);
-    pendingPlayRef.current = true;
-  };
-
-  const handlePrevious = () => {
-    setCurrentSongIndex((prev) => (prev - 1 + songs.length) % songs.length);
-    setIsPlaying(true);
-    pendingPlayRef.current = true;
-  };
+  }, [audioRef, updateProgressDOM]);
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const time = parseFloat(e.target.value);
-    if (audioRef.current) {
-      audioRef.current.currentTime = time;
-    }
+    seekTo(parseFloat(e.target.value));
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const vol = parseFloat(e.target.value);
-    setVolume(vol);
-    setIsMuted(vol === 0);
-  };
-
-  const toggleMute = () => {
-    if (isMuted) {
-      setVolume(1);
-      setIsMuted(false);
-    } else {
-      setVolume(0);
-      setIsMuted(true);
-    }
-  };
-
-  const selectSong = (index: number) => {
-    setCurrentSongIndex(index);
-    setIsPlaying(true);
-    pendingPlayRef.current = true;
+    setVolume(parseFloat(e.target.value));
   };
 
   const formatTime = (time: number) => {
@@ -134,6 +97,8 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
+
+  if (!currentSong) return null;
 
   return (
     <div className="flex flex-col gap-8 w-full max-w-2xl mx-auto p-0">
@@ -278,41 +243,6 @@ export default function MusicPlayer({ songs, showTracklist = true }: MusicPlayer
           </div>
         </div>
       )}
-
-      {/* Audio Element */}
-      <audio ref={audioRef} src={currentSong.audioUrl} preload="auto" />
-
-      {/* Custom Slider Styles */}
-      <style jsx global>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: #d1c58b;
-          cursor: pointer;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        .slider::-moz-range-thumb {
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: #d1c58b;
-          cursor: pointer;
-          border: none;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        @media (max-width: 640px) {
-          .slider::-webkit-slider-thumb {
-            width: 18px;
-            height: 18px;
-          }
-          .slider::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
-          }
-        }
-      `}</style>
     </div>
   );
 }
