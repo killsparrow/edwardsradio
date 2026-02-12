@@ -15,7 +15,15 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard.mp3',
+    audioUrl: '/music/2026/billboard.m4a',
+  },
+    {
+    id: 33,
+    title: 'billboard2',
+    artist: 'Edwards Radio',
+    album: 'Underwater',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/billboard2.m4a',
   },
   {
     id: 2,
@@ -23,7 +31,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/at-the-table.mp3',
+    audioUrl: '/music/2026/at-the-table.m4a',
   },
   {
     id: 3,
@@ -31,7 +39,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/underwater.mp3',
+    audioUrl: '/music/2026/underwater.m4a',
   },
   {
     id: 4,
