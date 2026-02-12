@@ -17,14 +17,6 @@ export const underwaterSongs: Song[] = [
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/billboard.m4a',
   },
-    {
-    id: 33,
-    title: 'billboard2',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard2.m4a',
-  },
   {
     id: 2,
     title: 'at the table',
