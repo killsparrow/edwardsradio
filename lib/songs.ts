@@ -58,12 +58,20 @@ export const underwaterSongs: Song[] = [
     audioUrl: '/music/2026/professor.mp3',
   },
   {
-    id: 8,
+    id: 7,
     title: 'cold and dreary',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
     audioUrl: '/music/2026/cold-and-dreary.mp3',
+  },
+    {
+    id: 8,
+    title: 'song of the damned',
+    artist: 'Edwards Radio',
+    album: 'Underwater',
+    albumArt: '/2026.jpg',
+    audioUrl: '/music/2026/the-same-cheese.m4a',
   },
     {
     id: 9,
