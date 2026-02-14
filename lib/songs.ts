@@ -39,7 +39,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/i-fell-in-love.mp3',
+    audioUrl: '/music/2026/i-fell-in-love.m4a',
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/only-you.mp3',
+    audioUrl: '/music/2026/only-you.m4a',
   },
   {
     id: 6,
