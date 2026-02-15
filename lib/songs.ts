@@ -19,7 +19,7 @@ export const underwaterSongs: Song[] = [
   },
     {
     id: 11,
-    title: 'billboard 2',
+    title: 'billboard 3',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
