@@ -19,11 +19,11 @@ export const underwaterSongs: Song[] = [
   },
     {
     id: 11,
-    title: 'billboard 3',
+    title: 'billboard full',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard15a.m4a',
+    audioUrl: '/music/2026/billboard15.m4a',
   },
   {
     id: 2,
