@@ -11,21 +11,12 @@ export interface Song {
 export const underwaterSongs: Song[] = [
   {
     id: 1,
-    title: 'billboard 16',
+    title: 'billboard',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard16.m4a',
+    audioUrl: '/music/2026/billboard-17.m4a',
   },
-    {
-    id: 11,
-    title: 'billboard 17',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard17.m4a',
-  },
-
   {
     id: 2,
     title: 'at the table',
