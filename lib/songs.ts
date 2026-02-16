@@ -11,36 +11,21 @@ export interface Song {
 export const underwaterSongs: Song[] = [
   {
     id: 1,
-    title: 'billboard drums lowered',
+    title: 'billboard 16',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard-15-drumslower.m4a',
+    audioUrl: '/music/2026/billboard16.m4a',
   },
     {
     id: 11,
-    title: 'billboard kick out only',
+    title: 'billboard 17',
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard-15-kickout.m4a',
+    audioUrl: '/music/2026/billboard17.m4a',
   },
-      {
-    id: 12,
-    title: 'billboard kick lowered with compression',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard-15-lowwcompression.m4a',
-  },
-        {
-    id: 13,
-    title: 'billboard kick no kick',
-    artist: 'Edwards Radio',
-    album: 'Underwater',
-    albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/billboard-15-nokick.m4a',
-  },
+
   {
     id: 2,
     title: 'at the table',
