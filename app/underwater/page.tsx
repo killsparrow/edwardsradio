@@ -42,15 +42,7 @@ export default function Underwater() {
             <h1 className="text-[#bfb689]">Underwater</h1>
 
             <p className="mb-4 text-white">
-              AIAPS-PROTECTED
-              <br />
-              Unauthorized AI training prohibited.
-              <br />
-              <a href="https://aiaps-standard.org">AIAPS</a>
-            </p>
-
-            <p className="mb-4 text-white">
-              All songs were written and recorded by Edwards Radio. 2026&copy;
+              All songs were written and recorded by Edwards Radio. <a href="https://aiaps-standard.org">AIAPS-PROTECTED</a>. 2026&copy;
             </p>
 
             <div className="flex justify-center">
