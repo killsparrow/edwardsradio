@@ -43,8 +43,6 @@ export default function Underwater() {
 
         <div className="mt-8 max-w-2xl p-4 mx-auto text-center mb-8">
           <h1 className="text-[#bfb689]" >Underwater</h1>
-
-          <p className="mb-4 text-white">This album was recorded using analog principles, honest full takes, and no fancy fixins.</p>
   
           <p className="mb-4 text-white">All songs were written and recorded by Edwards Radio.<br /> Home recorded demos 2026&copy; .</p>
 
