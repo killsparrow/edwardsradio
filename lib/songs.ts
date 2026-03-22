@@ -55,7 +55,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/professor.mp3',
+    audioUrl: '/music/2026/professor.m4a',
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/cold-and-dreary.mp3',
+    audioUrl: '/music/2026/cold-and-dreary.m4a',
   },
     {
     id: 8,
@@ -79,6 +79,6 @@ export const underwaterSongs: Song[] = [
     artist: 'Edwards Radio',
     album: 'Underwater',
     albumArt: '/2026.jpg',
-    audioUrl: '/music/2026/at-the-bridge.mp3',
+    audioUrl: '/music/2026/at-the-bridge.m4a',
   },
 ];
