@@ -9,317 +9,346 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAudio } from "../providers/AudioProvider";
 import { FaPlay, FaPause, FaStepForward, FaStepBackward } from "react-icons/fa";
 
-/* ── songs in new order ── */
+/* ── track data — single source of truth ── */
 
-const underwaterSongs: Song[] = [
-  { id: 1, title: "billboard", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/billboard.m4a" },
-  { id: 2, title: "at the table", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/at-the-table.m4a" },
-  { id: 3, title: "underwater", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/underwater.m4a" },
-  { id: 4, title: "dark side", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/i-fell-in-love.m4a" },
-  { id: 5, title: "professor", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/professor.m4a" },
-  { id: 6, title: "cold and dreary", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/cold-and-dreary.m4a" },
-  { id: 7, title: "only you", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/only-you.m4a" },
-  { id: 8, title: "oliver at the bridge", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/at-the-bridge.m4a" },
-  { id: 9, title: "st george", artist: "Edwards Radio", album: "Underwater", albumArt: "/2026.jpg", audioUrl: "/music/2026/st-george.m4a" },
+const tracks: {
+  title: string;
+  audioUrl: string;
+  subtitle?: string;
+  lyrics?: React.ReactNode;
+}[] = [
+  {
+    title: "Billboard",
+    audioUrl: "/music/2026/billboard.m4a",
+    lyrics: (
+      <>
+        <p>
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+        </p>
+        <p>
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
+        </p>
+        <p>
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+      </>
+    ),
+  },
+  {
+    title: "Billboard-B",
+    audioUrl: "/music/2026/billboard-b.m4a",
+  },
+  {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
+    lyrics: (
+      <>
+        <p>
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
+        </p>
+        <p>Needle falls right through, stare at the clock.</p>
+        <p>
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+        <p>
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
+    lyrics: (
+      <>
+        <p>
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
+        </p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Professor",
+    audioUrl: "/music/2026/professor.m4a",
+    lyrics: (
+      <>
+        <p>
+          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+          I&rsquo;m hiding from your observation.
+        </p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+        <p>
+          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+          All that you got wrong.<br />
+          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+        </p>
+        <p>I&rsquo;m hiding from your observation.</p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Cold and Dreary",
+    audioUrl: "/music/2026/cold-and-dreary.m4a",
+    subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
+    lyrics: (
+      <>
+        <p>
+          Eyes open wide,<br />
+          Picture frame views of the east.<br />
+          You never stop to say hi, when you pass me by.<br />
+          Down this sea of brick late at night.
+        </p>
+        <p>
+          I wish to be alive, and in your eyes.<br />
+          Into each life some rain must fall.<br />
+          You were meant to pass through.<br />
+          But for each storm I am stuck here now.<br />
+          As I sit and watch time pass me by.
+        </p>
+        <p>
+          Slow when you open.<br />
+          Slow when you go in.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>
+          Eyes open wide.<br />
+          Picture frame views watch the world pass you by.<br />
+          Long after you&rsquo;re gone, I will be here for an eternity.<br />
+          I&rsquo;ll await your return,<br />
+          From the lanterns on state,<br />
+          On this granite I ride.<br />
+          Into each life some rain must fall.
+        </p>
+        <p>
+          Slow when you open.<br />
+          Slow when you go in.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>Oh be still.</p>
+        <p>
+          Slow when you go in.<br />
+          Slow when you open.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>
+          Eyes open wide.<br />
+          Into life some rain must fall.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Only You",
+    audioUrl: "/music/2026/only-you.m4a",
+    lyrics: (
+      <>
+        <p>
+          Only you could be so beautiful when you cry.<br />
+          I see your eyes like stars against the black of night.<br />
+          Like a heron in the trees.<br />
+          And I wonder why you would ever want to be so alone.
+        </p>
+        <p>
+          Only you could be<br />
+          So warm and kind.<br />
+          When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
+          Only your smile could last this long, I see you. I see you.
+        </p>
+        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+        <p>
+          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+          You don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+        <p>
+          Only you, could be, a light this bright.<br />
+          A beacon at night, a place to reset to, a chance to believe in something more.<br />
+          And I see you. I see you.
+        </p>
+        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+        <p>
+          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+          You don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+        <p>
+          I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
+          I don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+      </>
+    ),
+  },
+  {
+    title: "Oliver at the Bridge",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "St George",
+    audioUrl: "/music/2026/st-george.m4a",
+    lyrics: (
+      <>
+        <p>
+          I ain&rsquo;t a cowboy,<br />
+          ain&rsquo;t got a ten gallon hat.<br />
+          Don&rsquo;t wear rattlesnake boots under my jeans,<br />
+          but I lived in Texas, slept beneath lone stars,<br />
+          turned bluebonnets into eagle claws.<br />
+          If you live there you&rsquo;d know what I mean.<br />
+          South of San Marcos in New Braunfels I&rsquo;ve seen<br />
+          so many things that can&rsquo;t be unseen.
+        </p>
+        <p>
+          I ain&rsquo;t a cowboy,<br />
+          ain&rsquo;t got no horse,<br />
+          never filed for divorce.<br />
+          Somewhere way out west of Texas,<br />
+          laid my head in the gorges of old St. George&rsquo;s<br />
+          canyons and counted the stars.<br />
+          Got so lost in between Native American scars.<br />
+          Somewhere way out west of Texas,<br />
+          tell me how did you earn yours.
+        </p>
+        <p>
+          I was way out west of Texas,<br />
+          laid my head in the gorges of old St. George&rsquo;s<br />
+          canyons and counted the stars.<br />
+          Got so lost in between Native American scars.<br />
+          Way out west of Texas,<br />
+          tell me how did you earn yours.
+        </p>
+      </>
+    ),
+  },
 ];
 
-/* ── chapter data (matches song order) ── */
+/* ── derived song list for audio player ── */
 
-const chapters = [
-  { title: "Billboard" },
-  { title: "At the Table" },
-  { title: "Underwater" },
-  { title: "Dark Side" },
-  { title: "Professor" },
-  { title: "Cold and Dreary", subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841)." },
-  { title: "Only You" },
-  { title: "Oliver at the Bridge" },
-  { title: "St George" },
-];
-
-/* ── lyrics keyed by chapter index ── */
-
-const lyrics: Record<number, React.ReactNode> = {
-  0: (
-    <>
-      <p>
-        Dreams I hold, I hope I never let go of.<br />
-        It looks like rain at night only unfolds.<br />
-        Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
-      </p>
-      <p>
-        I know, I know, the sky is taken away.<br />
-        I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-        And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
-      </p>
-      <p>
-        Message paid for by someone we don&rsquo;t know.<br />
-        It looks like light at night, but it doesn&rsquo;t let go.
-      </p>
-      <p>
-        It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-        I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
-      </p>
-      <p>
-        I know, I know, the sky is taken away.<br />
-        I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-      </p>
-      <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
-    </>
-  ),
-  1: (
-    <>
-      <p>
-        In the place I used to wait for you, at the table. At the table.<br />
-        In the place I used to hide from you, under the table.
-      </p>
-      <p>Needle falls right through, stare at the clock.</p>
-      <p>
-        In the place she used to fade away, staring through the cracks.<br />
-        Hey light, hey life.<br />
-        In the place she used to waste away, falling through the cracks.<br />
-        Hey light, hey life.
-      </p>
-      <p>In this place we used to wait all day, at the table. At the table.</p>
-      <p>In this place we used to hide away, under the table.</p>
-      <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-      <p>
-        In the place she used to fade away, falling through the cracks.<br />
-        Hey life, hey light.<br />
-        In this place she used to waste away, falling through the cracks.<br />
-        Hey light, hey life.
-      </p>
-    </>
-  ),
-  2: (
-    <>
-      <p>
-        I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-        I&rsquo;m just a person on your black t-shirt.<br />
-        That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-        The fabric beneath me thins, spin cycle takes me again.
-      </p>
-      <p>
-        Been underwater for too long to fake ends.<br />
-        Do you remember the parts of me that washed away with time?
-      </p>
-      <p>
-        I&rsquo;m just a person on your black t-shirt.<br />
-        If given the choice I&rsquo;d join you in your world.<br />
-        I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-        Fade away with me in this machine.<br />
-        Fade away with me in this machine.
-      </p>
-      <p>
-        Been underwater for too long to fake ends.<br />
-        Do you remember the parts of me that washed away with time?
-      </p>
-    </>
-  ),
-  3: (
-    <>
-      <p>
-        Did your heart die?<br />
-        I think you got it,<br />
-        pretty well figured out now.<br />
-        Don&rsquo;t need to spot you.<br />
-        Did you lose your mind?<br />
-        I think you got it, figured out.
-      </p>
-      <p>I think you got it, figured out.</p>
-      <p>
-        Are you brain dead now? Did you listen to the audio?<br />
-        Was it rock n roll? Are you under control?<br />
-        Did you lose your mind? I think you got it, pretty well figured out.
-      </p>
-      <p>I think you got it, figured out.</p>
-      <p>
-        My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-        I never listened to what they told me to do, and I fell in love with the dark side.
-      </p>
-      <p>Fell in love with the dark side.</p>
-      <p>
-        Did your light fade out? I think you figured it out.<br />
-        No need to run and hide, they won&rsquo;t come to find you.<br />
-        Did you lose control? I think you got it, figured out.
-      </p>
-      <p>
-        My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-        I never listened to what they told me to do, and I fell in love with the dark side.
-      </p>
-    </>
-  ),
-  4: (
-    <>
-      <p>
-        Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-        And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-        I&rsquo;m hiding from your observation.
-      </p>
-      <p>
-        And so far I haven&rsquo;t caught on yet.<br />
-        I thought by now that I&rsquo;d be so much stronger.<br />
-        And so far I haven&rsquo;t caught on yet.<br />
-        I thought by now that I&rsquo;d be so much stronger than I am.
-      </p>
-      <p>
-        And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-        All that you got wrong.<br />
-        And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
-      </p>
-      <p>I&rsquo;m hiding from your observation.</p>
-      <p>
-        And so far I haven&rsquo;t caught on yet.<br />
-        I thought by now that I&rsquo;d be so much stronger.<br />
-        And so far I haven&rsquo;t caught on yet.<br />
-        I thought by now that I&rsquo;d be so much stronger than I am.
-      </p>
-    </>
-  ),
-  5: (
-    <>
-      <p>
-        Eyes open wide,<br />
-        Picture frame views of the east.<br />
-        You never stop to say hi, when you pass me by.<br />
-        Down this sea of brick late at night.
-      </p>
-      <p>
-        I wish to be alive, and in your eyes.<br />
-        Into each life some rain must fall.<br />
-        You were meant to pass through.<br />
-        But for each storm I am stuck here now.<br />
-        As I sit and watch time pass me by.
-      </p>
-      <p>
-        Slow when you open.<br />
-        Slow when you go in.<br />
-        I&rsquo;ll wait in the cold and dreary.
-      </p>
-      <p>
-        Eyes open wide.<br />
-        Picture frame views watch the world pass you by.<br />
-        Long after you&rsquo;re gone, I will be here for an eternity.<br />
-        I&rsquo;ll await your return,<br />
-        From the lanterns on state,<br />
-        On this granite I ride.<br />
-        Into each life some rain must fall.
-      </p>
-      <p>
-        Slow when you open.<br />
-        Slow when you go in.<br />
-        I&rsquo;ll wait in the cold and dreary.
-      </p>
-      <p>Oh be still.</p>
-      <p>
-        Slow when you go in.<br />
-        Slow when you open.<br />
-        I&rsquo;ll wait in the cold and dreary.
-      </p>
-      <p>
-        Eyes open wide.<br />
-        Into life some rain must fall.
-      </p>
-    </>
-  ),
-  6: (
-    <>
-      <p>
-        Only you could be so beautiful when you cry.<br />
-        I see your eyes like stars against the black of night.<br />
-        Like a heron in the trees.<br />
-        And I wonder why you would ever want to be so alone.
-      </p>
-      <p>
-        Only you could be<br />
-        So warm and kind.<br />
-        When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
-        Only your smile could last this long, I see you. I see you.
-      </p>
-      <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-      <p>
-        You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-        You don&rsquo;t want to be just fine, at least not their way, not their way.
-      </p>
-      <p>I still believe in love.<br />I still believe in love.</p>
-      <p>
-        Only you, could be, a light this bright.<br />
-        A beacon at night, a place to reset to, a chance to believe in something more.<br />
-        And I see you. I see you.
-      </p>
-      <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-      <p>
-        You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-        You don&rsquo;t want to be just fine, at least not their way, not their way.
-      </p>
-      <p>I still believe in love.<br />I still believe in love.</p>
-      <p>
-        I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
-        I don&rsquo;t want to be just fine, at least not their way, not their way.
-      </p>
-      <p>I still believe in love.<br />I still believe in love.</p>
-    </>
-  ),
-  7: (
-    <>
-      <p>
-        Oliver standing at the bridge, waiting for you to return to this place.<br />
-        I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-        Or would you see the lines and just walk away?<br />
-        Would you see the lines and just walk away?
-      </p>
-      <p>
-        I see no way to save you now.<br />
-        From a world that keeps on leading you down, the wrong road the wrong way.<br />
-        There&rsquo;s no way out.
-      </p>
-      <p>
-        Oliver standing at the bridge, waiting for you to return to this place.<br />
-        I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-        Would you hold me in your arms?<br />
-        Would you still hold me in your arms?
-      </p>
-      <p>
-        I see no way to save you now.<br />
-        From a world that keeps on leading you down, the wrong road the wrong way.<br />
-        There&rsquo;s no way out.
-      </p>
-    </>
-  ),
-  8: (
-    <>
-      <p>
-        I ain&rsquo;t a cowboy,<br />
-        ain&rsquo;t got a ten gallon hat.<br />
-        Don&rsquo;t wear rattlesnake boots under my jeans,<br />
-        but I lived in Texas, slept beneath lone stars,<br />
-        turned bluebonnets into eagle claws.<br />
-        If you live there you&rsquo;d know what I mean.<br />
-        South of San Marcos in New Braunfels I&rsquo;ve seen<br />
-        so many things that can&rsquo;t be unseen.
-      </p>
-      <p>
-        I ain&rsquo;t a cowboy,<br />
-        ain&rsquo;t got no horse,<br />
-        never filed for divorce.<br />
-        Somewhere way out west of Texas,<br />
-        laid my head in the gorges of old St. George&rsquo;s<br />
-        canyons and counted the stars.<br />
-        Got so lost in between Native American scars.<br />
-        Somewhere way out west of Texas,<br />
-        tell me how did you earn yours.
-      </p>
-      <p>
-        I was way out west of Texas,<br />
-        laid my head in the gorges of old St. George&rsquo;s<br />
-        canyons and counted the stars.<br />
-        Got so lost in between Native American scars.<br />
-        Way out west of Texas,<br />
-        tell me how did you earn yours.
-      </p>
-    </>
-  ),
-};
+const underwaterSongs: Song[] = tracks.map((t, i) => ({
+  id: i + 1,
+  title: t.title.toLowerCase(),
+  artist: "Edwards Radio",
+  album: "Underwater",
+  albumArt: "/2026.jpg",
+  audioUrl: t.audioUrl,
+}));
 
 /* ── Zissou-style player (no tracklist) ── */
 
@@ -536,14 +565,14 @@ export default function Underwater() {
             <section aria-label="Tracklist and lyrics" className="max-w-3xl mx-auto py-4">
               <h2 className="sr-only">Tracklist</h2>
               <ol className="list-none m-0 p-0 space-y-0" role="list">
-                {chapters.map((chapter, index) => {
+                {tracks.map((track, index) => {
                   const isActive = currentSongIndex === index;
                   return (
                     <li key={index} className="border-t border-[#494a5d]/50">
                       <div className="flex items-center gap-0">
                         <button
                           onClick={() => selectSong(index)}
-                          aria-label={`Play ${chapter.title}`}
+                          aria-label={`Play ${track.title}`}
                           aria-current={isActive ? "true" : undefined}
                           className={`py-4 px-2 md:px-4 flex items-center gap-4 md:gap-6 transition-colors text-left group flex-1 min-w-0 ${
                             isActive ? "bg-[#bfb689]/5" : "hover:bg-white/[0.02]"
@@ -565,7 +594,7 @@ export default function Underwater() {
                                 : "text-white group-hover:text-[#bfb689] transition-colors"
                             }`}
                           >
-                            {chapter.title}
+                            {track.title}
                           </span>
                           {isActive && isPlaying && (
                             <div className="flex gap-0.5 items-end h-3 flex-shrink-0" aria-hidden="true">
@@ -576,13 +605,13 @@ export default function Underwater() {
                           )}
                         </button>
 
-                        {lyrics[index] && (
+                        {track.lyrics && (
                           <button
                             onClick={() =>
                               setExpandedChapter(expandedChapter === index ? null : index)
                             }
                             aria-expanded={expandedChapter === index}
-                            aria-label={`${expandedChapter === index ? "Hide" : "Show"} lyrics for ${chapter.title}`}
+                            aria-label={`${expandedChapter === index ? "Hide" : "Show"} lyrics for ${track.title}`}
                             className="py-4 px-3 md:px-4 flex-shrink-0 hover:bg-white/[0.02] transition-colors"
                           >
                             <motion.span
@@ -598,7 +627,7 @@ export default function Underwater() {
                       </div>
 
                       <AnimatePresence>
-                        {expandedChapter === index && lyrics[index] && (
+                        {expandedChapter === index && track.lyrics && (
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
@@ -606,18 +635,18 @@ export default function Underwater() {
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="overflow-hidden"
                             role="region"
-                            aria-label={`Lyrics for ${chapter.title}`}
+                            aria-label={`Lyrics for ${track.title}`}
                           >
                             <div className="px-2 md:px-4 pb-6 md:pl-[calc(3rem+2.5rem)]">
-                              {chapter.subtitle && (
+                              {track.subtitle && (
                                 <div className="border border-[#494a5d]/30 px-4 py-3 mb-5">
                                   <p className="text-[10px] uppercase tracking-[0.3em] text-[#c4895f] !mb-0">
-                                    {chapter.subtitle}
+                                    {track.subtitle}
                                   </p>
                                 </div>
                               )}
                               <div className="text-white/80 text-sm leading-relaxed border-l-2 border-[#a0633b]/30 pl-6 pt-2">
-                                {lyrics[index]}
+                                {track.lyrics}
                               </div>
                             </div>
                           </motion.div>
