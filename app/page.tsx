@@ -3,7 +3,7 @@ import Section from "./components/Section";
 import TheWeightOfIllusionHero from "./components/TheWeightOfIllusionHero";
 import MusicPage from "./components/AlbumCard";
 import Image from "next/image";
-import NoCookies from "./components/NoCookies";
+// import NoCookies from "./components/NoCookies";
 
 
 
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
         </Section>
 
-<NoCookies />
+{/* <NoCookies /> */}
     
       </div>
     </>

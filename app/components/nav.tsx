@@ -4,6 +4,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { GiRadioTower } from 'react-icons/gi';
 
 const LINKS = [
   { href: '/#music', label: 'Music' },
@@ -14,6 +16,8 @@ const LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isUnderwater = pathname === '/underwater';
 
   // lock scroll when mobile menu open
   useEffect(() => {
@@ -36,31 +40,47 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm">
+    <header className={`fixed top-0 inset-x-0 z-50 ${
+      isUnderwater
+        ? 'bg-[#24252d]/80 backdrop-blur-md border-b border-[#494a5d]/30'
+        : 'bg-black/30 backdrop-blur-sm'
+    }`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-14 flex items-center justify-between">
           {/* Logo on the left */}
           <Link href="/#hero" className="flex items-center gap-2">
-            <Image
-              src="/edwards-radio_2.png"
-              alt="Edwards Radio"
-              width={150}
-              height={32}
-            />
-
+            {isUnderwater ? (
+              <span className="flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-white/70">
+                <GiRadioTower size={16} />
+                Edwards Radio
+              </span>
+            ) : (
+              <Image
+                src="/edwards-radio_2.png"
+                alt="Edwards Radio"
+                width={150}
+                height={32}
+              />
+            )}
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {LINKS.map((l) => (
+            {LINKS.map((l) => {
+              const label = isUnderwater && l.label === 'Music' ? 'Home' : l.label;
+              return (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm tracking-wide text-white hover:text-[#d0bd3b] transition-colors"
+                className={isUnderwater
+                  ? 'text-[11px] uppercase tracking-[0.25em] text-white/70 hover:text-[#bfb689] transition-colors'
+                  : 'text-sm tracking-wide text-white hover:text-[#d0bd3b] transition-colors'
+                }
               >
-                {l.label}
+                {label}
               </Link>
-            ))}
+              );
+            })}
           </nav>
 
           {/* Mobile hamburger */}
@@ -106,8 +126,12 @@ export default function Nav() {
       {/* Slide-out mobile menu */}
       <aside
         id="mobile-menu"
-        className={`md:hidden fixed right-0 top-0 z-50 h-dvh w-[80vw] max-w-xs bg-black/95 border-l border-white/10
+        className={`md:hidden fixed right-0 top-0 z-50 h-dvh w-[80vw] max-w-xs border-l border-white/10
         transform transition-transform duration-300 ${
+          isUnderwater
+            ? 'bg-[#24252d]/95 backdrop-blur-md border-l-[#494a5d]/30'
+            : 'bg-black/95'
+        } ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -125,16 +149,22 @@ export default function Nav() {
         </div>
 
         <nav className="px-6 pb-8 grid gap-5">
-          {LINKS.map((l) => (
+          {LINKS.map((l) => {
+            const label = isUnderwater && l.label === 'Music' ? 'Home' : l.label;
+            return (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-lg text-white hover:text-[#d0bd3b]"
+              className={isUnderwater
+                ? 'text-sm uppercase tracking-[0.2em] text-white/70 hover:text-[#bfb689]'
+                : 'text-lg text-white hover:text-[#d0bd3b]'
+              }
             >
-              {l.label}
+              {label}
             </Link>
-          ))}
+            );
+          })}
         </nav>
       </aside>
     </header>

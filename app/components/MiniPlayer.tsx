@@ -26,7 +26,7 @@ export default function MiniPlayer() {
     const d = audio.duration || 1;
     progressRef.current.value = String(t);
     progressRef.current.max = String(d);
-    progressRef.current.style.background = `linear-gradient(to right, #d1c58b 0%, #d1c58b ${(t / d) * 100}%, rgba(255,255,255,0.15) ${(t / d) * 100}%, rgba(255,255,255,0.15) 100%)`;
+    progressRef.current.style.background = `linear-gradient(to right, #bfb689 0%, #bfb689 ${(t / d) * 100}%, rgba(255,255,255,0.15) ${(t / d) * 100}%, rgba(255,255,255,0.15) 100%)`;
     const min = Math.floor(t / 60);
     const sec = Math.floor(t % 60);
     timeRef.current.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
@@ -68,40 +68,42 @@ export default function MiniPlayer() {
   };
 
   return (
-    <div className="fixed bottom-16 inset-x-0 z-50 bg-[#1a1b23]/95 backdrop-blur-sm border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-4 flex items-center gap-3 h-14">
-        {/* Album art */}
-        <div className="relative w-10 h-10 flex-shrink-0 rounded overflow-hidden">
-          <Image
-            src={currentSong.albumArt}
-            alt={currentSong.album}
-            fill
-            className="object-cover"
-            sizes="40px"
-          />
+    <div className="fixed bottom-16 inset-x-0 z-50 bg-[#24252d]/95 backdrop-blur-sm border-t border-[#494a5d]/40">
+      <div className="mx-auto max-w-6xl px-4 flex items-center gap-4 h-16">
+        {/* Album art — porthole */}
+        <div className="relative w-10 h-10 flex-shrink-0 rounded-full border-2 border-[#494a5d] p-0.5">
+          <div className="w-full h-full rounded-full overflow-hidden relative border border-[#a0633b]/40">
+            <Image
+              src={currentSong.albumArt}
+              alt={currentSong.album}
+              fill
+              className="object-cover"
+              sizes="40px"
+            />
+          </div>
         </div>
 
         {/* Track info */}
         <div className="min-w-0 flex-shrink-0 w-32 sm:w-48">
-          <p className="text-sm text-white truncate !mb-0">{currentSong.title}</p>
-          <p className="text-xs text-white/50 truncate !mb-0">{currentSong.artist}</p>
+          <p className="text-sm text-white uppercase tracking-wide truncate !mb-0">{currentSong.title}</p>
+          <p className="text-[10px] text-white/40 uppercase tracking-wider truncate !mb-0">{currentSong.artist}</p>
         </div>
 
         {/* Controls */}
-        <div className="flex items-center gap-2">
-          <button onClick={previous} className="text-white/70 hover:text-[#d1c58b] transition-colors p-1" aria-label="Previous">
-            <FaStepBackward className="w-3 h-3" />
+        <div className="flex items-center gap-3">
+          <button onClick={previous} className="text-white/40 hover:text-[#bfb689] transition-colors p-1" aria-label="Previous">
+            <FaStepBackward className="w-2.5 h-2.5" />
           </button>
-          <button onClick={togglePlayPause} className="bg-[#d1c58b] text-[#1a1b23] rounded-full p-2 hover:bg-[#c1b57b] transition-colors" aria-label={isPlaying ? 'Pause' : 'Play'}>
-            {isPlaying ? <FaPause className="w-3 h-3" /> : <FaPlay className="w-3 h-3 ml-0.5" />}
+          <button onClick={togglePlayPause} className="w-8 h-8 rounded-full border border-[#bfb689] flex items-center justify-center text-[#bfb689] hover:bg-[#bfb689] hover:text-[#24252d] transition-all" aria-label={isPlaying ? 'Pause' : 'Play'}>
+            {isPlaying ? <FaPause className="w-2.5 h-2.5" /> : <FaPlay className="w-2.5 h-2.5 ml-0.5" />}
           </button>
-          <button onClick={next} className="text-white/70 hover:text-[#d1c58b] transition-colors p-1" aria-label="Next">
-            <FaStepForward className="w-3 h-3" />
+          <button onClick={next} className="text-white/40 hover:text-[#bfb689] transition-colors p-1" aria-label="Next">
+            <FaStepForward className="w-2.5 h-2.5" />
           </button>
         </div>
 
         {/* Progress */}
-        <span ref={timeRef} className="text-[10px] text-white/50 w-7 tabular-nums flex-shrink-0">0:00</span>
+        <span ref={timeRef} className="text-[9px] text-white/30 w-7 tabular-nums tracking-wider flex-shrink-0">0:00</span>
         <input
           ref={progressRef}
           type="range"
@@ -109,7 +111,7 @@ export default function MiniPlayer() {
           max="100"
           defaultValue={0}
           onChange={handleSeek}
-          className="flex-1 h-1 bg-white/15 rounded appearance-none cursor-pointer slider"
+          className="flex-1 h-[2px] bg-white/10 rounded-none appearance-none cursor-pointer slider"
         />
       </div>
     </div>
