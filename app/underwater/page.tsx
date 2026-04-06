@@ -19,7 +19,7 @@ const tracks: {
 }[] = [
   {
     title: "Billboard",
-    audioUrl: "/music/2026/billboard.m4a",
+    audioUrl: "/music/2026/billboard-master-25.m4a",
     lyrics: (
       <>
         <p>
@@ -47,6 +47,14 @@ const tracks: {
         <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
       </>
     ),
+  },
+   {
+    title: "Billboard 25b",
+    audioUrl: "/music/2026/billboard-master-25b.m4a",
+  },
+  {
+    title: "Billboard 27",
+    audioUrl: "/music/2026/billboard-master-27.m4a",
   },
   {
     title: "At the Table",
