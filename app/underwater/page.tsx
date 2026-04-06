@@ -49,10 +49,6 @@ const tracks: {
     ),
   },
   {
-    title: "Billboard-B",
-    audioUrl: "/music/2026/billboard-b.m4a",
-  },
-  {
     title: "At the Table",
     audioUrl: "/music/2026/at-the-table.m4a",
     lyrics: (
