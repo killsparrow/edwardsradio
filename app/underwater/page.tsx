@@ -142,6 +142,36 @@ const tracks: {
       </>
     ),
   },
+    {
+    title: "Oliver at the Bridge",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+      </>
+    ),
+  },
   {
     title: "Professor",
     audioUrl: "/music/2026/professor.m4a",
@@ -263,36 +293,6 @@ const tracks: {
           I don&rsquo;t want to be just fine, at least not their way, not their way.
         </p>
         <p>I still believe in love.<br />I still believe in love.</p>
-      </>
-    ),
-  },
-  {
-    title: "Oliver at the Bridge",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
       </>
     ),
   },
