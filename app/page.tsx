@@ -98,14 +98,14 @@ export default function Home() {
               {/* Copy */}
               <div className="flex-1 max-w-lg text-left leading-relaxed border-l-2 border-[#a0633b]/30 pl-6">
                 <p className="text-white/80 text-sm md:text-base">
-                  Edwards Radio is the musical project of songwriter
-                  Evan Parker. Parker has carved out a distinctive sonic
-                  space where the raw sincerity of folk intersects with the
-                  textured depth of indie rock. Recorded and mixed entirely in his
-                  home studio, his music showcases an evolving
-                  craft as both a songwriter and producer, capturing analog
-                  moments with a DIY/lo-fi spirit that never sacrifices emotional
-                  impact.
+                  Edwards Radio is the indie folk project of songwriter Evan
+                  Parker, with four studio albums released between 2022 and
+                  2026. Parker has carved out a distinctive sonic space where
+                  the raw sincerity of folk intersects with the textured depth
+                  of indie rock. Recorded and mixed entirely in his home
+                  studio, his music showcases an evolving craft as both a
+                  songwriter and producer, capturing analog moments with a
+                  DIY/lo-fi spirit that never sacrifices emotional impact.
                 </p>
 
                 <div className="mt-8 flex gap-4">

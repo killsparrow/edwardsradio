@@ -11,18 +11,18 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   title: {
-    default: "Edwards Radio",
+    default: "Edwards Radio — Underwater (Coming 2026)",
     template: "%s | Edwards Radio",
   },
   description:
-    "Edwards Radio — alt-country/indie artist blending lo-fi and analog. Music, videos, and contact info.",
+    "Edwards Radio (Evan Parker) — lyric-driven indie folk with analog warmth. New album Underwater coming 2026. Stream The Weight of Illusion, This Endless Life, and Feral Nights.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    title: "Edwards Radio",
+    title: "Edwards Radio — Underwater (Coming 2026)",
     description:
-      "Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.",
+      "New album Underwater coming 2026. Lyric-driven indie folk with analog warmth from Edwards Radio.",
     siteName: "Edwards Radio",
     images: [
       { url: "/og.jpg", width: 1200, height: 630, alt: "Edwards Radio" },
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@evanparkermusic", // change if you want; or remove
-    title: "Edwards Radio",
+    site: "@evanparkermusic",
+    title: "Edwards Radio — Underwater (Coming 2026)",
     description:
-      "Alt-country/indie artist blending lo-fi and analog. Music, videos, and contact.",
+      "New album Underwater coming 2026. Lyric-driven indie folk with analog warmth.",
     images: ["/og.jpg"],
   },
   icons: {
