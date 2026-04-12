@@ -2,24 +2,18 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
 import { GiRadioTower } from 'react-icons/gi';
 
 const LINKS = [
   { href: '/#music', label: 'Music' },
   { href: '/#about', label: 'About' },
-  // { href: '#video', label: 'Video' },
   { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const isUnderwater = pathname === '/underwater';
 
-  // lock scroll when mobile menu open
   useEffect(() => {
     const body = document.body;
     const prev = body.style.overflow;
@@ -29,7 +23,6 @@ export default function Nav() {
     };
   }, [open]);
 
-  // close on Esc
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -40,50 +33,28 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 ${
-      isUnderwater
-        ? 'bg-[#24252d]/80 backdrop-blur-md border-b border-[#494a5d]/30'
-        : 'bg-black/30 backdrop-blur-sm'
-    }`}>
+    <header className="fixed top-0 inset-x-0 z-50 bg-[#24252d]/80 backdrop-blur-md border-b border-[#494a5d]/30">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="h-14 flex items-center justify-between">
-          {/* Logo on the left */}
-          <Link href="/#hero" className="flex items-center gap-2">
-            {isUnderwater ? (
-              <span className="flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-white/70">
-                <GiRadioTower size={16} />
-                Edwards Radio
-              </span>
-            ) : (
-              <Image
-                src="/edwards-radio_2.png"
-                alt="Edwards Radio"
-                width={150}
-                height={32}
-              />
-            )}
+          <Link href="/#home" className="flex items-center gap-2">
+            <span className="flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-white/70">
+              <GiRadioTower size={16} />
+              Edwards Radio
+            </span>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {LINKS.map((l) => {
-              const label = isUnderwater && l.label === 'Music' ? 'Home' : l.label;
-              return (
+            {LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className={isUnderwater
-                  ? 'text-[11px] uppercase tracking-[0.25em] text-white/70 hover:text-[#bfb689] transition-colors'
-                  : 'text-sm tracking-wide text-white hover:text-[#d0bd3b] transition-colors'
-                }
+                className="text-[11px] uppercase tracking-[0.25em] text-white/70 hover:text-[#bfb689] transition-colors"
               >
-                {label}
+                {l.label}
               </Link>
-              );
-            })}
+            ))}
           </nav>
 
-          {/* Mobile hamburger */}
           <button
             type="button"
             aria-label="Toggle menu"
@@ -113,7 +84,6 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile overlay */}
       <div
         className={`md:hidden fixed inset-0 z-40 transition-opacity ${
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -123,15 +93,10 @@ export default function Nav() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* Slide-out mobile menu */}
       <aside
         id="mobile-menu"
-        className={`md:hidden fixed right-0 top-0 z-50 h-dvh w-[80vw] max-w-xs border-l border-white/10
+        className={`md:hidden fixed right-0 top-0 z-50 h-dvh w-[80vw] max-w-xs border-l border-[#494a5d]/30 bg-[#24252d]/95 backdrop-blur-md
         transform transition-transform duration-300 ${
-          isUnderwater
-            ? 'bg-[#24252d]/95 backdrop-blur-md border-l-[#494a5d]/30'
-            : 'bg-black/95'
-        } ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -149,22 +114,16 @@ export default function Nav() {
         </div>
 
         <nav className="px-6 pb-8 grid gap-5">
-          {LINKS.map((l) => {
-            const label = isUnderwater && l.label === 'Music' ? 'Home' : l.label;
-            return (
+          {LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className={isUnderwater
-                ? 'text-sm uppercase tracking-[0.2em] text-white/70 hover:text-[#bfb689]'
-                : 'text-lg text-white hover:text-[#d0bd3b]'
-              }
+              className="text-sm uppercase tracking-[0.2em] text-white/70 hover:text-[#bfb689]"
             >
-              {label}
+              {l.label}
             </Link>
-            );
-          })}
+          ))}
         </nav>
       </aside>
     </header>

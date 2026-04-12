@@ -17,9 +17,9 @@ export default function TheWeightOfIllusionHero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-dvh snap-start" aria-label="Home">
+    <section id="weight-of-illusion" className="relative min-h-dvh snap-start" aria-label="The Weight of Illusion">
       {/* Background */}
-      <div className="kb-wrap absolute inset-0 -z-10 overflow-hidden">
+      <div className="kb-wrap absolute inset-0 overflow-hidden">
         <Image
           src="/flower.jpg"
           alt=""
