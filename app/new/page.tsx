@@ -18,7 +18,7 @@ const tracks: {
   lyrics?: React.ReactNode;
 }[] = [
   {
-    title: "Billboard y",
+    title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
       <>
