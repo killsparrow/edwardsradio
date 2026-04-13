@@ -16,16 +16,8 @@ export default function Home() {
 
         {/* <TheWeightOfIllusionHero /> */}
 
-        {/* MUSIC */}
-        <Section id="music" className="bg-[#24252d]">
-          <div className="relative z-10 w-full">
-            <MusicPage />
-          </div>
-        </Section>
-
         {/* AIAPS */}
-        <section id="aiaps" className="relative bg-[#2f303b] py-28 md:py-32 snap-start overflow-hidden">
-          <GridOverlay />
+        <section id="aiaps" className="relative bg-[#24252d] py-28 md:py-32 snap-start overflow-hidden">
           <div className="relative z-10 w-full max-w-xl mx-auto px-6 text-center">
             <p className="text-[10px] uppercase tracking-[0.5em] text-[#a0633b] mb-4">
               AI Audio Protection
@@ -59,6 +51,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* MUSIC */}
+        <Section id="music" className="bg-[#2f303b]">
+          <GridOverlay />
+          <div className="relative z-10 w-full">
+            <MusicPage />
+          </div>
+        </Section>
 
         {/* ABOUT */}
         <Section id="about" className="bg-[#24252d] py-20">
