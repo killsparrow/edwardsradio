@@ -18,6 +18,35 @@ const tracks: {
   lyrics?: React.ReactNode;
 }[] = [
   {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -48,64 +77,37 @@ const tracks: {
       </>
     ),
   },
-  {
-    title: "At the Table",
-    audioUrl: "/music/2026/at-the-table.m4a",
+       {
+    title: "Oliver at the Bridge",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
     lyrics: (
       <>
         <p>
-          In the place I used to wait for you, at the table. At the table.<br />
-          In the place I used to hide from you, under the table.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
         </p>
-        <p>Needle falls right through, stare at the clock.</p>
         <p>
-          In the place she used to fade away, staring through the cracks.<br />
-          Hey light, hey life.<br />
-          In the place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
-        <p>In this place we used to wait all day, at the table. At the table.</p>
-        <p>In this place we used to hide away, under the table.</p>
-        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
         <p>
-          In the place she used to fade away, falling through the cracks.<br />
-          Hey life, hey light.<br />
-          In this place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
       </>
     ),
   },
-  {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-      </>
-    ),
-  },
-  {
+    {
     title: "Dark Side",
     audioUrl: "/music/2026/i-fell-in-love.m4a",
     lyrics: (
@@ -142,36 +144,36 @@ const tracks: {
       </>
     ),
   },
-    {
-    title: "Oliver at the Bridge",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
+  {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
     lyrics: (
       <>
         <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
         </p>
+        <p>Needle falls right through, stare at the clock.</p>
         <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
         </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
         <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
         </p>
       </>
     ),
   },
+
+ 
   {
     title: "Professor",
     audioUrl: "/music/2026/professor.m4a",
