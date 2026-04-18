@@ -17,36 +17,7 @@ const tracks: {
   subtitle?: string;
   lyrics?: React.ReactNode;
 }[] = [
-  {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-      </>
-    ),
-  },
-  {
+    {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -77,74 +48,7 @@ const tracks: {
       </>
     ),
   },
-       {
-    title: "Oliver at the Bridge",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-      </>
-    ),
-  },
-    {
-    title: "Dark Side",
-    audioUrl: "/music/2026/i-fell-in-love.m4a",
-    lyrics: (
-      <>
-        <p>
-          Did your heart die?<br />
-          I think you got it,<br />
-          pretty well figured out now.<br />
-          Don&rsquo;t need to spot you.<br />
-          Did you lose your mind?<br />
-          I think you got it, figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          Are you brain dead now? Did you listen to the audio?<br />
-          Was it rock n roll? Are you under control?<br />
-          Did you lose your mind? I think you got it, pretty well figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-        <p>Fell in love with the dark side.</p>
-        <p>
-          Did your light fade out? I think you figured it out.<br />
-          No need to run and hide, they won&rsquo;t come to find you.<br />
-          Did you lose control? I think you got it, figured out.
-        </p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-      </>
-    ),
-  },
-  {
+      {
     title: "At the Table",
     audioUrl: "/music/2026/at-the-table.m4a",
     lyrics: (
@@ -172,41 +76,37 @@ const tracks: {
       </>
     ),
   },
-
- 
   {
-    title: "Professor",
-    audioUrl: "/music/2026/professor.m4a",
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
     lyrics: (
       <>
         <p>
-          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-          I&rsquo;m hiding from your observation.
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
         </p>
         <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
         </p>
         <p>
-          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-          All that you got wrong.<br />
-          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
         </p>
-        <p>I&rsquo;m hiding from your observation.</p>
         <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
         </p>
       </>
     ),
   },
-  {
-    title: "Cold and Dreary",
+       {
+    title: "Eternity at State",
     audioUrl: "/music/2026/cold-and-dreary.m4a",
     subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
     lyrics: (
@@ -257,48 +157,6 @@ const tracks: {
     ),
   },
   {
-    title: "Only You",
-    audioUrl: "/music/2026/only-you.m4a",
-    lyrics: (
-      <>
-        <p>
-          Only you could be so beautiful when you cry.<br />
-          I see your eyes like stars against the black of night.<br />
-          Like a heron in the trees.<br />
-          And I wonder why you would ever want to be so alone.
-        </p>
-        <p>
-          Only you could be<br />
-          So warm and kind.<br />
-          When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
-          Only your smile could last this long, I see you. I see you.
-        </p>
-        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-        <p>
-          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-          You don&rsquo;t want to be just fine, at least not their way, not their way.
-        </p>
-        <p>I still believe in love.<br />I still believe in love.</p>
-        <p>
-          Only you, could be, a light this bright.<br />
-          A beacon at night, a place to reset to, a chance to believe in something more.<br />
-          And I see you. I see you.
-        </p>
-        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-        <p>
-          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-          You don&rsquo;t want to be just fine, at least not their way, not their way.
-        </p>
-        <p>I still believe in love.<br />I still believe in love.</p>
-        <p>
-          I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
-          I don&rsquo;t want to be just fine, at least not their way, not their way.
-        </p>
-        <p>I still believe in love.<br />I still believe in love.</p>
-      </>
-    ),
-  },
-  {
     title: "St George",
     audioUrl: "/music/2026/st-george.m4a",
     lyrics: (
@@ -331,6 +189,148 @@ const tracks: {
           Got so lost in between Native American scars.<br />
           Way out west of Texas,<br />
           tell me how did you earn yours.
+        </p>
+      </>
+    ),
+  },
+    {
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
+    lyrics: (
+      <>
+        <p>
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
+        </p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Professor",
+    audioUrl: "/music/2026/professor.m4a",
+    lyrics: (
+      <>
+        <p>
+          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+          I&rsquo;m hiding from your observation.
+        </p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+        <p>
+          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+          All that you got wrong.<br />
+          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+        </p>
+        <p>I&rsquo;m hiding from your observation.</p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+      </>
+    ),
+  },
+  // {
+  //   title: "Only You",
+  //   audioUrl: "/music/2026/only-you.m4a",
+  //   lyrics: (
+  //     <>
+  //       <p>
+  //         Only you could be so beautiful when you cry.<br />
+  //         I see your eyes like stars against the black of night.<br />
+  //         Like a heron in the trees.<br />
+  //         And I wonder why you would ever want to be so alone.
+  //       </p>
+  //       <p>
+  //         Only you could be<br />
+  //         So warm and kind.<br />
+  //         When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
+  //         Only your smile could last this long, I see you. I see you.
+  //       </p>
+  //       <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+  //       <p>
+  //         You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+  //         You don&rsquo;t want to be just fine, at least not their way, not their way.
+  //       </p>
+  //       <p>I still believe in love.<br />I still believe in love.</p>
+  //       <p>
+  //         Only you, could be, a light this bright.<br />
+  //         A beacon at night, a place to reset to, a chance to believe in something more.<br />
+  //         And I see you. I see you.
+  //       </p>
+  //       <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+  //       <p>
+  //         You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+  //         You don&rsquo;t want to be just fine, at least not their way, not their way.
+  //       </p>
+  //       <p>I still believe in love.<br />I still believe in love.</p>
+  //       <p>
+  //         I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
+  //         I don&rsquo;t want to be just fine, at least not their way, not their way.
+  //       </p>
+  //       <p>I still believe in love.<br />I still believe in love.</p>
+  //     </>
+  //   ),
+  // },
+
+       {
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
       </>
     ),
