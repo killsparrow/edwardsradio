@@ -17,36 +17,37 @@ const tracks: {
   subtitle?: string;
   lyrics?: React.ReactNode;
 }[] = [
-    {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
+   {
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
     lyrics: (
       <>
         <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
         </p>
         <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
         <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
         </p>
         <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
       </>
     ),
   },
-    {
+      {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -77,66 +78,36 @@ const tracks: {
       </>
     ),
   },
-      {
-    title: "Billboard Reference",
-    audioUrl: "/music/2026/billboard2.m4a",
+    {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
     lyrics: (
       <>
         <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
         </p>
         <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
         </p>
         <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
         </p>
         <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
-      </>
-    ),
-  },
-      {
-    title: "At the Table",
-    audioUrl: "/music/2026/at-the-table.m4a",
-    lyrics: (
-      <>
-        <p>
-          In the place I used to wait for you, at the table. At the table.<br />
-          In the place I used to hide from you, under the table.
-        </p>
-        <p>Needle falls right through, stare at the clock.</p>
-        <p>
-          In the place she used to fade away, staring through the cracks.<br />
-          Hey light, hey life.<br />
-          In the place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-        <p>In this place we used to wait all day, at the table. At the table.</p>
-        <p>In this place we used to hide away, under the table.</p>
-        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-        <p>
-          In the place she used to fade away, falling through the cracks.<br />
-          Hey life, hey light.<br />
-          In this place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
         </p>
       </>
     ),
   },
-       {
+         {
     title: "Eternity at State",
     audioUrl: "/music/2026/cold-and-dreary.m4a",
     subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
@@ -224,7 +195,7 @@ const tracks: {
       </>
     ),
   },
-    {
+   {
     title: "Dark Side",
     audioUrl: "/music/2026/i-fell-in-love.m4a",
     lyrics: (
@@ -261,7 +232,34 @@ const tracks: {
       </>
     ),
   },
-
+      {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
+    lyrics: (
+      <>
+        <p>
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
+        </p>
+        <p>Needle falls right through, stare at the clock.</p>
+        <p>
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+        <p>
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+      </>
+    ),
+  },
   {
     title: "Professor",
     audioUrl: "/music/2026/professor.m4a",
@@ -336,36 +334,7 @@ const tracks: {
   //   ),
   // },
 
-       {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-      </>
-    ),
-  },
+    
 ];
 
 /* ── derived song list for audio player ── */
