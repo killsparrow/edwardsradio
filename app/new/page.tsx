@@ -17,66 +17,7 @@ const tracks: {
   subtitle?: string;
   lyrics?: React.ReactNode;
 }[] = [
-   {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-      </>
-    ),
-  },
-    {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-      </>
-    ),
-  },
-   {
+  {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -107,7 +48,131 @@ const tracks: {
       </>
     ),
   },
-         {
+  {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
+    lyrics: (
+      <>
+        <p>
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
+        </p>
+        <p>Needle falls right through, stare at the clock.</p>
+        <p>
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+        <p>
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
+    lyrics: (
+      <>
+        <p>
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
+        </p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Eternity at State",
     audioUrl: "/music/2026/cold-and-dreary.m4a",
     subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
@@ -159,6 +224,90 @@ const tracks: {
     ),
   },
   {
+    title: "Property",
+    audioUrl: "/music/2026/property.m4a",
+    subtitle: "Inspired by Charles Fort's Book of the Damned.",
+    lyrics: (
+      <>
+        <p>
+          I know not what or wither<br />
+          Still I beg, between the pages<br />
+          Im property instead<br />
+          of this fiction,<br />
+          Tell me<br />
+          to who do you belong
+        </p>
+        <p>
+          here I am,<br />
+          In the same old line,<br />
+          That confused you<br />
+          {"{Just reversed}"}<br />
+          But close in kind<br />
+          Tremendous and subtle<br />
+          As nature itself cares to find
+        </p>
+        <p>
+          these dreams<br />
+          believe in wings<br />
+          they keep falling, down
+        </p>
+        <p>
+          these things<br />
+          believed in dreams<br />
+          they keep calling<br />
+          calling now
+        </p>
+        <p>
+          Working towards an<br />
+          Unseen goal<br />
+          Decomposition<br />
+          she Dressed in gold<br />
+          Oh terrible rotting existinence<br />
+          All I know is that<br />
+          Beliefs over time can change
+        </p>
+        <p>
+          Its All just cheese im told<br />
+          Lost somewhere in orbit<br />
+          How would you hold onto momentary lives<br />
+          As nature itself cares to find<br />
+          as They fall from the sky
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Professor",
+    audioUrl: "/music/2026/professor.m4a",
+    lyrics: (
+      <>
+        <p>
+          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+          I&rsquo;m hiding from your observation.
+        </p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+        <p>
+          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+          All that you got wrong.<br />
+          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+        </p>
+        <p>I&rsquo;m hiding from your observation.</p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "St George",
     audioUrl: "/music/2026/st-george.m4a",
     lyrics: (
@@ -191,102 +340,6 @@ const tracks: {
           Got so lost in between Native American scars.<br />
           Way out west of Texas,<br />
           tell me how did you earn yours.
-        </p>
-      </>
-    ),
-  },
-   {
-    title: "Dark Side",
-    audioUrl: "/music/2026/i-fell-in-love.m4a",
-    lyrics: (
-      <>
-        <p>
-          Did your heart die?<br />
-          I think you got it,<br />
-          pretty well figured out now.<br />
-          Don&rsquo;t need to spot you.<br />
-          Did you lose your mind?<br />
-          I think you got it, figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          Are you brain dead now? Did you listen to the audio?<br />
-          Was it rock n roll? Are you under control?<br />
-          Did you lose your mind? I think you got it, pretty well figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-        <p>Fell in love with the dark side.</p>
-        <p>
-          Did your light fade out? I think you figured it out.<br />
-          No need to run and hide, they won&rsquo;t come to find you.<br />
-          Did you lose control? I think you got it, figured out.
-        </p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-      </>
-    ),
-  },
-      {
-    title: "At the Table",
-    audioUrl: "/music/2026/at-the-table.m4a",
-    lyrics: (
-      <>
-        <p>
-          In the place I used to wait for you, at the table. At the table.<br />
-          In the place I used to hide from you, under the table.
-        </p>
-        <p>Needle falls right through, stare at the clock.</p>
-        <p>
-          In the place she used to fade away, staring through the cracks.<br />
-          Hey light, hey life.<br />
-          In the place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-        <p>In this place we used to wait all day, at the table. At the table.</p>
-        <p>In this place we used to hide away, under the table.</p>
-        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-        <p>
-          In the place she used to fade away, falling through the cracks.<br />
-          Hey life, hey light.<br />
-          In this place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Professor",
-    audioUrl: "/music/2026/professor.m4a",
-    lyrics: (
-      <>
-        <p>
-          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-          I&rsquo;m hiding from your observation.
-        </p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
-        </p>
-        <p>
-          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-          All that you got wrong.<br />
-          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
-        </p>
-        <p>I&rsquo;m hiding from your observation.</p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
         </p>
       </>
     ),
