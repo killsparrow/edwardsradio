@@ -49,7 +49,7 @@ const tracks: {
     ),
   },
   {
-    title: "At the Table",
+    title: "Hey Life",
     audioUrl: "/music/2026/at-the-table.m4a",
     lyrics: (
       <>
