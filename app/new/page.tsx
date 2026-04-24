@@ -18,6 +18,37 @@ const tracks: {
   lyrics?: React.ReactNode;
 }[] = [
   {
+    title: "Dreams",
+    audioUrl: "/music/2026/dreams.m4a",
+    lyrics: (
+      <>
+        <p>
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+        </p>
+        <p>
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
+        </p>
+        <p>
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+      </>
+    ),
+  },
+  {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
