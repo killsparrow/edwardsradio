@@ -105,44 +105,7 @@ const tracks: {
       </>
     ),
   },
-  {
-    title: "Dark Side",
-    audioUrl: "/music/2026/i-fell-in-love.m4a",
-    lyrics: (
-      <>
-        <p>
-          Did your heart die?<br />
-          I think you got it,<br />
-          pretty well figured out now.<br />
-          Don&rsquo;t need to spot you.<br />
-          Did you lose your mind?<br />
-          I think you got it, figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          Are you brain dead now? Did you listen to the audio?<br />
-          Was it rock n roll? Are you under control?<br />
-          Did you lose your mind? I think you got it, pretty well figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-        <p>Fell in love with the dark side.</p>
-        <p>
-          Did your light fade out? I think you figured it out.<br />
-          No need to run and hide, they won&rsquo;t come to find you.<br />
-          Did you lose control? I think you got it, figured out.
-        </p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-      </>
-    ),
-  },
-  {
+    {
     title: "Dreams",
     audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
@@ -206,6 +169,43 @@ const tracks: {
           Got so lost in between Native American scars.<br />
           Way out west of Texas,<br />
           tell me how did you earn yours.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
+    lyrics: (
+      <>
+        <p>
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
+        </p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
         </p>
       </>
     ),
