@@ -18,37 +18,6 @@ const tracks: {
   lyrics?: React.ReactNode;
 }[] = [
   {
-    title: "Dreams",
-    audioUrl: "/music/2026/dreams.m4a",
-    lyrics: (
-      <>
-        <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
-        </p>
-        <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
-        </p>
-        <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
-      </>
-    ),
-  },
-  {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -174,31 +143,69 @@ const tracks: {
     ),
   },
   {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
+    title: "Dreams",
+    audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
       <>
         <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
         </p>
         <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
         </p>
         <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
         </p>
         <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+      </>
+    ),
+  },
+    {
+    title: "St George",
+    audioUrl: "/music/2026/st-george.m4a",
+    lyrics: (
+      <>
+        <p>
+          I ain&rsquo;t a cowboy,<br />
+          ain&rsquo;t got a ten gallon hat.<br />
+          Don&rsquo;t wear rattlesnake boots under my jeans,<br />
+          but I lived in Texas, slept beneath lone stars,<br />
+          turned bluebonnets into eagle claws.<br />
+          If you live there you&rsquo;d know what I mean.<br />
+          South of San Marcos in New Braunfels I&rsquo;ve seen<br />
+          so many things that can&rsquo;t be unseen.
+        </p>
+        <p>
+          I ain&rsquo;t a cowboy,<br />
+          ain&rsquo;t got no horse,<br />
+          never filed for divorce.<br />
+          Somewhere way out west of Texas,<br />
+          laid my head in the gorges of old St. George&rsquo;s<br />
+          canyons and counted the stars.<br />
+          Got so lost in between Native American scars.<br />
+          Somewhere way out west of Texas,<br />
+          tell me how did you earn yours.
+        </p>
+        <p>
+          I was way out west of Texas,<br />
+          laid my head in the gorges of old St. George&rsquo;s<br />
+          canyons and counted the stars.<br />
+          Got so lost in between Native American scars.<br />
+          Way out west of Texas,<br />
+          tell me how did you earn yours.
         </p>
       </>
     ),
@@ -339,38 +346,31 @@ const tracks: {
     ),
   },
   {
-    title: "St George",
-    audioUrl: "/music/2026/st-george.m4a",
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
     lyrics: (
       <>
         <p>
-          I ain&rsquo;t a cowboy,<br />
-          ain&rsquo;t got a ten gallon hat.<br />
-          Don&rsquo;t wear rattlesnake boots under my jeans,<br />
-          but I lived in Texas, slept beneath lone stars,<br />
-          turned bluebonnets into eagle claws.<br />
-          If you live there you&rsquo;d know what I mean.<br />
-          South of San Marcos in New Braunfels I&rsquo;ve seen<br />
-          so many things that can&rsquo;t be unseen.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
         </p>
         <p>
-          I ain&rsquo;t a cowboy,<br />
-          ain&rsquo;t got no horse,<br />
-          never filed for divorce.<br />
-          Somewhere way out west of Texas,<br />
-          laid my head in the gorges of old St. George&rsquo;s<br />
-          canyons and counted the stars.<br />
-          Got so lost in between Native American scars.<br />
-          Somewhere way out west of Texas,<br />
-          tell me how did you earn yours.
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
         <p>
-          I was way out west of Texas,<br />
-          laid my head in the gorges of old St. George&rsquo;s<br />
-          canyons and counted the stars.<br />
-          Got so lost in between Native American scars.<br />
-          Way out west of Texas,<br />
-          tell me how did you earn yours.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
       </>
     ),
