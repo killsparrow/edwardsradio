@@ -47,8 +47,88 @@ const tracks: {
       </>
     ),
   },
-      {
-    title: "Dreams",
+        {
+    title: "Eternity at State",
+    audioUrl: "/music/2026/cold-and-dreary.m4a",
+    subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
+    lyrics: (
+      <>
+        <p>
+          Eyes open wide,<br />
+          Picture frame views of the east.<br />
+          You never stop to say hi, when you pass me by.<br />
+          Down this sea of brick late at night.
+        </p>
+        <p>
+          I wish to be alive, and in your eyes.<br />
+          Into each life some rain must fall.<br />
+          You were meant to pass through.<br />
+          But for each storm I am stuck here now.<br />
+          As I sit and watch time pass me by.
+        </p>
+        <p>
+          Slow when you open.<br />
+          Slow when you go in.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>
+          Eyes open wide.<br />
+          Picture frame views watch the world pass you by.<br />
+          Long after you&rsquo;re gone, I will be here for an eternity.<br />
+          I&rsquo;ll await your return,<br />
+          From the lanterns on state,<br />
+          On this granite I ride.<br />
+          Into each life some rain must fall.
+        </p>
+        <p>
+          Slow when you open.<br />
+          Slow when you go in.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>Oh be still.</p>
+        <p>
+          Slow when you go in.<br />
+          Slow when you open.<br />
+          I&rsquo;ll wait in the cold and dreary.
+        </p>
+        <p>
+          Eyes open wide.<br />
+          Into life some rain must fall.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+    {
+    title: "Fight it Alone",
     audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
       <>
@@ -79,35 +159,6 @@ const tracks: {
     ),
   },
 
-  {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-      </>
-    ),
-  },
   {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
@@ -167,57 +218,7 @@ const tracks: {
       </>
     ),
   },
-      {
-    title: "Eternity at State",
-    audioUrl: "/music/2026/cold-and-dreary.m4a",
-    subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
-    lyrics: (
-      <>
-        <p>
-          Eyes open wide,<br />
-          Picture frame views of the east.<br />
-          You never stop to say hi, when you pass me by.<br />
-          Down this sea of brick late at night.
-        </p>
-        <p>
-          I wish to be alive, and in your eyes.<br />
-          Into each life some rain must fall.<br />
-          You were meant to pass through.<br />
-          But for each storm I am stuck here now.<br />
-          As I sit and watch time pass me by.
-        </p>
-        <p>
-          Slow when you open.<br />
-          Slow when you go in.<br />
-          I&rsquo;ll wait in the cold and dreary.
-        </p>
-        <p>
-          Eyes open wide.<br />
-          Picture frame views watch the world pass you by.<br />
-          Long after you&rsquo;re gone, I will be here for an eternity.<br />
-          I&rsquo;ll await your return,<br />
-          From the lanterns on state,<br />
-          On this granite I ride.<br />
-          Into each life some rain must fall.
-        </p>
-        <p>
-          Slow when you open.<br />
-          Slow when you go in.<br />
-          I&rsquo;ll wait in the cold and dreary.
-        </p>
-        <p>Oh be still.</p>
-        <p>
-          Slow when you go in.<br />
-          Slow when you open.<br />
-          I&rsquo;ll wait in the cold and dreary.
-        </p>
-        <p>
-          Eyes open wide.<br />
-          Into life some rain must fall.
-        </p>
-      </>
-    ),
-  },
+
   {
     title: "Dark Side",
     audioUrl: "/music/2026/i-fell-in-love.m4a",
