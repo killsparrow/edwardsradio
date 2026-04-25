@@ -47,37 +47,8 @@ const tracks: {
       </>
     ),
   },
-      
-  {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-      </>
-    ),
-  },
-    {
+
+   {
     title: "Fight it Alone",
     audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
@@ -109,6 +80,37 @@ const tracks: {
     ),
   },
 
+      
+  {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+   
   {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
@@ -192,6 +194,69 @@ const tracks: {
       </>
     ),
   },
+
+  {
+    title: "Carry on Dawn",
+    audioUrl: "/music/2026/carry-on-dawn.m4a",
+    lyrics: (
+      <>
+        <p>
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+        </p>
+        <p>
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
+        </p>
+        <p>
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+      </>
+    ),
+  },
+   {
+    title: "Professor",
+    audioUrl: "/music/2026/professor.m4a",
+    lyrics: (
+      <>
+        <p>
+          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+          I&rsquo;m hiding from your observation.
+        </p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+        <p>
+          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+          All that you got wrong.<br />
+          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+        </p>
+        <p>I&rsquo;m hiding from your observation.</p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+      </>
+    ),
+  },
       {
     title: "Hey Life",
     audioUrl: "/music/2026/at-the-table.m4a",
@@ -259,37 +324,7 @@ const tracks: {
     ),
   },
 
-    {
-    title: "Professor",
-    audioUrl: "/music/2026/professor.m4a",
-    lyrics: (
-      <>
-        <p>
-          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-          I&rsquo;m hiding from your observation.
-        </p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
-        </p>
-        <p>
-          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-          All that you got wrong.<br />
-          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
-        </p>
-        <p>I&rsquo;m hiding from your observation.</p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
-        </p>
-      </>
-    ),
-  },
+   
 
     {
     title: "St George",
