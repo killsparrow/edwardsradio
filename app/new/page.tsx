@@ -54,28 +54,33 @@ const tracks: {
     lyrics: (
       <>
         <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+          Ain&rsquo;t got no heart left<br />
+          inside of your soul.
         </p>
         <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+          Ain&rsquo;t got no hope left inside your soul.<br />
+          Ain&rsquo;t got no dreams left where you can go.<br />
+          You climbed your way to the top,<br />
+          but it&rsquo;s not what you thought you were fighting for.<br />
+          You put in the work, but it&rsquo;s not what you hoped all your dreams were for.
+        </p>
+        <p>Line &rsquo;em up and let &rsquo;em hit the floor.</p>
+        <p>
+          When your heart lets go,<br />
+          everyone&rsquo;s there to let you know.<br />
+          You don&rsquo;t have what it takes,<br />
+          you&rsquo;ll have to fight it on your own.
         </p>
         <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
+          When your heart lets go,<br />
+          they&rsquo;re all there to let you know.<br />
+          You won&rsquo;t have what it takes,<br />
+          you&rsquo;ll have to fight it all alone.
         </p>
         <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+          You have no heart left inside of your soul.<br />
+          You have no dreams left inside your soul.
         </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
       </>
     ),
   },
