@@ -109,44 +109,6 @@ const tracks: {
   },
 
   {
-    title: "Dark Side",
-    audioUrl: "/music/2026/i-fell-in-love.m4a",
-    lyrics: (
-      <>
-        <p>
-          Did your heart die?<br />
-          I think you got it,<br />
-          pretty well figured out now.<br />
-          Don&rsquo;t need to spot you.<br />
-          Did you lose your mind?<br />
-          I think you got it, figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          Are you brain dead now? Did you listen to the audio?<br />
-          Was it rock n roll? Are you under control?<br />
-          Did you lose your mind? I think you got it, pretty well figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-        <p>Fell in love with the dark side.</p>
-        <p>
-          Did your light fade out? I think you figured it out.<br />
-          No need to run and hide, they won&rsquo;t come to find you.<br />
-          Did you lose control? I think you got it, figured out.
-        </p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-      </>
-    ),
-  },
-
-  {
     title: "Fight it Alone",
     audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
@@ -217,31 +179,38 @@ const tracks: {
   },
 
   {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
     lyrics: (
       <>
         <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
         </p>
         <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
         </p>
       </>
     ),
@@ -299,6 +268,38 @@ const tracks: {
     ),
   },
 
+  {
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+      </>
+    ),
+  },
+
+  /*
   {
     title: "Professor",
     audioUrl: "/music/2026/professor.m4a",
@@ -362,6 +363,7 @@ const tracks: {
       </>
     ),
   },
+  */
 
 
   //  {
