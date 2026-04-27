@@ -18,37 +18,6 @@ const tracks: {
   lyrics?: React.ReactNode;
 }[] = [
   {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-      </>
-    ),
-  },
-
-  {
     title: "Fight it Alone",
     audioUrl: "/music/2026/dreams.m4a",
     lyrics: (
@@ -86,6 +55,53 @@ const tracks: {
   },
 
   {
+    title: "Your Own Light",
+    audioUrl: "/music/2026/your-own-light.m4a",
+    lyrics: (
+      <>
+        <p>
+          Hold me in your arms.<br />
+          Try to love yourself better.<br />
+          Try to love yourself even when it doesn&rsquo;t feel right.
+        </p>
+        <p>
+          Maybe your tears<br />
+          will turn into stars.<br />
+          Maybe your fears<br />
+          will win you awards.
+        </p>
+        <p>
+          Whose love did you finally find?<br />
+          You look so good in your own light.<br />
+          Whose love did you finally find?<br />
+          You look so good in your own life.
+        </p>
+        <p>
+          Hold me in your heart.<br />
+          Try to love me better.<br />
+          Try to love me even when I&rsquo;m broken inside.
+        </p>
+        <p>
+          Maybe your tears<br />
+          will turn into stars.<br />
+          Maybe your fears<br />
+          will win you awards.
+        </p>
+        <p>
+          Whose love did you finally find?<br />
+          You look so good in your own light.<br />
+          Whose love did you finally find?<br />
+          You look so good in your own life.
+        </p>
+        <p>
+          Hold me in your arms.<br />
+          Try to love yourself better.
+        </p>
+      </>
+    ),
+  },
+
+  {
     title: "Underwater",
     audioUrl: "/music/2026/underwater.m4a",
     lyrics: (
@@ -111,6 +127,38 @@ const tracks: {
           Been underwater for too long to fake ends.<br />
           Do you remember the parts of me that washed away with time?
         </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Billboard",
+    audioUrl: "/music/2026/billboard.m4a",
+    lyrics: (
+      <>
+        <p>
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+        </p>
+        <p>
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
+        </p>
+        <p>
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
       </>
     ),
   },
@@ -163,38 +211,6 @@ const tracks: {
           Eyes open wide.<br />
           Into life some rain must fall.
         </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Billboard",
-    audioUrl: "/music/2026/billboard.m4a",
-    lyrics: (
-      <>
-        <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
-        </p>
-        <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
-        </p>
-        <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
       </>
     ),
   },
@@ -299,6 +315,37 @@ const tracks: {
           Got so lost in between Native American scars.<br />
           Way out west of Texas,<br />
           tell me how did you earn yours.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
+    lyrics: (
+      <>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
+        </p>
+        <p>
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
+        </p>
+        <p>
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
       </>
     ),
