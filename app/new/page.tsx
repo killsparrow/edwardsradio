@@ -134,6 +134,35 @@ const tracks: {
   },
   
   {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
+    lyrics: (
+      <>
+        <p>
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
+        </p>
+        <p>Needle falls right through, stare at the clock.</p>
+        <p>
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+        <p>
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+      </>
+    ),
+  },
+
+  {
     title: "Underwater",
     audioUrl: "/music/2026/underwater.m4a",
     lyrics: (
@@ -158,6 +187,44 @@ const tracks: {
         <p>
           Been underwater for too long to fake ends.<br />
           Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Dark Side",
+    audioUrl: "/music/2026/i-fell-in-love.m4a",
+    lyrics: (
+      <>
+        <p>
+          Did your heart die?<br />
+          I think you got it,<br />
+          pretty well figured out now.<br />
+          Don&rsquo;t need to spot you.<br />
+          Did you lose your mind?<br />
+          I think you got it, figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          Are you brain dead now? Did you listen to the audio?<br />
+          Was it rock n roll? Are you under control?<br />
+          Did you lose your mind? I think you got it, pretty well figured out.
+        </p>
+        <p>I think you got it, figured out.</p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
+        </p>
+        <p>Fell in love with the dark side.</p>
+        <p>
+          Did your light fade out? I think you figured it out.<br />
+          No need to run and hide, they won&rsquo;t come to find you.<br />
+          Did you lose control? I think you got it, figured out.
+        </p>
+        <p>
+          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
+          I never listened to what they told me to do, and I fell in love with the dark side.
         </p>
       </>
     ),
@@ -210,73 +277,6 @@ const tracks: {
         <p>
           Eyes open wide.<br />
           Into life some rain must fall.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Hey Life",
-    audioUrl: "/music/2026/at-the-table.m4a",
-    lyrics: (
-      <>
-        <p>
-          In the place I used to wait for you, at the table. At the table.<br />
-          In the place I used to hide from you, under the table.
-        </p>
-        <p>Needle falls right through, stare at the clock.</p>
-        <p>
-          In the place she used to fade away, staring through the cracks.<br />
-          Hey light, hey life.<br />
-          In the place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-        <p>In this place we used to wait all day, at the table. At the table.</p>
-        <p>In this place we used to hide away, under the table.</p>
-        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-        <p>
-          In the place she used to fade away, falling through the cracks.<br />
-          Hey life, hey light.<br />
-          In this place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    title: "Dark Side",
-    audioUrl: "/music/2026/i-fell-in-love.m4a",
-    lyrics: (
-      <>
-        <p>
-          Did your heart die?<br />
-          I think you got it,<br />
-          pretty well figured out now.<br />
-          Don&rsquo;t need to spot you.<br />
-          Did you lose your mind?<br />
-          I think you got it, figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          Are you brain dead now? Did you listen to the audio?<br />
-          Was it rock n roll? Are you under control?<br />
-          Did you lose your mind? I think you got it, pretty well figured out.
-        </p>
-        <p>I think you got it, figured out.</p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
-        </p>
-        <p>Fell in love with the dark side.</p>
-        <p>
-          Did your light fade out? I think you figured it out.<br />
-          No need to run and hide, they won&rsquo;t come to find you.<br />
-          Did you lose control? I think you got it, figured out.
-        </p>
-        <p>
-          My rope ladder hangs from a door in the sky, I was lost inside since I was a child.<br />
-          I never listened to what they told me to do, and I fell in love with the dark side.
         </p>
       </>
     ),
