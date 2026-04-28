@@ -101,6 +101,16 @@ const tracks: {
     ),
   },
 
+  {
+    title: "Rescue for the Heartache",
+    audioUrl: "/music/2026/RFTHA-master.m4a",
+  },
+
+  {
+    title: "Wilderness",
+    audioUrl: "/music/2026/wilderness.m4a",
+  },
+
     {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
@@ -133,6 +143,7 @@ const tracks: {
     ),
   },
   
+  /*
   {
     title: "At the Table",
     audioUrl: "/music/2026/at-the-table.m4a",
@@ -161,6 +172,7 @@ const tracks: {
       </>
     ),
   },
+  */
 
   {
     title: "Underwater",
@@ -231,6 +243,11 @@ const tracks: {
   },
 
   {
+    title: "No One",
+    audioUrl: "/music/2026/noone.m4a",
+  },
+
+  {
     title: "Eternity at State",
     audioUrl: "/music/2026/cold-and-dreary.m4a",
     subtitle: "Inspired by Henry Wadsworth Longfellow, where his likeness sits in Longfellow Square, Portland, Maine. Lyrics reference his poem The Rainy Day (1841).",
@@ -282,6 +299,7 @@ const tracks: {
     ),
   },
 
+  /*
   {
     title: "St George",
     audioUrl: "/music/2026/st-george.m4a",
@@ -319,6 +337,7 @@ const tracks: {
       </>
     ),
   },
+  */
 
   {
     title: "Oliver",
