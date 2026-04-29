@@ -225,34 +225,41 @@ const tracks: {
     ),
   },
   
-  {
-    title: "At the Table",
-    audioUrl: "/music/2026/at-the-table.m4a",
-    lyrics: (
-      <>
-        <p>
-          In the place I used to wait for you, at the table. At the table.<br />
-          In the place I used to hide from you, under the table.
-        </p>
-        <p>Needle falls right through, stare at the clock.</p>
-        <p>
-          In the place she used to fade away, staring through the cracks.<br />
-          Hey light, hey life.<br />
-          In the place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-        <p>In this place we used to wait all day, at the table. At the table.</p>
-        <p>In this place we used to hide away, under the table.</p>
-        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-        <p>
-          In the place she used to fade away, falling through the cracks.<br />
-          Hey life, hey light.<br />
-          In this place she used to waste away, falling through the cracks.<br />
-          Hey light, hey life.
-        </p>
-      </>
-    ),
+    {
+    title: "Rescue for the Heartache",
+    audioUrl: "/music/2026/RFTHA-master.m4a",
   },
+
+
+
+  // {
+  //   title: "At the Table",
+  //   audioUrl: "/music/2026/at-the-table.m4a",
+  //   lyrics: (
+  //     <>
+  //       <p>
+  //         In the place I used to wait for you, at the table. At the table.<br />
+  //         In the place I used to hide from you, under the table.
+  //       </p>
+  //       <p>Needle falls right through, stare at the clock.</p>
+  //       <p>
+  //         In the place she used to fade away, staring through the cracks.<br />
+  //         Hey light, hey life.<br />
+  //         In the place she used to waste away, falling through the cracks.<br />
+  //         Hey light, hey life.
+  //       </p>
+  //       <p>In this place we used to wait all day, at the table. At the table.</p>
+  //       <p>In this place we used to hide away, under the table.</p>
+  //       <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+  //       <p>
+  //         In the place she used to fade away, falling through the cracks.<br />
+  //         Hey life, hey light.<br />
+  //         In this place she used to waste away, falling through the cracks.<br />
+  //         Hey light, hey life.
+  //       </p>
+  //     </>
+  //   ),
+  // },
 
   {
     title: "Dark Side",
@@ -292,10 +299,6 @@ const tracks: {
     ),
   },
 
-  {
-    title: "No One",
-    audioUrl: "/music/2026/noone.m4a",
-  },
 
   {
     title: "Eternity at State",
@@ -349,42 +352,38 @@ const tracks: {
     ),
   },
 
-  {
-    title: "Rescue for the Heartache",
-    audioUrl: "/music/2026/RFTHA-master.m4a",
-  },
 
-  {
-    title: "Carry on Dawn",
-    audioUrl: "/music/2026/carry-on-dawn.m4a",
-    lyrics: (
-      <>
-        <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
-        </p>
-        <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
-        </p>
-        <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
-        </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
-      </>
-    ),
-  },
+  // {
+  //   title: "Carry on Dawn",
+  //   audioUrl: "/music/2026/carry-on-dawn.m4a",
+  //   lyrics: (
+  //     <>
+  //       <p>
+  //         Dreams I hold, I hope I never let go of.<br />
+  //         It looks like rain at night only unfolds.<br />
+  //         Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+  //       </p>
+  //       <p>
+  //         I know, I know, the sky is taken away.<br />
+  //         I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+  //         And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+  //       </p>
+  //       <p>
+  //         Message paid for by someone we don&rsquo;t know.<br />
+  //         It looks like light at night, but it doesn&rsquo;t let go.
+  //       </p>
+  //       <p>
+  //         It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+  //         I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+  //       </p>
+  //       <p>
+  //         I know, I know, the sky is taken away.<br />
+  //         I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+  //       </p>
+  //       <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+  //     </>
+  //   ),
+  // },
 
   {
     title: "St George",
@@ -424,37 +423,42 @@ const tracks: {
     ),
   },
 
+  // {
+  //   title: "Professor",
+  //   audioUrl: "/music/2026/professor.m4a",
+  //   lyrics: (
+  //     <>
+  //       <p>
+  //         Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+  //         And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+  //         I&rsquo;m hiding from your observation.
+  //       </p>
+  //       <p>
+  //         And so far I haven&rsquo;t caught on yet.<br />
+  //         I thought by now that I&rsquo;d be so much stronger.<br />
+  //         And so far I haven&rsquo;t caught on yet.<br />
+  //         I thought by now that I&rsquo;d be so much stronger than I am.
+  //       </p>
+  //       <p>
+  //         And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+  //         All that you got wrong.<br />
+  //         And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+  //       </p>
+  //       <p>I&rsquo;m hiding from your observation.</p>
+  //       <p>
+  //         And so far I haven&rsquo;t caught on yet.<br />
+  //         I thought by now that I&rsquo;d be so much stronger.<br />
+  //         And so far I haven&rsquo;t caught on yet.<br />
+  //         I thought by now that I&rsquo;d be so much stronger than I am.
+  //       </p>
+  //     </>
+  //   ),
+  // },
   {
-    title: "Professor",
-    audioUrl: "/music/2026/professor.m4a",
-    lyrics: (
-      <>
-        <p>
-          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-          I&rsquo;m hiding from your observation.
-        </p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
-        </p>
-        <p>
-          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-          All that you got wrong.<br />
-          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
-        </p>
-        <p>I&rsquo;m hiding from your observation.</p>
-        <p>
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger.<br />
-          And so far I haven&rsquo;t caught on yet.<br />
-          I thought by now that I&rsquo;d be so much stronger than I am.
-        </p>
-      </>
-    ),
+    title: "No One",
+    audioUrl: "/music/2026/noone.m4a",
   },
+
 
   {
     title: "Oliver",
