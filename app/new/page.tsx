@@ -102,16 +102,46 @@ const tracks: {
   },
 
   {
-    title: "Rescue for the Heartache",
-    audioUrl: "/music/2026/RFTHA-master.m4a",
-  },
-
-  {
     title: "Wilderness",
     audioUrl: "/music/2026/wilderness.m4a",
   },
 
-    {
+  {
+    title: "Underwater",
+    audioUrl: "/music/2026/underwater.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
+          I&rsquo;m just a person on your black t-shirt.<br />
+          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
+          The fabric beneath me thins, spin cycle takes me again.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+        <p>
+          I&rsquo;m just a person on your black t-shirt.<br />
+          If given the choice I&rsquo;d join you in your world.<br />
+          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
+          Fade away with me in this machine.<br />
+          Fade away with me in this machine.
+        </p>
+        <p>
+          Been underwater for too long to fake ends.<br />
+          Do you remember the parts of me that washed away with time?
+        </p>
+      </>
+    ),
+  },
+
+  {
+    title: "Warpath",
+    audioUrl: "/music/2026/warpath-master.m4a",
+  },
+
+  {
     title: "Billboard",
     audioUrl: "/music/2026/billboard.m4a",
     lyrics: (
@@ -143,7 +173,6 @@ const tracks: {
     ),
   },
   
-  /*
   {
     title: "At the Table",
     audioUrl: "/music/2026/at-the-table.m4a",
@@ -168,37 +197,6 @@ const tracks: {
           Hey life, hey light.<br />
           In this place she used to waste away, falling through the cracks.<br />
           Hey light, hey life.
-        </p>
-      </>
-    ),
-  },
-  */
-
-  {
-    title: "Underwater",
-    audioUrl: "/music/2026/underwater.m4a",
-    lyrics: (
-      <>
-        <p>
-          I don&rsquo;t mind, I&rsquo;ll be yours anytime that you want me to be there for you.<br />
-          I&rsquo;m just a person on your black t-shirt.<br />
-          That&rsquo;s all I&rsquo;ll ever be, it&rsquo;s all I ever was.<br />
-          The fabric beneath me thins, spin cycle takes me again.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
-        </p>
-        <p>
-          I&rsquo;m just a person on your black t-shirt.<br />
-          If given the choice I&rsquo;d join you in your world.<br />
-          I&rsquo;d meet you where you live, I&rsquo;d hold you in real life.<br />
-          Fade away with me in this machine.<br />
-          Fade away with me in this machine.
-        </p>
-        <p>
-          Been underwater for too long to fake ends.<br />
-          Do you remember the parts of me that washed away with time?
         </p>
       </>
     ),
@@ -299,7 +297,11 @@ const tracks: {
     ),
   },
 
-  /*
+  {
+    title: "Rescue for the Heartache",
+    audioUrl: "/music/2026/RFTHA-master.m4a",
+  },
+
   {
     title: "St George",
     audioUrl: "/music/2026/st-george.m4a",
@@ -337,7 +339,6 @@ const tracks: {
       </>
     ),
   },
-  */
 
   {
     title: "Oliver",
