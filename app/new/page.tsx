@@ -139,6 +139,58 @@ const tracks: {
   {
     title: "Warpath",
     audioUrl: "/music/2026/warpath-master.m4a",
+    lyrics: (
+      <>
+        <p>
+          Your eyes the color of the dark skies,<br />
+          waiting for the sun to rise.<br />
+          Don&rsquo;t know right from wrong, how to smile<br />
+          in a room where you know that you don&rsquo;t belong.
+        </p>
+        <p>
+          They say that pure gold is the killer of the moon child.<br />
+          They say it was their heart, not yours, right?<br />
+          I know you know me well enough to know I just cave in<br />
+          when you walk through the door.
+        </p>
+        <p>
+          Your hands scaly as the snake skin suit you&rsquo;re wearing,<br />
+          telling me what to do, where to be, where to go.<br />
+          Why&rsquo;d it take so long for me to become someone you could steal from?
+        </p>
+        <p>
+          I know you know me well enough to know I just cave in<br />
+          when you walk through the door.<br />
+          This is the last fall in my heart,<br />
+          so man, I wish you all as well,<br />
+          standing on the outside watching the rain fall in.
+        </p>
+        <p>
+          You&rsquo;re on a warpath to your own ghost.<br />
+          You&rsquo;re on a warpath to your own ghost.
+        </p>
+        <p>
+          Everyone&rsquo;s alive for the first time,<br />
+          somehow convinced that it&rsquo;s not their last ride.<br />
+          Who pulled the wool over their eyes? Over their eyes.
+        </p>
+        <p>
+          I know you know me well enough to know I just cave in<br />
+          when you walk through the door.<br />
+          This is the last fall in my heart,<br />
+          so man, I wish you all as well,<br />
+          standing on the outside watching the rain fall in.
+        </p>
+        <p>
+          You&rsquo;re on a warpath to your own ghost.<br />
+          You&rsquo;re on a warpath to your own ghost.
+        </p>
+        <p>
+          Everyone&rsquo;s alive for the first time,<br />
+          somehow convinced that it&rsquo;s not their last ride.
+        </p>
+      </>
+    ),
   },
 
   {
@@ -303,6 +355,38 @@ const tracks: {
   },
 
   {
+    title: "Carry on Dawn",
+    audioUrl: "/music/2026/carry-on-dawn.m4a",
+    lyrics: (
+      <>
+        <p>
+          Dreams I hold, I hope I never let go of.<br />
+          It looks like rain at night only unfolds.<br />
+          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
+          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+        </p>
+        <p>
+          Message paid for by someone we don&rsquo;t know.<br />
+          It looks like light at night, but it doesn&rsquo;t let go.
+        </p>
+        <p>
+          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
+          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+        </p>
+        <p>
+          I know, I know, the sky is taken away.<br />
+          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
+        </p>
+        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
+      </>
+    ),
+  },
+
+  {
     title: "St George",
     audioUrl: "/music/2026/st-george.m4a",
     lyrics: (
@@ -341,38 +425,6 @@ const tracks: {
   },
 
   {
-    title: "Oliver",
-    audioUrl: "/music/2026/at-the-bridge.m4a",
-    lyrics: (
-      <>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
-          Or would you see the lines and just walk away?<br />
-          Would you see the lines and just walk away?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-        <p>
-          Oliver standing at the bridge, waiting for you to return to this place.<br />
-          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
-          Would you hold me in your arms?<br />
-          Would you still hold me in your arms?
-        </p>
-        <p>
-          I see no way to save you now.<br />
-          From a world that keeps on leading you down, the wrong road the wrong way.<br />
-          There&rsquo;s no way out.
-        </p>
-      </>
-    ),
-  },
-
-  /*
-  {
     title: "Professor",
     audioUrl: "/music/2026/professor.m4a",
     lyrics: (
@@ -405,37 +457,35 @@ const tracks: {
   },
 
   {
-    title: "Carry on Dawn",
-    audioUrl: "/music/2026/carry-on-dawn.m4a",
+    title: "Oliver",
+    audioUrl: "/music/2026/at-the-bridge.m4a",
     lyrics: (
       <>
         <p>
-          Dreams I hold, I hope I never let go of.<br />
-          It looks like rain at night only unfolds.<br />
-          Orange groves and lights exposed, don&rsquo;t let&nbsp;go.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 100 years, if you return to the place would you still recognize my face?<br />
+          Or would you see the lines and just walk away?<br />
+          Would you see the lines and just walk away?
         </p>
         <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.<br />
-          And I don&rsquo;t know what&rsquo;s worse, that it was paid for, or that it works.
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
         <p>
-          Message paid for by someone we don&rsquo;t know.<br />
-          It looks like light at night, but it doesn&rsquo;t let go.
+          Oliver standing at the bridge, waiting for you to return to this place.<br />
+          I know it&rsquo;s been 1000 years, if you return to the place would you still recognize my face?<br />
+          Would you hold me in your arms?<br />
+          Would you still hold me in your arms?
         </p>
         <p>
-          It&rsquo;s cursed, they say it&rsquo;s cursed.<br />
-          I don&rsquo;t know if it&rsquo;s real, maybe it&rsquo;s worse
+          I see no way to save you now.<br />
+          From a world that keeps on leading you down, the wrong road the wrong way.<br />
+          There&rsquo;s no way out.
         </p>
-        <p>
-          I know, I know, the sky is taken away.<br />
-          I know, I know, I&rsquo;m to blame. I&rsquo;m to blame.
-        </p>
-        <p>And I don&rsquo;t know what&rsquo;s worse, that it was paid for or that it works.</p>
       </>
     ),
   },
-  */
 
 
   //  {
