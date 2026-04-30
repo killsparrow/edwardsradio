@@ -592,9 +592,32 @@ const tracks: {
     
 ];
 
+/* ── display order — rearrange this list to reorder the album ── */
+
+const trackOrder: string[] = [
+  "Fight it Alone",
+  "Your Own Light",
+  "Rescue for the Heartache",
+  "Wilderness",
+  "Underwater",
+  "St George",
+  "Warpath",
+  "Billboard",
+  "Dark Side",
+  "Eternity at State",
+  "No One",
+  "Oliver",
+];
+
+const orderedTracks = trackOrder.map((title) => {
+  const t = tracks.find((track) => track.title === title);
+  if (!t) throw new Error(`trackOrder: no track found with title "${title}"`);
+  return t;
+});
+
 /* ── derived song list for audio player ── */
 
-const underwaterSongs: Song[] = tracks.map((t, i) => ({
+const underwaterSongs: Song[] = orderedTracks.map((t, i) => ({
   id: i + 1,
   title: t.title.toLowerCase(),
   artist: "Edwards Radio",
@@ -818,7 +841,7 @@ export default function Underwater() {
             <section aria-label="Tracklist and lyrics" className="max-w-3xl mx-auto py-4">
               <h2 className="sr-only">Tracklist</h2>
               <ol className="list-none m-0 p-0 space-y-0" role="list">
-                {tracks.map((track, index) => {
+                {orderedTracks.map((track, index) => {
                   const isActive = currentSongIndex === index;
                   return (
                     <li key={index} className="border-t border-[#494a5d]/50">
