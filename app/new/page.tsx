@@ -230,6 +230,10 @@ const tracks: {
     audioUrl: "/music/2026/RFTHA-master.m4a",
   },
 
+     {
+    title: "Batten the Hatches",
+    audioUrl: "/music/2026/BTH-master.m4a",
+  },
 
 
   // {
@@ -597,16 +601,17 @@ const tracks: {
 const trackOrder: string[] = [
   "Fight it Alone",
   "Your Own Light",
-  "Rescue for the Heartache",
   "Wilderness",
+  "Rescue for the Heartache",
   "Underwater",
-  "St George",
   "Warpath",
+  "Batten the Hatches",
   "Billboard",
+  "Oliver",
   "Dark Side",
   "Eternity at State",
   "No One",
-  "Oliver",
+  "St George",
 ];
 
 const orderedTracks = trackOrder.map((title) => {
