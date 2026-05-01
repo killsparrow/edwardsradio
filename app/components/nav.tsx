@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { GiRadioTower } from 'react-icons/gi';
 
 const LINKS = [
@@ -11,8 +12,11 @@ const LINKS = [
   { href: '/#contact', label: 'Contact' },
 ];
 
+const HIDE_ON = ['/wilderness'];
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const body = document.body;
@@ -31,6 +35,8 @@ export default function Nav() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
+
+  if (HIDE_ON.includes(pathname)) return null;
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#24252d]/80 backdrop-blur-md border-b border-[#494a5d]/30">

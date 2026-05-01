@@ -7,10 +7,10 @@ import { FaPlay, FaPause, FaStepForward, FaStepBackward } from 'react-icons/fa';
 import { useAudio } from '../providers/AudioProvider';
 
 // Pages that render the full MusicPlayer — hide mini player there
-const FULL_PLAYER_PAGES = ['/new', '/player'];
+const FULL_PLAYER_PAGES = ['/new', '/player', '/wilderness'];
 
 export default function MiniPlayer() {
-  const { songs, currentSongIndex, isPlaying, audioRef, togglePlayPause, next, previous, seekTo } = useAudio();
+  const { songs, currentSongIndex, isPlaying, hasStarted, audioRef, togglePlayPause, next, previous, seekTo } = useAudio();
   const pathname = usePathname();
 
   const progressRef = useRef<HTMLInputElement>(null);
@@ -59,8 +59,8 @@ export default function MiniPlayer() {
     };
   }, [audioRef, updateProgress]);
 
-  // Don't render if no songs loaded or on pages with full player
-  if (songs.length === 0 || !currentSong) return null;
+  // Don't render if no songs loaded, never started, or on pages with full player
+  if (songs.length === 0 || !currentSong || !hasStarted) return null;
   if (FULL_PLAYER_PAGES.includes(pathname)) return null;
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {

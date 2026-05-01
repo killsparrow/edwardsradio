@@ -7,6 +7,7 @@ interface AudioContextType {
   songs: Song[];
   currentSongIndex: number;
   isPlaying: boolean;
+  hasStarted: boolean;
   duration: number;
   volume: number;
   isMuted: boolean;
@@ -33,6 +34,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   const [songs, setSongs] = useState<Song[]>([]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
@@ -46,6 +48,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
       if (prev.length === newSongs.length && prev.every((s, i) => s.id === newSongs[i].id)) {
         return prev;
       }
+      setHasStarted(false);
       return newSongs;
     });
   }, []);
@@ -83,6 +86,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
     } else {
       audio.play().catch(() => setIsPlaying(false));
       setIsPlaying(true);
+      setHasStarted(true);
     }
   }, [isPlaying, currentSong]);
 
@@ -90,6 +94,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
     if (songs.length === 0) return;
     setCurrentSongIndex(prev => (prev + 1) % songs.length);
     setIsPlaying(true);
+    setHasStarted(true);
     setTimeout(() => audioRef.current?.play(), 100);
   }, [songs.length]);
 
@@ -97,6 +102,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
     if (songs.length === 0) return;
     setCurrentSongIndex(prev => (prev - 1 + songs.length) % songs.length);
     setIsPlaying(true);
+    setHasStarted(true);
     setTimeout(() => audioRef.current?.play(), 100);
   }, [songs.length]);
 
@@ -107,6 +113,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
   const selectSong = useCallback((index: number) => {
     setCurrentSongIndex(index);
     setIsPlaying(true);
+    setHasStarted(true);
     setTimeout(() => audioRef.current?.play(), 100);
   }, []);
 
@@ -130,6 +137,7 @@ export default function AudioProvider({ children }: { children: ReactNode }) {
       songs,
       currentSongIndex,
       isPlaying,
+      hasStarted,
       duration,
       volume,
       isMuted,

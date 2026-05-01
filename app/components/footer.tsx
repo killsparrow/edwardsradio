@@ -2,9 +2,15 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaSpotify, FaInstagram, FaApple } from 'react-icons/fa';
 
+const HIDE_ON = ['/wilderness'];
+
 export default function Footer() {
+  const pathname = usePathname();
+  if (HIDE_ON.includes(pathname)) return null;
+
   return (
     <footer className="fixed bottom-0 inset-x-0 z-50 bg-[#24252d]/80 backdrop-blur-md border-t border-[#494a5d]/30">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">

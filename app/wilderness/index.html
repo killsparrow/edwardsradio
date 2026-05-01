@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilderness — Edwards Radio</title>
+<link rel="stylesheet" href="https://use.typekit.net/fes0wtv.css">
+<style>
+  :root {
+    --ink: #0a0a0c;
+    --paper: #ede6d3;
+    --bone: #d8cdb1;
+    --bruise: #1a1d3a;
+    --ember: #b8451f;
+    --gold: #c9a24a;
+    --rule: 1px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(rgba(10, 10, 12, 0.10) 1.2px, transparent 1.4px),
+      radial-gradient(rgba(10, 10, 12, 0.06) 1px, transparent 1.2px);
+    background-size: 6px 6px, 4px 4px;
+    background-position: 0 0, 3px 3px;
+    color: var(--ink);
+    font-family: "henriette", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .frame {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: var(--rule) solid var(--ink);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+  }
+  header .left   { text-align: left; }
+  header .center { text-align: center; font-weight: 700; }
+  header .right  { text-align: right; }
+
+  /* ── HERO ─────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: var(--rule) solid var(--ink);
+  }
+
+  .hero-text {
+    padding: 64px 48px;
+    border-right: var(--rule) solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 560px;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .services {
+    display: inline-flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .services a {
+    color: var(--ink);
+    display: inline-flex;
+    transition: color 0.18s ease;
+  }
+
+  .services a:hover { color: var(--ember); }
+
+  .services svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    display: block;
+  }
+
+  .title-block { padding: 48px 0; }
+
+  .title-block .by {
+    font-family: "henriette", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--bruise);
+    margin-top: 8px;
+  }
+
+  h1 {
+    font-family: "henriette", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(60px, 9vw, 140px);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-left: -0.25em;
+  }
+
+  h1 .accent {
+    color: var(--ember);
+  }
+
+  .lede {
+    font-family: "henriette", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--bruise);
+    max-width: 38ch;
+  }
+
+  .hero-art {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .hero-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    mix-blend-mode: multiply;
+    filter: contrast(1.05) saturate(1.1);
+  }
+
+  .hero-art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, transparent 0%, rgba(10,10,12,0.35) 100%),
+      linear-gradient(180deg, transparent 60%, rgba(10,10,12,0.4));
+    pointer-events: none;
+  }
+
+  .catalog-tag {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: var(--paper);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  .catalog-tag::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--paper);
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  /* ── TRACKLIST ────────────────────────────── */
+  .tracks-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: var(--rule) solid var(--ink);
+  }
+
+  .section-label {
+    padding: 48px;
+    border-right: var(--rule) solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 560px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .label-tag {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .label-headline {
+    font-family: "henriette", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 1.05;
+    color: var(--paper);
+    margin-bottom: 14px;
+  }
+
+  .label-description {
+    font-family: "henriette", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(237, 230, 211, 0.6);
+    max-width: 38ch;
+  }
+
+  .label-description a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .label-description a:hover {
+    color: var(--ember);
+    border-color: var(--ember);
+  }
+
+  .label-foot {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--bone);
+    border-top: 1px solid rgba(237, 230, 211, 0.18);
+    padding-top: 14px;
+  }
+
+  .aiaps-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+  }
+
+  .aiaps-link:hover { color: var(--gold); }
+
+  .aiaps-link .aiaps-name {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  .tracklist {
+    list-style: none;
+    counter-reset: track;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tracklist li {
+    counter-increment: track;
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: baseline;
+    padding: 22px 48px;
+    border-bottom: 1px solid var(--ink);
+    transition: background 0.25s ease;
+    cursor: pointer;
+  }
+
+  .tracklist li:last-child { border-bottom: none; }
+
+  .tracklist li:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .tracklist li:hover .track-time { color: var(--gold); }
+
+  .tracklist li::before {
+    content: counter(track, decimal-leading-zero);
+    font-family: "henriette", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+
+  .track-name {
+    font-family: "henriette", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+  }
+
+  .track-time {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    color: var(--bruise);
+  }
+
+  /* ── DETAILS PANEL ────────────────────────── */
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: var(--rule) solid var(--ink);
+  }
+
+  .detail-cell {
+    padding: 40px;
+    border-right: var(--rule) solid var(--ink);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .detail-cell:last-child { border-right: none; }
+
+  .detail-cell.dark {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .detail-cell.image {
+    padding: 0;
+    background: var(--ink);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .detail-cell.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.2) contrast(1.1);
+  }
+
+  .detail-cell h3 {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 16px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: 24px;
+  }
+
+  .detail-cell p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.45;
+  }
+
+  .detail-cell .stat {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 24px;
+  }
+
+  .detail-cell .stat-label {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin-top: 8px;
+  }
+
+  /* ── CTA STRIP ────────────────────────────── */
+  .cta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: var(--rule) solid var(--ink);
+  }
+
+  .cta a {
+    padding: 28px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ink);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+    border-right: var(--rule) solid var(--ink);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .cta a:last-child { border-right: none; }
+
+  .cta a:hover {
+    background: var(--ember);
+    color: var(--paper);
+  }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 24px 0;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+  }
+  footer .center { text-align: center; }
+  footer .right  { text-align: right; }
+
+  /* ── RESPONSIVE ───────────────────────────── */
+  @media (max-width: 880px) {
+    .frame { padding: 16px; }
+    .hero, .tracks-section, .details, .cta { grid-template-columns: 1fr; }
+    .hero-text, .section-label { border-right: none; border-bottom: var(--rule) solid var(--ink); min-height: auto; }
+    .hero-art { min-height: 340px; }
+    .detail-cell { border-right: none; border-bottom: var(--rule) solid var(--ink); }
+    .detail-cell:last-child { border-bottom: none; }
+    .cta { grid-template-columns: 1fr 1fr; }
+    .cta a:nth-child(2) { border-right: none; }
+    .cta a:nth-child(1), .cta a:nth-child(2) { border-bottom: var(--rule) solid var(--ink); }
+    .tracklist li { grid-template-columns: 48px 1fr auto; padding: 18px 24px; }
+    .track-name { font-size: 22px; }
+    h1 { font-size: clamp(56px, 14vw, 96px); }
+  }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <header>
+    <div class="left">Edwards Radio</div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="meta-row">
+        <span>EP / Digital</span>
+        <div class="services">
+          <a href="#" aria-label="Apple Music"><svg viewBox="0 0 24 24"><path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.527 20.373.275 19.7.137 19.218.039 18.73 0 18.24 0H5.76c-.49 0-.978.04-1.46.137-.673.138-1.302.39-1.876.755C1.305 1.625.56 2.625.24 3.935.064 4.654 0 5.387 0 6.124v11.752c0 .737.065 1.47.24 2.19.317 1.31 1.062 2.31 2.18 3.043.575.365 1.205.617 1.876.755.483.097.972.137 1.461.137h12.48c.49 0 .978-.04 1.46-.137.673-.138 1.302-.39 1.876-.755 1.12-.733 1.864-1.733 2.18-3.043.176-.72.24-1.453.24-2.19V6.124zM18.61 8.21c-.06.06-.13.1-.21.13l-.84.18v6.21c0 .57-.16 1.03-.49 1.39-.32.36-.79.54-1.4.54-.45 0-.83-.16-1.13-.48-.3-.32-.45-.7-.45-1.14 0-.44.15-.82.45-1.14.3-.32.68-.48 1.13-.48.32 0 .61.08.86.24V9.54l-5.49 1.17v6.05c0 .57-.16 1.03-.49 1.39-.32.36-.79.54-1.4.54-.45 0-.83-.16-1.13-.48-.3-.32-.45-.7-.45-1.14 0-.44.15-.82.45-1.14.3-.32.68-.48 1.13-.48.32 0 .61.08.86.24V8.94l6.04-1.24c.16-.04.28 0 .37.12.09.12.13.27.13.45v.04z"/></svg></a>
+          <a href="#" aria-label="Spotify"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.78-.179-.9-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+          <a href="#" aria-label="Bandcamp"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24L16.563 18.75z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="title-block">
+        <h1>Wilder<span class="accent">ness</span></h1>
+        <div class="by">By: Edwards Radio</div>
+      </div>
+
+      <p class="lede" aria-hidden="true">&nbsp;</p>
+    </div>
+
+    <div class="hero-art">
+      <img src="album-cover.webp" alt="Wilderness album cover">
+    </div>
+  </section>
+
+  <section class="tracks-section">
+    <aside class="section-label">
+      <div class="label-tag">Home Recorded / Lo-Fi</div>
+
+      <div class="label-content">
+        <p class="label-description">All audio on this album is protected under the <a href="https://aiaps-standard.org" target="_blank" rel="noopener">AIAPS</a> Standard, an open framework that safeguards music from unauthorized AI training and reproduction.</p>
+      </div>
+
+    </aside>
+
+    <ol class="tracklist">
+      <li><span class="track-name">Wilderness</span><span class="track-time">05:27</span></li>
+      <li><span class="track-name">Rescue for the Heartache</span><span class="track-time">04:03</span></li>
+      <li><span class="track-name">Warpath</span><span class="track-time">04:12</span></li>
+      <li><span class="track-name">Batten the Hatches</span><span class="track-time">03:48</span></li>
+      <li><span class="track-name">The Breaking Part</span><span class="track-time">03:55</span></li>
+      <li><span class="track-name">Love Song</span><span class="track-time">04:31</span></li>
+      <li><span class="track-name">No One</span><span class="track-time">06:09</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="left">© Edwards Radio</div>
+    <div class="center">Wilderness</div>
+    <div class="right">All Rights Reserved</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
