@@ -618,7 +618,7 @@ const trackOrder: string[] = [
   "Batten the Hatches",
   "Billboard",
   "At the Table",
-  "home",
+  "Home",
   "Oliver",
   "Dark Side",
   "Eternity at State",
