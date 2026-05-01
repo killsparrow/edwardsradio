@@ -27,7 +27,22 @@ type AlbumPageProps = {
   streaming?: StreamingUrls;
 };
 
-function ZissouPlayer({ songs }: { songs: Song[] }) {
+function toRoman(n: number): string {
+  const map: [number, string][] = [
+    [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
+  ];
+  let result = "";
+  let v = n;
+  for (const [value, numeral] of map) {
+    while (v >= value) {
+      result += numeral;
+      v -= value;
+    }
+  }
+  return result;
+}
+
+function ZissouPlayer({ songs, theme }: { songs: Song[]; theme: "underwater" | "wilderness" }) {
   const {
     currentSongIndex,
     isPlaying,
@@ -96,10 +111,14 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
               priority
             />
           </div>
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
-          <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
-          <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+          {theme === "underwater" && (
+            <>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+              <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+              <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+            </>
+          )}
         </motion.div>
 
         <div className="flex-1 min-w-0">
@@ -224,6 +243,13 @@ export default function AlbumPage({
           </div>
         )}
 
+        {theme === "wilderness" && (
+          <div
+            className="absolute inset-0 pointer-events-none wilderness-overlay"
+            aria-hidden="true"
+          />
+        )}
+
         <div className="w-[90%] mx-auto bg-[var(--color-bg-card)] mt-40 md:mt-80 mb-16 relative overflow-hidden">
           <div
             className="absolute inset-0 pointer-events-none decor-pattern"
@@ -234,7 +260,7 @@ export default function AlbumPage({
             <h1 className="sr-only">{albumName} — Album by Edwards Radio (2026)</h1>
 
             <section aria-label="Music player" className="py-6">
-              <ZissouPlayer songs={songs} />
+              <ZissouPlayer songs={songs} theme={theme} />
             </section>
 
             <section aria-label="Tracklist and lyrics" className="max-w-3xl mx-auto py-4">
@@ -242,8 +268,12 @@ export default function AlbumPage({
               <ol className="list-none m-0 p-0 space-y-0" role="list">
                 {orderedTracks.map((track, index) => {
                   const isActive = currentSongIndex === index;
+                  const liBorder =
+                    theme === "wilderness"
+                      ? "border-t border-dotted border-[var(--color-border-base-30)]"
+                      : "border-t border-[var(--color-border-base-50)]";
                   return (
-                    <li key={index} className="border-t border-[var(--color-border-base-50)]">
+                    <li key={index} className={liBorder}>
                       <div className="flex items-center gap-0">
                         <button
                           onClick={() => selectSong(index)}
@@ -255,13 +285,17 @@ export default function AlbumPage({
                         >
                           <span
                             aria-hidden="true"
-                            className={`text-[10px] uppercase tracking-[0.3em] w-12 flex-shrink-0 font-bold ${
+                            className={`${theme === "wilderness" ? "text-xs italic w-8 text-right" : "text-[10px] uppercase tracking-[0.3em] w-12 font-bold"} flex-shrink-0 ${
                               isActive ? "text-[var(--color-accent-gold)]" : "text-[var(--color-accent-gold-30)]"
                             }`}
                           >
-                            Ch. {index + 1}
+                            {theme === "wilderness" ? toRoman(index + 1) : `Ch. ${index + 1}`}
                           </span>
-                          <span aria-hidden="true" className="flex-shrink-0 w-4 md:w-6 h-px bg-[var(--color-border-base-60)] group-hover:bg-[var(--color-accent-copper-40)] transition-colors" />
+                          {theme === "wilderness" ? (
+                            <span aria-hidden="true" className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--color-accent-copper-30)] group-hover:bg-[var(--color-accent-copper)] transition-colors" />
+                          ) : (
+                            <span aria-hidden="true" className="flex-shrink-0 w-4 md:w-6 h-px bg-[var(--color-border-base-60)] group-hover:bg-[var(--color-accent-copper-40)] transition-colors" />
+                          )}
                           <span
                             className={`flex-1 text-base md:text-lg tracking-wide truncate ${
                               isActive

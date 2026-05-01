@@ -17,6 +17,7 @@ export default function WildernessPage() {
     <AlbumPage
       albumName="Wilderness"
       trackOrder={trackOrder}
+      albumArt="/wilderness.jpg.webp"
       backgroundImage="/wilderness.jpg.webp"
       showWaves={false}
       theme="wilderness"
