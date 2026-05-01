@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo } from "react";
-import { FaSpotify, FaApple, FaBandcamp } from "react-icons/fa";
+import { FaSpotify, FaApple, FaBandcamp, FaPlay, FaPause } from "react-icons/fa";
 import { GiRadioTower } from "react-icons/gi";
 import { useAudio } from "../providers/AudioProvider";
 import { getOrderedTracks } from "@/lib/album-tracks";
@@ -64,7 +64,7 @@ export default function WildernessPage() {
           <div className="text-left">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 hover:text-[#b8451f] transition-colors"
+              className="inline-flex items-center gap-2 whitespace-nowrap hover:text-[#b8451f] transition-colors"
             >
               <GiRadioTower size={14} />
               Edwards Radio
@@ -76,10 +76,11 @@ export default function WildernessPage() {
 
         {/* HERO */}
         <section className="grid md:grid-cols-2 border-b border-[#0a0a0c]">
-          <div className="px-6 py-12 md:px-12 md:py-16 md:border-r border-b md:border-b-0 border-[#0a0a0c] flex flex-col justify-between min-h-[420px] md:min-h-[560px]">
+          <div className="min-w-0 overflow-hidden px-6 py-12 md:px-12 md:py-16 md:border-r border-b md:border-b-0 border-[#0a0a0c] flex flex-col justify-between min-h-[420px] md:min-h-[560px]">
             {/* meta row */}
             <div className="flex justify-between items-center uppercase text-[10px] tracking-[0.22em] font-semibold">
               <span>EP / Digital</span>
+              {/* Streaming links — uncomment when album launches
               <div className="flex gap-3.5 items-center">
                 <a
                   href="https://music.apple.com/us/artist/edwards-radio/1519077170"
@@ -109,15 +110,16 @@ export default function WildernessPage() {
                   <FaBandcamp size={16} />
                 </a>
               </div>
+              */}
             </div>
 
             {/* title block */}
             <div className="py-12">
               <h1
-                className="italic font-black leading-[0.88] tracking-[-0.02em] text-[#0a0a0c] -ml-[0.25em]"
+                className="italic font-black leading-[0.88] tracking-[-0.02em] text-[#0a0a0c] -ml-[0.18em]"
                 style={{
                   fontFamily: '"henriette", sans-serif',
-                  fontSize: "clamp(60px, 9vw, 140px)",
+                  fontSize: "clamp(56px, 7vw, 108px)",
                 }}
               >
                 Wilder<span className="text-[#b8451f]">ness</span>
@@ -205,17 +207,39 @@ export default function WildernessPage() {
                   tabIndex={0}
                   aria-label={`Play ${track.display}`}
                   aria-current={isActive ? "true" : undefined}
-                  className={`grid grid-cols-[48px_1fr_auto] md:grid-cols-[80px_1fr_auto] items-baseline px-6 md:px-12 py-[18px] md:py-[22px] border-b border-[#0a0a0c] last:border-b-0 cursor-pointer transition-colors ${
+                  className={`group grid grid-cols-[48px_1fr_auto] md:grid-cols-[80px_1fr_auto] items-baseline px-6 md:px-12 py-[18px] md:py-[22px] border-b border-[#0a0a0c] last:border-b-0 cursor-pointer transition-colors ${
                     isActive
                       ? "bg-[#0a0a0c] text-[#ede6d3]"
                       : "hover:bg-[#0a0a0c] hover:text-[#ede6d3]"
                   }`}
                 >
                   <span
-                    className="text-[13px] tracking-[0.1em] font-medium"
+                    className="text-[13px] tracking-[0.1em] font-medium relative inline-flex items-center"
                     style={{ fontFamily: '"henriette", sans-serif' }}
                   >
-                    {num}
+                    {/* Track number — hidden on hover and when active */}
+                    <span
+                      className={`${
+                        isActive ? "hidden" : "group-hover:hidden"
+                      }`}
+                    >
+                      {num}
+                    </span>
+                    {/* Play / pause icon — shown on hover and when active */}
+                    <span
+                      className={`${
+                        isActive
+                          ? "inline-flex"
+                          : "hidden group-hover:inline-flex"
+                      } items-center text-[#c9a24a]`}
+                      aria-hidden="true"
+                    >
+                      {isActive && isPlaying ? (
+                        <FaPause className="w-3 h-3" />
+                      ) : (
+                        <FaPlay className="w-3 h-3" />
+                      )}
+                    </span>
                   </span>
                   <span className="flex items-center gap-3 min-w-0">
                     <span
