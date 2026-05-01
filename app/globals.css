@@ -145,6 +145,10 @@ font-size: 16px;
   --color-accent-copper-30: #b874664d;
   --color-accent-copper-40: #b8746666;
   --color-highlight: #d99a7a;
+
+  /* SVG turbulence: cream specks against transparent — chalk-on-paper grain */
+  --paper-grain: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.86 0 0 0 0 0.72 0.299 0.587 0.114 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  --paper-grain-coarse: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='2' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.12 0 0 0 0 0.16 0.299 0.587 0.114 0 -0.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
 }
 
 /* Decorative texture overlay — themed */
@@ -157,18 +161,22 @@ font-size: 16px;
 }
 
 .theme-wilderness .decor-pattern {
-  background-image:
-    radial-gradient(ellipse 60% 50% at 28% 12%, rgba(217, 154, 122, 0.28), transparent 70%),
-    radial-gradient(ellipse 70% 60% at 78% 90%, rgba(201, 169, 110, 0.22), transparent 70%);
+  background-image: var(--paper-grain), var(--paper-grain-coarse);
+  background-blend-mode: screen, multiply;
+  opacity: 0.55;
+  mix-blend-mode: overlay;
 }
 
-/* Warm Redon-inspired overlay tinting the wilderness page background image */
+/* Wilderness page overlay: pastel-paper grain layered over a plum tint
+   that kills the photo's blues. Two grain frequencies for chalk-on-paper feel. */
 .wilderness-overlay {
   background-image:
-    radial-gradient(ellipse 75% 35% at 50% 18%, rgba(217, 154, 122, 0.28), transparent 65%),
+    var(--paper-grain),
+    var(--paper-grain-coarse),
     linear-gradient(to bottom,
       rgba(42, 31, 46, 0.55) 0%,
       rgba(42, 31, 46, 0.85) 45%,
       rgba(42, 31, 46, 1) 80%
     );
+  background-blend-mode: screen, multiply, normal;
 }

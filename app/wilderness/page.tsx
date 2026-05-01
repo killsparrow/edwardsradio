@@ -8,8 +8,8 @@ const trackOrder: string[] = [
   "Wilderness",
   "Rescue for the Heartache",
   "Breaking Part",
-  "No One",
   "Love Song",
+  "No One",
 ];
 
 export default function WildernessPage() {
