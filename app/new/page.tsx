@@ -469,7 +469,7 @@ const tracks: {
   },
 
       {
-    title: "Home",
+    title: "Breaking Part",
     audioUrl: "/music/2026/home-master.m4a",
   },
 
@@ -612,21 +612,21 @@ const trackOrder: string[] = [
   "Fight it Alone",
   "Your Own Light",
   "Wilderness",
-  "Rescue for the Heartache",
   "Underwater",
   "Warpath",
-  "Batten the Hatches",
+  "Professor",
+  "Rescue for the Heartache",
   "Billboard",
+  "Batten the Hatches",
   "At the Table",
-  "Home",
-  "Oliver",
-  "Dark Side",
+  "Breaking Part",
+  "St George",
+  "No One",
   "Eternity at State",
   "Love Song",
-  "No One",
   "Only You",
-  "St George",
-  "Professor",
+  "Dark Side",
+  "Oliver",
 ];
 
 const orderedTracks = trackOrder.map((title) => {
