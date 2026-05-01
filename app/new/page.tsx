@@ -236,34 +236,34 @@ const tracks: {
   },
 
 
-  // {
-  //   title: "At the Table",
-  //   audioUrl: "/music/2026/at-the-table.m4a",
-  //   lyrics: (
-  //     <>
-  //       <p>
-  //         In the place I used to wait for you, at the table. At the table.<br />
-  //         In the place I used to hide from you, under the table.
-  //       </p>
-  //       <p>Needle falls right through, stare at the clock.</p>
-  //       <p>
-  //         In the place she used to fade away, staring through the cracks.<br />
-  //         Hey light, hey life.<br />
-  //         In the place she used to waste away, falling through the cracks.<br />
-  //         Hey light, hey life.
-  //       </p>
-  //       <p>In this place we used to wait all day, at the table. At the table.</p>
-  //       <p>In this place we used to hide away, under the table.</p>
-  //       <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
-  //       <p>
-  //         In the place she used to fade away, falling through the cracks.<br />
-  //         Hey life, hey light.<br />
-  //         In this place she used to waste away, falling through the cracks.<br />
-  //         Hey light, hey life.
-  //       </p>
-  //     </>
-  //   ),
-  // },
+  {
+    title: "At the Table",
+    audioUrl: "/music/2026/at-the-table.m4a",
+    lyrics: (
+      <>
+        <p>
+          In the place I used to wait for you, at the table. At the table.<br />
+          In the place I used to hide from you, under the table.
+        </p>
+        <p>Needle falls right through, stare at the clock.</p>
+        <p>
+          In the place she used to fade away, staring through the cracks.<br />
+          Hey light, hey life.<br />
+          In the place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+        <p>In this place we used to wait all day, at the table. At the table.</p>
+        <p>In this place we used to hide away, under the table.</p>
+        <p>Needle falls right through, stare at the clock. Stare at the clock.</p>
+        <p>
+          In the place she used to fade away, falling through the cracks.<br />
+          Hey life, hey light.<br />
+          In this place she used to waste away, falling through the cracks.<br />
+          Hey light, hey life.
+        </p>
+      </>
+    ),
+  },
 
   {
     title: "Dark Side",
@@ -427,40 +427,50 @@ const tracks: {
     ),
   },
 
-  // {
-  //   title: "Professor",
-  //   audioUrl: "/music/2026/professor.m4a",
-  //   lyrics: (
-  //     <>
-  //       <p>
-  //         Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
-  //         And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
-  //         I&rsquo;m hiding from your observation.
-  //       </p>
-  //       <p>
-  //         And so far I haven&rsquo;t caught on yet.<br />
-  //         I thought by now that I&rsquo;d be so much stronger.<br />
-  //         And so far I haven&rsquo;t caught on yet.<br />
-  //         I thought by now that I&rsquo;d be so much stronger than I am.
-  //       </p>
-  //       <p>
-  //         And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
-  //         All that you got wrong.<br />
-  //         And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
-  //       </p>
-  //       <p>I&rsquo;m hiding from your observation.</p>
-  //       <p>
-  //         And so far I haven&rsquo;t caught on yet.<br />
-  //         I thought by now that I&rsquo;d be so much stronger.<br />
-  //         And so far I haven&rsquo;t caught on yet.<br />
-  //         I thought by now that I&rsquo;d be so much stronger than I am.
-  //       </p>
-  //     </>
-  //   ),
-  // },
+  {
+    title: "Professor",
+    audioUrl: "/music/2026/professor.m4a",
+    lyrics: (
+      <>
+        <p>
+          Professor I profess, I don&rsquo;t have the answers, I don&rsquo;t have the answers yet, to any of this.<br />
+          And in these halls I can hear their calls past every door and on every floor, I&rsquo;m hiding from your observation.<br />
+          I&rsquo;m hiding from your observation.
+        </p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+        <p>
+          And at your desk I must confess I&rsquo;m not strong enough yet to take on<br />
+          All that you got wrong.<br />
+          And in a way I could realize that you would have hoped for someone to sail this ship when you are gone.
+        </p>
+        <p>I&rsquo;m hiding from your observation.</p>
+        <p>
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger.<br />
+          And so far I haven&rsquo;t caught on yet.<br />
+          I thought by now that I&rsquo;d be so much stronger than I am.
+        </p>
+      </>
+    ),
+  },
   {
     title: "No One",
     audioUrl: "/music/2026/noone.m4a",
+  },
+
+    {
+    title: "Love Song",
+    audioUrl: "/music/2026/downhere-master.m4a",
+  },
+
+      {
+    title: "Home",
+    audioUrl: "/music/2026/home-master.m4a",
   },
 
 
@@ -550,48 +560,48 @@ const tracks: {
   //   ),
   // },
   
-  // {
-  //   title: "Only You",
-  //   audioUrl: "/music/2026/only-you.m4a",
-  //   lyrics: (
-  //     <>
-  //       <p>
-  //         Only you could be so beautiful when you cry.<br />
-  //         I see your eyes like stars against the black of night.<br />
-  //         Like a heron in the trees.<br />
-  //         And I wonder why you would ever want to be so alone.
-  //       </p>
-  //       <p>
-  //         Only you could be<br />
-  //         So warm and kind.<br />
-  //         When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
-  //         Only your smile could last this long, I see you. I see you.
-  //       </p>
-  //       <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-  //       <p>
-  //         You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-  //         You don&rsquo;t want to be just fine, at least not their way, not their way.
-  //       </p>
-  //       <p>I still believe in love.<br />I still believe in love.</p>
-  //       <p>
-  //         Only you, could be, a light this bright.<br />
-  //         A beacon at night, a place to reset to, a chance to believe in something more.<br />
-  //         And I see you. I see you.
-  //       </p>
-  //       <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
-  //       <p>
-  //         You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
-  //         You don&rsquo;t want to be just fine, at least not their way, not their way.
-  //       </p>
-  //       <p>I still believe in love.<br />I still believe in love.</p>
-  //       <p>
-  //         I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
-  //         I don&rsquo;t want to be just fine, at least not their way, not their way.
-  //       </p>
-  //       <p>I still believe in love.<br />I still believe in love.</p>
-  //     </>
-  //   ),
-  // },
+  {
+    title: "Only You",
+    audioUrl: "/music/2026/only-you.m4a",
+    lyrics: (
+      <>
+        <p>
+          Only you could be so beautiful when you cry.<br />
+          I see your eyes like stars against the black of night.<br />
+          Like a heron in the trees.<br />
+          And I wonder why you would ever want to be so alone.
+        </p>
+        <p>
+          Only you could be<br />
+          So warm and kind.<br />
+          When the world takes aim at the brighter side and it feels like nothing ever changes.<br />
+          Only your smile could last this long, I see you. I see you.
+        </p>
+        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+        <p>
+          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+          You don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+        <p>
+          Only you, could be, a light this bright.<br />
+          A beacon at night, a place to reset to, a chance to believe in something more.<br />
+          And I see you. I see you.
+        </p>
+        <p>Stay for the night, leave for the day, try not to cry, dry your eyes on your sleeve.</p>
+        <p>
+          You don&rsquo;t want to be alright, you don&rsquo;t want to be ok.<br />
+          You don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+        <p>
+          I don&rsquo;t want to be alright, I don&rsquo;t want to be ok.<br />
+          I don&rsquo;t want to be just fine, at least not their way, not their way.
+        </p>
+        <p>I still believe in love.<br />I still believe in love.</p>
+      </>
+    ),
+  },
 
     
 ];
@@ -607,11 +617,16 @@ const trackOrder: string[] = [
   "Warpath",
   "Batten the Hatches",
   "Billboard",
+  "At the Table",
+  "home",
   "Oliver",
   "Dark Side",
   "Eternity at State",
+  "Love Song",
   "No One",
+  "Only You",
   "St George",
+  "Professor",
 ];
 
 const orderedTracks = trackOrder.map((title) => {
