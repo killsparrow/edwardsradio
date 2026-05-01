@@ -263,9 +263,15 @@ export default function AlbumPage({
               <ZissouPlayer songs={songs} theme={theme} />
             </section>
 
-            <section aria-label="Tracklist and lyrics" className="max-w-3xl mx-auto py-4">
+            <section aria-label="Tracklist and lyrics" className="max-w-3xl mx-auto py-4 relative">
+              {theme === "wilderness" && (
+                <div
+                  className="absolute inset-0 pointer-events-none tracklist-grain"
+                  aria-hidden="true"
+                />
+              )}
               <h2 className="sr-only">Tracklist</h2>
-              <ol className="list-none m-0 p-0 space-y-0" role="list">
+              <ol className="list-none m-0 p-0 space-y-0 relative" role="list">
                 {orderedTracks.map((track, index) => {
                   const isActive = currentSongIndex === index;
                   const liBorder =

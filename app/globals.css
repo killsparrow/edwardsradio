@@ -160,23 +160,22 @@ font-size: 16px;
   opacity: 0.03;
 }
 
-.theme-wilderness .decor-pattern {
-  background-image: var(--paper-grain), var(--paper-grain-coarse);
-  background-blend-mode: screen, multiply;
-  opacity: 0.55;
-  mix-blend-mode: overlay;
-}
-
-/* Wilderness page overlay: pastel-paper grain layered over a plum tint
-   that kills the photo's blues. Two grain frequencies for chalk-on-paper feel. */
+/* Wilderness page overlay: very light plum wash that lets the photo come through,
+   fading toward the page color where the content card sits */
 .wilderness-overlay {
   background-image:
-    var(--paper-grain),
-    var(--paper-grain-coarse),
     linear-gradient(to bottom,
-      rgba(42, 31, 46, 0.55) 0%,
-      rgba(42, 31, 46, 0.85) 45%,
-      rgba(42, 31, 46, 1) 80%
+      rgba(42, 31, 46, 0.1) 0%,
+      rgba(42, 31, 46, 0.25) 35%,
+      rgba(42, 31, 46, 0.7) 75%,
+      rgba(42, 31, 46, 1) 100%
     );
-  background-blend-mode: screen, multiply, normal;
+}
+
+/* Pastel-paper grain — used as the backdrop behind the tracklist */
+.tracklist-grain {
+  background-image: var(--paper-grain), var(--paper-grain-coarse);
+  background-blend-mode: screen, multiply;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
 }
