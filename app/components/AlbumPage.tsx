@@ -250,7 +250,7 @@ export default function AlbumPage({
           />
         )}
 
-        <div className="w-[90%] mx-auto bg-[var(--color-bg-card)] mt-40 md:mt-80 mb-16 relative overflow-hidden">
+        <div className={`w-[90%] mx-auto bg-[var(--color-bg-card)] mb-16 relative overflow-hidden ${theme === "wilderness" ? "mt-12 md:mt-20" : "mt-40 md:mt-80"}`}>
           <div
             className="absolute inset-0 pointer-events-none decor-pattern"
             aria-hidden="true"
