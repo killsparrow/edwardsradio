@@ -114,6 +114,15 @@ const albums: Album[] = [
     // },
   },
   {
+    title: "Wilderness",
+    artist: "Edwards Radio",
+    coverImage: "/wilderness.jpg.webp",
+    releaseDate: "May 1, 2026",
+    links: {
+      bandcamp: "https://edwardsradio.bandcamp.com/album/wilderness",
+    },
+  },
+  {
     title: "The Weight of Illusion",
     artist: "Edwards Radio",
     coverImage: "/theweightofillusion.jpg?w=600&h=600&fit=crop",

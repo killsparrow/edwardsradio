@@ -5,14 +5,8 @@ export const metadata: Metadata = {
   description:
     "Wilderness — an album by Edwards Radio. Lo-fi, home-recorded indie folk.",
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-    },
+    index: true,
+    follow: true,
   },
 };
 

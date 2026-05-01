@@ -388,21 +388,19 @@ export default function AlbumPage({
 
             <section aria-label="AI audio protection" className="max-w-xl mx-auto text-center py-10">
               <div className="border border-[var(--color-border-base-40)] p-6 md:p-8">
-                <h2 className="text-[10px] uppercase tracking-[0.5em] text-[var(--color-accent-copper)] mb-4 !text-[10px]">
-                  AI Audio Protection
+                <h2 className="text-[10px] uppercase tracking-[0.5em] text-[var(--color-accent-copper)] mb-3 !text-[10px]">
+                  AIAPS-Protected
                 </h2>
                 <p className="text-white/70 text-sm leading-relaxed mb-4">
-                  All audio on this album is protected under the{" "}
-                  <strong className="text-white">AIAPS Standard</strong>, an open framework
-                  that safeguards music from unauthorized AI training and reproduction.
+                  Unauthorized AI training prohibited.
                 </p>
                 <a
-                  href="https://aiaps-standard.org"
+                  href="https://www.aiaps-standard.org/artist/edwards-radio"
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="inline-block text-[11px] uppercase tracking-[0.3em] text-[var(--color-accent-gold)] border border-[var(--color-accent-gold-40)] px-6 py-2 hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all"
+                  className="inline-block text-[11px] tracking-[0.15em] text-[var(--color-accent-gold)] border border-[var(--color-accent-gold-40)] px-6 py-2 hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all break-all"
                 >
-                  Learn More
+                  www.aiaps-standard.org/artist/edwards-radio
                 </a>
               </div>
             </section>
