@@ -1,6 +1,7 @@
 // AlbumCard.tsx
 "use client";
 import React, { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 import StreamingLinks from './StreamingLinks';
 
 // Individual album card
@@ -11,6 +12,7 @@ function AlbumCard({
   releaseDate,
   links,
   comingSoon = false,
+  pageHref,
 }: {
   title: string;
   artist: string;
@@ -23,7 +25,16 @@ function AlbumCard({
     bandcamp?: string;
   };
   comingSoon?: boolean;
+  pageHref?: string;
 }) {
+  const cover = (
+    <img
+      src={coverImage}
+      alt={`${title} album cover`}
+      className="w-full h-full object-cover"
+    />
+  );
+
   return (
     <div
       className={`w-full h-full flex flex-col bg-[#24252d]/70 border border-[#494a5d]/40 overflow-hidden ${
@@ -32,11 +43,17 @@ function AlbumCard({
     >
       {/* Album Cover */}
       <div className="relative aspect-square bg-[#2f303b]">
-        <img
-          src={coverImage}
-          alt={`${title} album cover`}
-          className="w-full h-full object-cover"
-        />
+        {pageHref ? (
+          <Link
+            href={pageHref}
+            aria-label={`Open ${title} album page`}
+            className="block w-full h-full"
+          >
+            {cover}
+          </Link>
+        ) : (
+          cover
+        )}
       </div>
 
       {/* Album Info */}
@@ -90,6 +107,7 @@ type Album = {
   coverImage: string;
   releaseDate?: string;
   comingSoon?: boolean;
+  pageHref?: string;
   links?: {
     spotify?: string;
     apple?: string;
@@ -116,8 +134,9 @@ const albums: Album[] = [
   {
     title: "Wilderness",
     artist: "Edwards Radio",
-    coverImage: "/wilderness.jpg.webp",
+    coverImage: "/wilderness-album-cover.jpg",
     releaseDate: "May 1, 2026",
+    pageHref: "/wilderness",
     links: {
       bandcamp: "https://edwardsradio.bandcamp.com/album/wilderness",
     },
