@@ -93,14 +93,72 @@ font-size: 16px;
   }
 }
 
-/* Underwater page — player + chapter overrides */
+/* Album page — player + chapter overrides */
 #underwater-page .slider::-webkit-slider-thumb {
-  background: #a0633b;
+  background: var(--color-accent-copper);
 }
 #underwater-page .slider::-moz-range-thumb {
-  background: #a0633b;
+  background: var(--color-accent-copper);
 }
 
 #underwater-page p {
   margin-bottom: 0.75rem;
+}
+
+/* ── Album theme tokens ── */
+
+.theme-underwater {
+  --color-bg-page: #2f303b;
+  --color-bg-card: #24252db3;
+  --color-bg-card-solid: #24252d;
+  --color-border-base: #494a5d;
+  --color-border-base-30: #494a5d4d;
+  --color-border-base-40: #494a5d66;
+  --color-border-base-50: #494a5d80;
+  --color-border-base-60: #494a5d99;
+  --color-border-base-70: #494a5db3;
+  --color-accent-gold: #bfb689;
+  --color-accent-gold-5: #bfb6890d;
+  --color-accent-gold-30: #bfb6894d;
+  --color-accent-gold-40: #bfb68966;
+  --color-accent-copper: #a0633b;
+  --color-accent-copper-30: #a0633b4d;
+  --color-accent-copper-40: #a0633b66;
+  --color-highlight: #c4895f;
+}
+
+.theme-wilderness {
+  --color-bg-page: #2a1f2e;
+  --color-bg-card: #1c151eb3;
+  --color-bg-card-solid: #1c151e;
+  --color-border-base: #4a3f4d;
+  --color-border-base-30: #4a3f4d4d;
+  --color-border-base-40: #4a3f4d66;
+  --color-border-base-50: #4a3f4d80;
+  --color-border-base-60: #4a3f4d99;
+  --color-border-base-70: #4a3f4db3;
+  --color-accent-gold: #c9a96e;
+  --color-accent-gold-5: #c9a96e0d;
+  --color-accent-gold-30: #c9a96e4d;
+  --color-accent-gold-40: #c9a96e66;
+  --color-accent-copper: #b87466;
+  --color-accent-copper-30: #b874664d;
+  --color-accent-copper-40: #b8746666;
+  --color-highlight: #d99a7a;
+}
+
+/* Decorative texture overlay — themed */
+.theme-underwater .decor-pattern {
+  background-image:
+    linear-gradient(#f5e6c8 1px, transparent 1px),
+    linear-gradient(90deg, #f5e6c8 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.03;
+}
+
+.theme-wilderness .decor-pattern {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 28% 12%, rgba(201, 169, 110, 0.18), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 75% 92%, rgba(184, 116, 102, 0.14), transparent 70%),
+    radial-gradient(ellipse 90% 80% at 50% 50%, rgba(42, 31, 46, 0.55), transparent 80%);
 }

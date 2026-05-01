@@ -21,6 +21,9 @@ type AlbumPageProps = {
   albumName: string;
   trackOrder: string[];
   albumArt?: string;
+  backgroundImage?: string;
+  showWaves?: boolean;
+  theme?: "underwater" | "wilderness";
   streaming?: StreamingUrls;
 };
 
@@ -58,7 +61,7 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
       const d = audio.duration || 1;
       progressRef.current.value = String(t);
       progressRef.current.max = String(d);
-      progressRef.current.style.background = `linear-gradient(to right, #bfb689 0%, #bfb689 ${(t / d) * 100}%, rgba(255,255,255,0.15) ${(t / d) * 100}%, rgba(255,255,255,0.15) 100%)`;
+      progressRef.current.style.background = `linear-gradient(to right, var(--color-accent-gold) 0%, var(--color-accent-gold) ${(t / d) * 100}%, rgba(255,255,255,0.15) ${(t / d) * 100}%, rgba(255,255,255,0.15) 100%)`;
       const min = Math.floor(t / 60);
       const sec = Math.floor(t % 60);
       currentTimeRef.current.textContent = `${min}:${sec.toString().padStart(2, "0")}`;
@@ -82,9 +85,9 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-[#494a5d] p-0.5 flex-shrink-0 relative"
+          className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-[var(--color-border-base)] p-0.5 flex-shrink-0 relative"
         >
-          <div className="w-full h-full rounded-full overflow-hidden relative border border-[#a0633b]/40">
+          <div className="w-full h-full rounded-full overflow-hidden relative border border-[var(--color-accent-copper-40)]">
             <Image
               src={currentSong.albumArt}
               alt={`${currentSong.album} album art`}
@@ -93,10 +96,10 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
               priority
             />
           </div>
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#494a5d]/50 border border-[#494a5d]/70" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#494a5d]/50 border border-[#494a5d]/70" />
-          <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#494a5d]/50 border border-[#494a5d]/70" />
-          <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#494a5d]/50 border border-[#494a5d]/70" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+          <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
+          <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[var(--color-border-base-50)] border border-[var(--color-border-base-70)]" />
         </motion.div>
 
         <div className="flex-1 min-w-0">
@@ -118,7 +121,7 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrevious}
-              className="text-white/40 hover:text-[#bfb689] transition-colors"
+              className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
               aria-label="Previous track"
             >
               <FaStepBackward className="w-2.5 h-2.5" />
@@ -126,7 +129,7 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
 
             <button
               onClick={togglePlayPause}
-              className="w-8 h-8 rounded-full border border-[#bfb689] flex items-center justify-center text-[#bfb689] hover:bg-[#bfb689] hover:text-[#24252d] transition-all flex-shrink-0"
+              className="w-8 h-8 rounded-full border border-[var(--color-accent-gold)] flex items-center justify-center text-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all flex-shrink-0"
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (
@@ -138,7 +141,7 @@ function ZissouPlayer({ songs }: { songs: Song[] }) {
 
             <button
               onClick={handleNext}
-              className="text-white/40 hover:text-[#bfb689] transition-colors"
+              className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
               aria-label="Next track"
             >
               <FaStepForward className="w-2.5 h-2.5" />
@@ -182,6 +185,9 @@ export default function AlbumPage({
   albumName,
   trackOrder,
   albumArt = "/2026.jpg",
+  backgroundImage = "/ship.webp",
+  showWaves = true,
+  theme = "underwater",
   streaming,
 }: AlbumPageProps) {
   const [expandedChapter, setExpandedChapter] = useState<number | null>(null);
@@ -200,33 +206,28 @@ export default function AlbumPage({
 
   return (
     <article
-      className="bg-[#2f303b] relative"
+      className={`theme-${theme} bg-[var(--color-bg-page)] relative`}
       aria-label={`${albumName} — album by Edwards Radio`}
     >
       <div
         id="underwater-page"
-        className="min-h-screen pt-20 pb-16 bg-[#2f303b] relative z-10 bg-[url('/ship.webp')] bg-no-repeat bg-[center_top] bg-[length:200%_auto] md:bg-[length:100%_auto] mx-auto"
-        style={{ overflowX: "clip" }}
+        className="min-h-screen pt-20 pb-16 bg-[var(--color-bg-page)] relative z-10 bg-no-repeat bg-[center_top] bg-[length:200%_auto] md:bg-[length:100%_auto] mx-auto"
+        style={{ overflowX: "clip", backgroundImage: `url('${backgroundImage}')` }}
       >
-        <div
-          className="absolute top-0 left-0 w-full pointer-events-none"
-          style={{ aspectRatio: "1920/1250" }}
-          aria-hidden="true"
-        >
-          <UnderwaterWaves />
-        </div>
-
-        <div className="w-[90%] mx-auto bg-[#24252d]/70 mt-40 md:mt-80 mb-16 relative overflow-hidden">
+        {showWaves && (
           <div
-            className="absolute inset-0 pointer-events-none opacity-[0.03]"
+            className="absolute top-0 left-0 w-full pointer-events-none"
+            style={{ aspectRatio: "1920/1250" }}
             aria-hidden="true"
-            style={{
-              backgroundImage: `
-                linear-gradient(#f5e6c8 1px, transparent 1px),
-                linear-gradient(90deg, #f5e6c8 1px, transparent 1px)
-              `,
-              backgroundSize: "60px 60px",
-            }}
+          >
+            <UnderwaterWaves />
+          </div>
+        )}
+
+        <div className="w-[90%] mx-auto bg-[var(--color-bg-card)] mt-40 md:mt-80 mb-16 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none decor-pattern"
+            aria-hidden="true"
           />
 
           <div className="relative p-6 md:p-10">
@@ -242,39 +243,39 @@ export default function AlbumPage({
                 {orderedTracks.map((track, index) => {
                   const isActive = currentSongIndex === index;
                   return (
-                    <li key={index} className="border-t border-[#494a5d]/50">
+                    <li key={index} className="border-t border-[var(--color-border-base-50)]">
                       <div className="flex items-center gap-0">
                         <button
                           onClick={() => selectSong(index)}
                           aria-label={`Play ${track.title}`}
                           aria-current={isActive ? "true" : undefined}
                           className={`py-4 px-2 md:px-4 flex items-center gap-4 md:gap-6 transition-colors text-left group flex-1 min-w-0 ${
-                            isActive ? "bg-[#bfb689]/5" : "hover:bg-white/[0.02]"
+                            isActive ? "bg-[var(--color-accent-gold-5)]" : "hover:bg-white/[0.02]"
                           }`}
                         >
                           <span
                             aria-hidden="true"
                             className={`text-[10px] uppercase tracking-[0.3em] w-12 flex-shrink-0 font-bold ${
-                              isActive ? "text-[#bfb689]" : "text-[#bfb689]/30"
+                              isActive ? "text-[var(--color-accent-gold)]" : "text-[var(--color-accent-gold-30)]"
                             }`}
                           >
                             Ch. {index + 1}
                           </span>
-                          <span aria-hidden="true" className="flex-shrink-0 w-4 md:w-6 h-px bg-[#494a5d]/60 group-hover:bg-[#a0633b]/40 transition-colors" />
+                          <span aria-hidden="true" className="flex-shrink-0 w-4 md:w-6 h-px bg-[var(--color-border-base-60)] group-hover:bg-[var(--color-accent-copper-40)] transition-colors" />
                           <span
                             className={`flex-1 text-base md:text-lg tracking-wide truncate ${
                               isActive
-                                ? "text-[#bfb689] font-semibold"
-                                : "text-white group-hover:text-[#bfb689] transition-colors"
+                                ? "text-[var(--color-accent-gold)] font-semibold"
+                                : "text-white group-hover:text-[var(--color-accent-gold)] transition-colors"
                             }`}
                           >
                             {track.title}
                           </span>
                           {isActive && isPlaying && (
                             <div className="flex gap-0.5 items-end h-3 flex-shrink-0" aria-hidden="true">
-                              <motion.div className="w-0.5 bg-[#bfb689] rounded-full" animate={{ height: ["40%", "100%", "40%"] }} transition={{ duration: 0.8, repeat: Infinity }} />
-                              <motion.div className="w-0.5 bg-[#bfb689] rounded-full" animate={{ height: ["100%", "40%", "100%"] }} transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }} />
-                              <motion.div className="w-0.5 bg-[#bfb689] rounded-full" animate={{ height: ["40%", "100%", "40%"] }} transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }} />
+                              <motion.div className="w-0.5 bg-[var(--color-accent-gold)] rounded-full" animate={{ height: ["40%", "100%", "40%"] }} transition={{ duration: 0.8, repeat: Infinity }} />
+                              <motion.div className="w-0.5 bg-[var(--color-accent-gold)] rounded-full" animate={{ height: ["100%", "40%", "100%"] }} transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }} />
+                              <motion.div className="w-0.5 bg-[var(--color-accent-gold)] rounded-full" animate={{ height: ["40%", "100%", "40%"] }} transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }} />
                             </div>
                           )}
                         </button>
@@ -292,7 +293,7 @@ export default function AlbumPage({
                               animate={{ rotate: expandedChapter === index ? 45 : 0 }}
                               transition={{ duration: 0.2 }}
                               aria-hidden="true"
-                              className="text-[#494a5d] hover:text-[#a0633b] text-lg transition-colors block"
+                              className="text-[var(--color-border-base)] hover:text-[var(--color-accent-copper)] text-lg transition-colors block"
                             >
                               +
                             </motion.span>
@@ -313,13 +314,13 @@ export default function AlbumPage({
                           >
                             <div className="px-2 md:px-4 pb-6 md:pl-[calc(3rem+2.5rem)]">
                               {track.subtitle && (
-                                <div className="border border-[#494a5d]/30 px-4 py-3 mb-5">
-                                  <p className="text-[10px] uppercase tracking-[0.3em] text-[#c4895f] !mb-0">
+                                <div className="border border-[var(--color-border-base-30)] px-4 py-3 mb-5">
+                                  <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-highlight)] !mb-0">
                                     {track.subtitle}
                                   </p>
                                 </div>
                               )}
-                              <div className="text-white/80 text-sm leading-relaxed border-l-2 border-[#a0633b]/30 pl-6 pt-2">
+                              <div className="text-white/80 text-sm leading-relaxed border-l-2 border-[var(--color-accent-copper-30)] pl-6 pt-2">
                                 {track.lyrics}
                               </div>
                             </div>
@@ -346,8 +347,8 @@ export default function AlbumPage({
             )}
 
             <section aria-label="AI audio protection" className="max-w-xl mx-auto text-center py-10">
-              <div className="border border-[#494a5d]/40 p-6 md:p-8">
-                <h2 className="text-[10px] uppercase tracking-[0.5em] text-[#a0633b] mb-4 !text-[10px]">
+              <div className="border border-[var(--color-border-base-40)] p-6 md:p-8">
+                <h2 className="text-[10px] uppercase tracking-[0.5em] text-[var(--color-accent-copper)] mb-4 !text-[10px]">
                   AI Audio Protection
                 </h2>
                 <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -359,7 +360,7 @@ export default function AlbumPage({
                   href="https://aiaps-standard.org"
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="inline-block text-[11px] uppercase tracking-[0.3em] text-[#bfb689] border border-[#bfb689]/40 px-6 py-2 hover:bg-[#bfb689] hover:text-[#24252d] transition-all"
+                  className="inline-block text-[11px] uppercase tracking-[0.3em] text-[var(--color-accent-gold)] border border-[var(--color-accent-gold-40)] px-6 py-2 hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all"
                 >
                   Learn More
                 </a>

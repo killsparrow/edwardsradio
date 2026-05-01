@@ -13,5 +13,13 @@ const trackOrder: string[] = [
 ];
 
 export default function WildernessPage() {
-  return <AlbumPage albumName="Wilderness" trackOrder={trackOrder} />;
+  return (
+    <AlbumPage
+      albumName="Wilderness"
+      trackOrder={trackOrder}
+      backgroundImage="/wilderness.jpg.webp"
+      showWaves={false}
+      theme="wilderness"
+    />
+  );
 }
