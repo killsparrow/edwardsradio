@@ -145,7 +145,7 @@ export default function WildernessPage() {
 
         {/* TRACKS */}
         <section className="grid md:grid-cols-[1fr_2fr] border-b border-[#0a0a0c]">
-          <aside className="bg-[#0a0a0c] text-[#ede6d3] p-12 md:border-r border-b md:border-b-0 border-[#0a0a0c] flex flex-col justify-between min-h-[280px] md:min-h-[560px]">
+          <aside className="bg-[#0a0a0c] text-[#ede6d3] p-12 md:border-r border-b md:border-b-0 border-[#0a0a0c] flex flex-col justify-between">
             <div className="text-[10px] tracking-[0.32em] uppercase font-bold text-[#c9a24a]">
               Home Recorded / Lo-Fi
             </div>
@@ -168,7 +168,7 @@ export default function WildernessPage() {
             </p>
           </aside>
 
-          <ol className="list-none m-0 p-0 flex flex-col justify-center">
+          <ol className="list-none m-0 p-0 flex flex-col">
             {TRACKS.map((track, i) => {
               const isActive = i === currentSongIndex;
               const num = String(i + 1).padStart(2, "0");
