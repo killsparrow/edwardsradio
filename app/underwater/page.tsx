@@ -9,8 +9,8 @@ const trackOrder: string[] = [
   "Eternity at State",
   "Dark Side",
   "Billboard",
-  "Professor",
-  // "At the Table",
+  // "Professor",
+  "At the Table",
   // "Only You",
   "Oliver",
 ];
