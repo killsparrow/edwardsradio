@@ -21,7 +21,6 @@ const TRACKS: WildernessTrack[] = [
   { key: "Warpath", display: "Warpath", time: "04:12" },
   { key: "Breaking Part", display: "The Breaking Part", time: "03:55" },
   { key: "Batten the Hatches", display: "Batten the Hatches", time: "03:48" },
-  { key: "Love Song", display: "Love Song", time: "04:31" },
   { key: "No One", display: "No One", time: "06:09" },
 ];
 

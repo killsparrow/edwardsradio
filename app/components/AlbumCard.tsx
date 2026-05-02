@@ -118,20 +118,6 @@ type Album = {
 
 const albums: Album[] = [
   {
-    title: "Underwater",
-    artist: "Edwards Radio",
-    coverImage: "/2026.jpg",
-    releaseDate: "2026",
-    comingSoon: true,
-    // Flip `comingSoon` to false at launch and uncomment links below.
-    // links: {
-    //   spotify: "",
-    //   youtube: "",
-    //   apple: "",
-    //   bandcamp: "",
-    // },
-  },
-  {
     title: "Wilderness",
     artist: "Edwards Radio",
     coverImage: "/wilderness-album-cover.jpg",
