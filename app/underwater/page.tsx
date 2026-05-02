@@ -3,9 +3,9 @@
 import AlbumPage from "../components/AlbumPage";
 
 const trackOrder: string[] = [
+  "Underwater",
   "Fight it Alone",
   "Your Own Light",
-  "Underwater",
   "Dark Side",
   "Eternity at State",
   "Professor",
