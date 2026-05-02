@@ -189,6 +189,25 @@ export default function MusicPage() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
+  // One-time nudge on mount to demonstrate scrollability (mobile mainly)
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || !canScroll) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const t1 = window.setTimeout(() => {
+      el.scrollBy({ left: 60, behavior: "smooth" });
+    }, 700);
+    const t2 = window.setTimeout(() => {
+      el.scrollBy({ left: -60, behavior: "smooth" });
+    }, 1400);
+
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+    };
+  }, [canScroll]);
+
   return (
     <div className="w-full mx-auto py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -215,7 +234,7 @@ export default function MusicPage() {
             {albums.map((album, index) => (
               <div
                 key={index}
-                className="w-[85vw] sm:w-[60vw] md:w-[calc(33.333%-1.5rem)] flex-shrink-0 snap-start"
+                className="w-[78vw] sm:w-[58vw] md:w-[calc(33.333%-1.5rem)] flex-shrink-0 snap-start"
               >
                 <AlbumCard {...album} />
               </div>

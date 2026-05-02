@@ -80,37 +80,17 @@ export default function WildernessPage() {
             {/* meta row */}
             <div className="flex justify-between items-center uppercase text-[10px] tracking-[0.22em] font-semibold">
               <span>EP / Digital</span>
-              {/* Streaming links — uncomment when album launches
               <div className="flex gap-3.5 items-center">
                 <a
-                  href="https://music.apple.com/us/artist/edwards-radio/1519077170"
+                  href="https://edwardsradio.bandcamp.com/album/wilderness"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Apple Music"
-                  className="text-[#0a0a0c] hover:text-[#b8451f] transition-colors"
-                >
-                  <FaApple size={16} />
-                </a>
-                <a
-                  href="https://open.spotify.com/artist/2rHb13sKpZjRPoBEkiRah5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Spotify"
-                  className="text-[#0a0a0c] hover:text-[#b8451f] transition-colors"
-                >
-                  <FaSpotify size={16} />
-                </a>
-                <a
-                  href="https://edwardsradio.bandcamp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Bandcamp"
+                  aria-label="Listen on Bandcamp"
                   className="text-[#0a0a0c] hover:text-[#b8451f] transition-colors"
                 >
                   <FaBandcamp size={16} />
                 </a>
               </div>
-              */}
             </div>
 
             {/* title block */}

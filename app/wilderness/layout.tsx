@@ -1,12 +1,34 @@
 import type { Metadata } from "next";
 
+const TITLE = "Wilderness — Edwards Radio";
+const DESCRIPTION =
+  "Wilderness — an EP by Edwards Radio. Lo-fi, home-recorded indie folk. Out May 1, 2026.";
+const COVER = "/wilderness-album-cover.jpg";
+
 export const metadata: Metadata = {
-  title: "Wilderness — Edwards Radio",
-  description:
-    "Wilderness — an album by Edwards Radio. Lo-fi, home-recorded indie folk.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/wilderness" },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    type: "music.album",
+    url: "/wilderness",
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: "Edwards Radio",
+    images: [
+      { url: COVER, width: 1500, height: 1500, alt: "Wilderness album cover" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@evanparkermusic",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [COVER],
   },
 };
 
