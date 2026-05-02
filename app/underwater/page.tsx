@@ -3,6 +3,8 @@
 import AlbumPage from "../components/AlbumPage";
 
 const trackOrder: string[] = [
+  "Fight it Alone",
+  "Your Own Light",
   "Billboard",
   "At the Table",
   "Underwater",
@@ -10,7 +12,6 @@ const trackOrder: string[] = [
   "Eternity at State",
   "Professor",
   "Only You",
-  "St George",
   "Oliver",
 ];
 
