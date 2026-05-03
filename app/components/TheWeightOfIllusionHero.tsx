@@ -1,7 +1,6 @@
 // TheWeightOfIllusionHero.tsx
 "use client";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import WeightofIllusion from "./WeightofIllusion";
 import StreamingLinks from "./StreamingLinks";
@@ -55,16 +54,28 @@ export default function TheWeightOfIllusionHero() {
             bandcamp="https://edwardsradio.bandcamp.com/album/the-weight-of-illusion"
           />
         </div>
-      
-      </div>
 
-      <a
-        href="#music"
-        aria-label="Scroll to Music"
-        className="group absolute left-1/2 -translate-x-1/2 bottom-16 inline-flex"
-      >
-        <ChevronDown className={["h-9 w-9 text-white/90", reduced ? "" : "animate-bounce"].join(" ")} />
-      </a>
+        {/* AIAPS Protection */}
+        <section aria-label="AI audio protection" className="w-full max-w-md mx-auto text-center mt-10">
+          <div className="border border-[#494a5d]/50 p-6 md:p-7 bg-black/30 backdrop-blur-sm">
+            <h2 className="text-[10px] uppercase tracking-[0.5em] text-[#a0633b] mb-3 !text-[10px]">
+              AIAPS-Protected
+            </h2>
+            <p className="text-white/70 text-sm leading-relaxed mb-4">
+              Unauthorized AI training prohibited.
+            </p>
+            <a
+              href="https://www.aiaps-standard.org/artist/edwards-radio"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="inline-block text-[11px] tracking-[0.15em] text-[#bfb689] border border-[#bfb689]/40 px-6 py-2 hover:bg-[#bfb689] hover:text-[#24252d] transition-all break-all"
+            >
+              www.aiaps-standard.org/artist/edwards-radio
+            </a>
+          </div>
+        </section>
+
+      </div>
 
       {/* Ken Burns styles */}
       <style jsx global>{`
