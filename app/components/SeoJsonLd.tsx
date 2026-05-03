@@ -25,8 +25,18 @@ export default function SeoJsonLd() {
       slug: "the-weight-of-illusion",
       releaseDate: "2025-11-07",
       image: `${siteUrl}/theweightofillusion.jpg`,
+      url: `${siteUrl}/the-weight-of-illusion`,
       description:
         "Lyric-driven, analog-leaning indie folk — spacious, intimate, and handmade.",
+    },
+    {
+      name: "Wilderness",
+      slug: "wilderness",
+      releaseDate: "2026-05-01",
+      image: `${siteUrl}/wilderness-album-cover.jpg`,
+      url: `${siteUrl}/wilderness`,
+      description:
+        "Wilderness — an EP by Edwards Radio. Lo-fi, home-recorded indie folk.",
     },
     {
       name: "Underwater",
@@ -49,7 +59,7 @@ export default function SeoJsonLd() {
     },
     {
       q: "How many albums has Edwards Radio released?",
-      a: "Edwards Radio has released three full-length albums: Feral Nights (2022), This Endless Life (2023), and The Weight of Illusion (2025). A fourth album, Underwater, is coming in 2026.",
+      a: "Edwards Radio has released three full-length albums — Feral Nights (2022), This Endless Life (2023), and The Weight of Illusion (2025) — plus the Wilderness EP (2026). A fourth full-length album, Underwater, is coming in 2026.",
     },
     {
       q: "What genre is Edwards Radio?",
@@ -111,7 +121,7 @@ export default function SeoJsonLd() {
         "@id": `${siteUrl}#${album.slug}`,
         name: album.name,
         byArtist: { "@id": `${siteUrl}#artist` },
-        url: siteUrl,
+        url: ("url" in album && album.url) ? album.url : siteUrl,
         image: album.image,
         datePublished: album.releaseDate,
         description: album.description,

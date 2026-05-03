@@ -132,6 +132,7 @@ const albums: Album[] = [
     artist: "Edwards Radio",
     coverImage: "/theweightofillusion.jpg?w=600&h=600&fit=crop",
     releaseDate: "Nov 7, 2025",
+    pageHref: "/the-weight-of-illusion",
     links: {
       spotify: "https://open.spotify.com/album/0NoYPQJRnnNoZ3f7MPRA2F?si=S3Cbu54PSbKsLIphFXwmnw",
       youtube: "https://www.youtube.com/watch?v=hPPAhWVmotY&list=OLAK5uy_nPsB4JATPU2l9D4dtOptunzWo8vCSb4zs",

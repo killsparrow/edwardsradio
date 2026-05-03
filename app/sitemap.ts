@@ -11,5 +11,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    {
+      url: `${base}/wilderness`,
+      lastModified: new Date('2026-05-01'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/the-weight-of-illusion`,
+      lastModified: new Date('2025-11-07'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
   ];
 }
