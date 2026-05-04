@@ -31,7 +31,7 @@ export default function TheWeightOfIllusionHero() {
       </div>
 
       {/* Foreground */}
-      <div className="relative z-10 w-full max-w-2xl mx-auto px-8 flex flex-col justify-center min-h-dvh items-center">
+      <div className="relative z-10 w-full max-w-2xl mx-auto px-8 py-20 md:py-24 flex flex-col items-center min-h-dvh [justify-content:safe_center]">
         <img
           src="/logo.svg"
           alt="Edwards Radio"
