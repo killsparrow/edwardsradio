@@ -3,16 +3,16 @@
 import AlbumPage from "../components/AlbumPage";
 
 const trackOrder: string[] = [
+  "Oliver",
   "Underwater",
   "Fight it Alone",
   "Your Own Light",
   "Eternity at State",
-  "Billboard",
   "Dark Side",
+  "Billboard",
   // "Professor",
   "At the Table",
   // "Only You",
-  "Oliver",
 ];
 
 export default function UnderwaterPage() {
