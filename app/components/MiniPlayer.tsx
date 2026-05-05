@@ -7,7 +7,11 @@ import { FaPlay, FaPause, FaStepForward, FaStepBackward } from 'react-icons/fa';
 import { useAudio } from '../providers/AudioProvider';
 
 // Pages that render the full MusicPlayer — hide mini player there
-const FULL_PLAYER_PAGES = ['/new', '/player', '/wilderness'];
+const FULL_PLAYER_PAGES = [
+  '/wilderness',
+  '/underwater',
+  '/the-weight-of-illusion',
+];
 
 export default function MiniPlayer() {
   const { songs, currentSongIndex, isPlaying, hasStarted, audioRef, togglePlayPause, next, previous, seekTo } = useAudio();

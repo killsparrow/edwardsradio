@@ -137,62 +137,66 @@ function ZissouPlayer({ songs, theme }: { songs: Song[]; theme: "underwater" | "
             </span>
           </motion.div>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handlePrevious}
-              className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
-              aria-label="Previous track"
-            >
-              <FaStepBackward className="w-2.5 h-2.5" />
-            </button>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <button
+                onClick={handlePrevious}
+                className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
+                aria-label="Previous track"
+              >
+                <FaStepBackward className="w-2.5 h-2.5" />
+              </button>
 
-            <button
-              onClick={togglePlayPause}
-              className="w-8 h-8 rounded-full border border-[var(--color-accent-gold)] flex items-center justify-center text-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all flex-shrink-0"
-              aria-label={isPlaying ? "Pause" : "Play"}
-            >
-              {isPlaying ? (
-                <FaPause className="w-2.5 h-2.5" />
-              ) : (
-                <FaPlay className="w-2.5 h-2.5 ml-0.5" />
-              )}
-            </button>
+              <button
+                onClick={togglePlayPause}
+                className="w-8 h-8 rounded-full border border-[var(--color-accent-gold)] flex items-center justify-center text-[var(--color-accent-gold)] hover:bg-[var(--color-accent-gold)] hover:text-[var(--color-bg-card-solid)] transition-all flex-shrink-0"
+                aria-label={isPlaying ? "Pause" : "Play"}
+              >
+                {isPlaying ? (
+                  <FaPause className="w-2.5 h-2.5" />
+                ) : (
+                  <FaPlay className="w-2.5 h-2.5 ml-0.5" />
+                )}
+              </button>
 
-            <button
-              onClick={handleNext}
-              className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
-              aria-label="Next track"
-            >
-              <FaStepForward className="w-2.5 h-2.5" />
-            </button>
+              <button
+                onClick={handleNext}
+                className="text-white/40 hover:text-[var(--color-accent-gold)] transition-colors"
+                aria-label="Next track"
+              >
+                <FaStepForward className="w-2.5 h-2.5" />
+              </button>
+            </div>
 
-            <span
-              ref={currentTimeRef}
-              className="text-[9px] text-white/30 w-7 tabular-nums tracking-wider flex-shrink-0"
-            >
-              0:00
-            </span>
-            <input
-              ref={progressRef}
-              type="range"
-              min="0"
-              max={duration || 0}
-              defaultValue={0}
-              aria-label="Seek through track"
-              onPointerDown={() => { seekingRef.current = true; }}
-              onPointerUp={(e) => {
-                seekTo(parseFloat((e.target as HTMLInputElement).value));
-                seekingRef.current = false;
-              }}
-              onTouchEnd={(e) => {
-                seekTo(parseFloat((e.target as HTMLInputElement).value));
-                seekingRef.current = false;
-              }}
-              className="flex-1 h-[2px] bg-white/10 rounded-none appearance-none cursor-pointer slider"
-            />
-            <span className="text-[9px] text-white/30 w-7 text-right tabular-nums tracking-wider flex-shrink-0">
-              {formatTime(duration)}
-            </span>
+            <div className="flex items-center gap-3 w-full sm:w-auto sm:flex-1 min-w-0">
+              <span
+                ref={currentTimeRef}
+                className="text-[9px] text-white/30 w-7 tabular-nums tracking-wider flex-shrink-0"
+              >
+                0:00
+              </span>
+              <input
+                ref={progressRef}
+                type="range"
+                min="0"
+                max={duration || 0}
+                defaultValue={0}
+                aria-label="Seek through track"
+                onPointerDown={() => { seekingRef.current = true; }}
+                onPointerUp={(e) => {
+                  seekTo(parseFloat((e.target as HTMLInputElement).value));
+                  seekingRef.current = false;
+                }}
+                onTouchEnd={(e) => {
+                  seekTo(parseFloat((e.target as HTMLInputElement).value));
+                  seekingRef.current = false;
+                }}
+                className="flex-1 h-[2px] bg-white/10 rounded-none appearance-none cursor-pointer slider"
+              />
+              <span className="text-[9px] text-white/30 w-7 text-right tabular-nums tracking-wider flex-shrink-0">
+                {formatTime(duration)}
+              </span>
+            </div>
           </div>
         </div>
       </div>
