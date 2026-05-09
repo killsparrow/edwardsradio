@@ -422,6 +422,43 @@ export const tracks: Track[] = [
   {
     title: "You Know Me Better",
     audioUrl: "/music/2026/you-know-me-better.m4a",
+    lyrics: (
+      <>
+        <p>
+          I don&rsquo;t know if time is real,<br />
+          don&rsquo;t know how to feel.<br />
+          I can&rsquo;t close my eyes at night when you&rsquo;re not near.
+        </p>
+        <p>
+          Don&rsquo;t know if life is real.<br />
+          Don&rsquo;t know how to steal from love,<br />
+          if love is all you need to heal yourself inside.
+        </p>
+        <p>Love is all you need to heal yourself inside.</p>
+        <p>
+          You know me better,<br />
+          better than I know myself.<br />
+          I know, you know me better than I know myself.
+        </p>
+        <p>
+          Don&rsquo;t know if time is real.<br />
+          Don&rsquo;t know how to feel.<br />
+          Don&rsquo;t know how you steal from love,<br />
+          if love is all you need to heal yourself inside.
+        </p>
+        <p>Love is all you need to heal yourself inside.</p>
+        <p>
+          You know me better,<br />
+          better than I know myself.<br />
+          I know, you know me better than I know myself.
+        </p>
+        <p>
+          Don&rsquo;t know if life is real.<br />
+          I can&rsquo;t close my eyes at night<br />
+          when you&rsquo;re not near.
+        </p>
+      </>
+    ),
   },
   {
     title: "Love Song",
