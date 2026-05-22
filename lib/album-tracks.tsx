@@ -96,6 +96,10 @@ export const tracks: Track[] = [
     title: "Wilderness",
     audioUrl: "/music/2026/wilderness.m4a",
   },
+    {
+    title: "Wilderness B",
+    audioUrl: "/music/2026/wilderness-b.m4a",
+  },
 
   {
     title: "Underwater",
