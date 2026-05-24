@@ -21,8 +21,8 @@ const TRACKS: WildernessTrack[] = [
   { key: "Breaking Part", display: "The Breaking Part", time: "03:55" },
   { key: "Wilderness", display: "Wilderness", time: "03:37" },
   { key: "Batten the Hatches", display: "Batten the Hatches", time: "03:11" },
-  { key: "No One", display: "No One", time: "05:10" },
   { key: "Warpath", display: "Warpath", time: "04:30" },
+  { key: "No One", display: "No One", time: "05:10" },
 ];
 
 const ALBUM_NAME = "Wilderness";
