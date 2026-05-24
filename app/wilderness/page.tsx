@@ -20,16 +20,16 @@ const TRACKS: WildernessTrack[] = [
   { key: "Rescue for the Heartache", display: "Rescue for the Heartache", time: "03:54" },
   { key: "Wilderness", display: "Wilderness", time: "03:37" },
   { key: "Breaking Part", display: "The Breaking Part", time: "03:55" },
-  { key: "Warpath", display: "Warpath", time: "04:30" },
   { key: "Batten the Hatches", display: "Batten the Hatches", time: "03:11" },
   { key: "No One", display: "No One", time: "05:10" },
+  { key: "Warpath", display: "Warpath", time: "04:30" },
 ];
 
 const ALBUM_NAME = "Wilderness";
 const ALBUM_ART = "/wilderness-album.webp";
 
 export default function WildernessPage() {
-  const { loadSongs, selectSong, togglePlayPause, currentSongIndex, isPlaying } =
+  const { loadSongs, selectSong, togglePlayPause, currentSongIndex, isPlaying, hasStarted } =
     useAudio();
 
   const songs = useMemo<Song[]>(() => {
@@ -171,7 +171,7 @@ export default function WildernessPage() {
 
           <ol className="list-none m-0 p-0 flex flex-col">
             {TRACKS.map((track, i) => {
-              const isActive = i === currentSongIndex;
+              const isActive = hasStarted && i === currentSongIndex;
               const num = String(i + 1).padStart(2, "0");
               return (
                 <li
