@@ -16,13 +16,13 @@ type WildernessTrack = {
 };
 
 const TRACKS: WildernessTrack[] = [
-  { key: "Wilderness", display: "Wilderness", time: "05:27" },
-  { key: "Rescue for the Heartache", display: "Rescue for the Heartache", time: "04:03" },
-  { key: "Warpath", display: "Warpath", time: "04:12" },
+  { key: "Wilderness", display: "Wilderness", time: "03:37" },
+  { key: "Rescue for the Heartache", display: "Rescue for the Heartache", time: "03:54" },
+  { key: "Warpath", display: "Warpath", time: "04:30" },
   { key: "Breaking Part", display: "The Breaking Part", time: "03:55" },
-  { key: "Batten the Hatches", display: "Batten the Hatches", time: "03:48" },
+  { key: "Batten the Hatches", display: "Batten the Hatches", time: "03:11" },
   { key: "Love Song", display: "Love Song", time: "02:56" },
-  { key: "No One", display: "No One", time: "06:09" },
+  { key: "No One", display: "No One", time: "05:10" },
 ];
 
 const ALBUM_NAME = "Wilderness";
