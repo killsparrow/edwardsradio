@@ -155,7 +155,7 @@ export default function WildernessPage() {
               className="text-[12px] leading-[1.5] text-[#ede6d3]/60 max-w-[38ch]"
               style={{ fontFamily: '"henriette", sans-serif' }}
             >
-              All audio on this album is protected under the{" "}
+              Audio on this album is protected under the{" "}
               <a
                 href="https://aiaps-standard.org"
                 target="_blank"
@@ -164,8 +164,7 @@ export default function WildernessPage() {
               >
                 AIAPS
               </a>{" "}
-              Standard, an open framework that safeguards music from
-              unauthorized AI training and reproduction.
+              Standard.
             </p>
           </aside>
 
