@@ -6,10 +6,10 @@ const trackOrder: string[] = [
   "Underwater",
   "Fight it Alone",
   "Your Own Light",
-  "Eternity at State",
-  "Dark Side",
   "Billboard",
   "At the Table",
+  "Dark Side",
+  "Eternity at State",
   "You Know Me Better",
   "Oliver",
 ];
