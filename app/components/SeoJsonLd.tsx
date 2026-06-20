@@ -41,10 +41,11 @@ export default function SeoJsonLd() {
     {
       name: "Underwater",
       slug: "underwater",
-      releaseDate: "2026",
+      releaseDate: "2026-06-20",
       image: `${siteUrl}/2026.jpg`,
+      url: `${siteUrl}/underwater`,
       description:
-        "The upcoming fourth album from Edwards Radio. Lyric-driven indie folk with analog warmth — coming 2026.",
+        "Underwater — the fourth album from Edwards Radio. Lyric-driven indie folk with analog warmth, recorded and mixed at home.",
     },
   ];
 
@@ -54,12 +55,12 @@ export default function SeoJsonLd() {
       a: "Edwards Radio is the indie folk project of songwriter Evan Parker. Parker writes, records, and produces the music in his home studio, blending folk sincerity with indie rock textures.",
     },
     {
-      q: "When is the new album Underwater coming out?",
-      a: "Underwater is the upcoming fourth album from Edwards Radio, scheduled for release in 2026.",
+      q: "When did Underwater come out?",
+      a: "Underwater, the fourth full-length album from Edwards Radio, was released on June 20, 2026.",
     },
     {
       q: "How many albums has Edwards Radio released?",
-      a: "Edwards Radio has released three full-length albums — Feral Nights (2022), This Endless Life (2023), and The Weight of Illusion (2025) — plus the Wilderness EP (2026). A fourth full-length album, Underwater, is coming in 2026.",
+      a: "Edwards Radio has released four full-length albums — Feral Nights (2022), This Endless Life (2023), The Weight of Illusion (2025), and Underwater (2026) — plus the Wilderness EP (2026).",
     },
     {
       q: "What genre is Edwards Radio?",

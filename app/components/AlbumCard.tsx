@@ -118,6 +118,13 @@ type Album = {
 
 const albums: Album[] = [
   {
+    title: "Underwater",
+    artist: "Edwards Radio",
+    coverImage: "/2026.jpg",
+    releaseDate: "Jun 20, 2026",
+    pageHref: "/underwater",
+  },
+  {
     title: "Wilderness",
     artist: "Edwards Radio",
     coverImage: "/wilderness-album-cover.jpg",
