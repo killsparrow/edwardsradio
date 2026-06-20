@@ -10,7 +10,12 @@ const trackOrder: string[] = [
   "At the Table",
   "Dark Side",
   "Eternity at State",
+  "B(t) ≠ const",
+  "Follow the Fractures",
+  "Unforgiven",
+  "Professor",
   "You Know Me Better",
+  "St George",
   "Oliver",
 ];
 

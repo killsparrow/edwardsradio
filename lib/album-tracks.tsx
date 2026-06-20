@@ -547,6 +547,22 @@ export const tracks: Track[] = [
       </>
     ),
   },
+
+  {
+    title: "B(t) ≠ const",
+    audioUrl: "/music/2026/the-same-cheese.m4a",
+    subtitle: "Inspired by Charles Fort's Book of the Damned (1919).",
+  },
+
+  {
+    title: "Follow the Fractures",
+    audioUrl: "/music/2026/follow-the-fractures.m4a",
+  },
+
+  {
+    title: "Unforgiven",
+    audioUrl: "/music/2026/unforgiven.m4a",
+  },
 ];
 
 export function getOrderedTracks(trackOrder: string[]): Track[] {
