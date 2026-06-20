@@ -1,6 +1,5 @@
 // AlbumCard.tsx
 "use client";
-import React, { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import StreamingLinks from './StreamingLinks';
 
@@ -161,6 +160,16 @@ const albums: Album[] = [
     },
   },
   {
+    title: "Feral Nights",
+    artist: "Edwards Radio",
+    coverImage: "/ferralnights.jpg?w=600&h=600&fit=crop",
+    releaseDate: "2022",
+    links: {
+      spotify: "https://open.spotify.com/album/3rwADCagSmCnPFoC4a8WFB?si=N3cP8wgzTBCABbfqDTIJcw",
+      apple: "https://music.apple.com/us/album/feral-nights/1738992532",
+    },
+  },
+  {
     title: "Obrien St",
     artist: "Edwards Radio",
     coverImage: "/obrienst.jpg",
@@ -178,51 +187,10 @@ const albums: Album[] = [
       bandcamp: "https://edwardsradio.bandcamp.com/album/cicadas-in-the-storm",
     },
   },
-  {
-    title: "Feral Nights",
-    artist: "Edwards Radio",
-    coverImage: "/ferralnights.jpg?w=600&h=600&fit=crop",
-    releaseDate: "2022",
-    links: {
-      spotify: "https://open.spotify.com/album/3rwADCagSmCnPFoC4a8WFB?si=N3cP8wgzTBCABbfqDTIJcw",
-      apple: "https://music.apple.com/us/album/feral-nights/1738992532",
-    },
-  },
 ];
 
 // Main page component
 export default function MusicPage() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScroll, setCanScroll] = useState(false);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const check = () => setCanScroll(el.scrollWidth > el.clientWidth + 4);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  // One-time nudge on mount to demonstrate scrollability (mobile mainly)
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el || !canScroll) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const t1 = window.setTimeout(() => {
-      el.scrollBy({ left: 60, behavior: "smooth" });
-    }, 700);
-    const t2 = window.setTimeout(() => {
-      el.scrollBy({ left: -60, behavior: "smooth" });
-    }, 1400);
-
-    return () => {
-      window.clearTimeout(t1);
-      window.clearTimeout(t2);
-    };
-  }, [canScroll]);
-
   return (
     <div className="w-full mx-auto py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -240,39 +208,13 @@ export default function MusicPage() {
           </div>
         </div>
 
-        <div className="relative">
-          <div
-            ref={scrollRef}
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 items-stretch"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {albums.map((album, index) => (
-              <div
-                key={index}
-                className="w-[78vw] sm:w-[58vw] md:w-[calc(33.333%-1.5rem)] flex-shrink-0 snap-start"
-              >
-                <AlbumCard {...album} />
-              </div>
-            ))}
-          </div>
-
-          {/* Right edge fade hint */}
-          {canScroll && (
-            <div
-              className="absolute right-0 top-0 bottom-4 w-16 pointer-events-none"
-              aria-hidden="true"
-              style={{
-                background: "linear-gradient(to right, transparent, #24252d)",
-              }}
-            />
-          )}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
+          {albums.map((album, index) => (
+            <div key={index}>
+              <AlbumCard {...album} />
+            </div>
+          ))}
         </div>
-
-        {canScroll && (
-          <p className="text-center mt-4 text-[10px] uppercase tracking-[0.4em] text-[#bfb689]/70">
-            Scroll for more &rarr;
-          </p>
-        )}
       </div>
     </div>
   );
