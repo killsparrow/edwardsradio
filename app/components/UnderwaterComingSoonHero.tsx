@@ -58,7 +58,7 @@ export default function UnderwaterComingSoonHero() {
         <div className="flex items-center justify-center gap-5 mt-10">
           <span className="w-16 h-px bg-[#494a5d]" aria-hidden="true" />
           <p className="text-[11px] uppercase tracking-[0.45em] text-[#bfb689] !mb-0">
-            Coming Soon
+            Out Now
           </p>
           <span className="w-16 h-px bg-[#494a5d]" aria-hidden="true" />
         </div>

@@ -99,8 +99,8 @@ export default function Home() {
               <div className="flex-1 max-w-lg text-left leading-relaxed border-l-2 border-[#a0633b]/30 pl-6">
                 <p className="text-white/80 text-sm md:text-base">
                   Edwards Radio is the music project of songwriter Evan
-                  Parker, with four studio albums released between 2022 and
-                  2026. Parker has carved out a distinctive sonic space where
+                  Parker, with a catalog of full-length albums and EPs
+                  released between 2021 and 2026. Parker has carved out a distinctive sonic space where
                   the raw sincerity of folk intersects with the textured depth
                   of indie rock. Recorded and mixed entirely in his home
                   studio, his music showcases an evolving craft as both a

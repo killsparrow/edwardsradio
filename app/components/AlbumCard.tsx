@@ -123,6 +123,9 @@ const albums: Album[] = [
     coverImage: "/2026.jpg",
     releaseDate: "Jun 20, 2026",
     pageHref: "/underwater",
+    links: {
+      bandcamp: "https://edwardsradio.bandcamp.com/album/underwater",
+    },
   },
   {
     title: "Wilderness",
@@ -155,6 +158,24 @@ const albums: Album[] = [
     links: {
       spotify: "https://open.spotify.com/album/7eA89ULirGp3xJqq9N9amf?si=Feo5XnmFT-6OtGX9PhLbCg",
       apple: "https://music.apple.com/us/album/this-endless-life/1741657602",
+    },
+  },
+  {
+    title: "Obrien St",
+    artist: "Edwards Radio",
+    coverImage: "/obrienst.jpg",
+    releaseDate: "Nov 20, 2021",
+    links: {
+      bandcamp: "https://edwardsradio.bandcamp.com/album/obrien-st",
+    },
+  },
+  {
+    title: "Cicadas in the Storm",
+    artist: "Edwards Radio",
+    coverImage: "/cicadas-in-the-storm.jpg",
+    releaseDate: "Sep 15, 2021",
+    links: {
+      bandcamp: "https://edwardsradio.bandcamp.com/album/cicadas-in-the-storm",
     },
   },
   {
