@@ -5,6 +5,14 @@ export default function SeoJsonLd() {
 
   const albums = [
     {
+      name: "unsorry",
+      slug: "unsorry",
+      releaseDate: "2021-08-27",
+      image: `${siteUrl}/unsorry.jpg`,
+      description:
+        "An early Edwards Radio EP — intimate, lyric-driven home recordings.",
+    },
+    {
       name: "Cicadas in the Storm",
       slug: "cicadas-in-the-storm",
       releaseDate: "2021-09-15",
@@ -76,7 +84,7 @@ export default function SeoJsonLd() {
     },
     {
       q: "How many albums has Edwards Radio released?",
-      a: "Edwards Radio has released six full-length albums — Cicadas in the Storm (Sep 2021), Obrien St (Nov 2021), Feral Nights (2022), This Endless Life (2023), The Weight of Illusion (2025), and Underwater (2026) — plus the Wilderness EP (2026).",
+      a: "Edwards Radio has released six full-length albums — Cicadas in the Storm (Sep 2021), Obrien St (Nov 2021), Feral Nights (2022), This Endless Life (2023), The Weight of Illusion (2025), and Underwater (2026) — plus the unsorry (Aug 2021) and Wilderness (2026) EPs.",
     },
     {
       q: "What genre is Edwards Radio?",

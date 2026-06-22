@@ -133,6 +133,9 @@ const albums: Album[] = [
     releaseDate: "May 1, 2026",
     pageHref: "/wilderness",
     links: {
+      spotify: "https://open.spotify.com/album/5vREwhu27d9MoK5sCXQjZX?si=5znSnkN3QqGwyIJeHDPzVg",
+      apple: "https://music.apple.com/us/album/wilderness/6781593986",
+      youtube: "https://youtube.com/playlist?list=OLAK5uy_kV53AHAu4m21njOe5QaJlMke4KWciXWaU&si=a5B2babFJYxNdBKz",
       bandcamp: "https://edwardsradio.bandcamp.com/album/wilderness",
     },
   },
@@ -175,6 +178,9 @@ const albums: Album[] = [
     coverImage: "/obrienst.jpg",
     releaseDate: "Nov 20, 2021",
     links: {
+      spotify: "https://open.spotify.com/album/1jTMUxucsYh9nyaJVjto9j?si=-XsQch-pQ9mfHzIXQnBRfQ",
+      apple: "https://music.apple.com/us/album/obrien-st-ep/6781419252",
+      youtube: "https://youtube.com/playlist?list=OLAK5uy_mB4XOzJifEy7Aw_PruQaCZuiPPC_a-WUo&si=f6yZrMoYRHoM5uo3",
       bandcamp: "https://edwardsradio.bandcamp.com/album/obrien-st",
     },
   },
@@ -184,7 +190,22 @@ const albums: Album[] = [
     coverImage: "/cicadas-in-the-storm.jpg",
     releaseDate: "Sep 15, 2021",
     links: {
+      spotify: "https://open.spotify.com/album/1s6hOrCJmk2HidxxCwVJHe?si=4SOuFv4VRqyjTWzPT7GtmQ",
+      apple: "https://music.apple.com/us/album/cicadas-in-the-storm-ep/6781405800",
+      youtube: "https://youtube.com/playlist?list=OLAK5uy_mTJyVVzvZMmTxizwCnEAhS5gw1snncWrg&si=9Hxkyad-vzX4TFNm",
       bandcamp: "https://edwardsradio.bandcamp.com/album/cicadas-in-the-storm",
+    },
+  },
+  {
+    title: "unsorry",
+    artist: "Edwards Radio",
+    coverImage: "/unsorry.jpg",
+    releaseDate: "Aug 27, 2021",
+    links: {
+      spotify: "https://open.spotify.com/album/38xXz0De8YRdtfEa423Mb0?si=qYD5zln6R3eImD85JpXOJg",
+      apple: "https://music.apple.com/us/album/unsorry-ep/6781419906",
+      youtube: "https://youtube.com/playlist?list=OLAK5uy_ktlMR-ff2ImLnlLhiDcyX9O-Xt-P9o5zk&si=lMSeR0yzbhCSpVPu",
+      bandcamp: "https://edwardsradio.bandcamp.com/album/unsorry",
     },
   },
 ];
