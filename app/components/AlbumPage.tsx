@@ -15,6 +15,7 @@ type StreamingUrls = {
   youtube?: string;
   apple?: string;
   bandcamp?: string;
+  tidal?: string;
 };
 
 type AlbumPageProps = {
@@ -384,6 +385,7 @@ export default function AlbumPage({
                     spotify={streaming.spotify}
                     youtube={streaming.youtube}
                     apple={streaming.apple}
+                    tidal={streaming.tidal}
                     bandcamp={streaming.bandcamp}
                   />
                 </div>
