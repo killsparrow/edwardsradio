@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const TITLE = "Underwater — Edwards Radio";
 const DESCRIPTION =
   "Underwater — the fourth album from Edwards Radio. Lyric-driven indie folk with analog warmth, recorded and mixed at home.";
-const COVER = "/2026.jpg";
+const COVER = "/underwater-og.jpg";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     siteName: "Edwards Radio",
     images: [
-      { url: COVER, alt: "Underwater album cover" },
+      { url: COVER, width: 1200, height: 630, alt: "Underwater — Edwards Radio" },
     ],
   },
   twitter: {
