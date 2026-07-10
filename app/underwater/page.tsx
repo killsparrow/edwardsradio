@@ -3,17 +3,14 @@
 import AlbumPage from "../components/AlbumPage";
 
 const trackOrder: string[] = [
+  "Billboard",
+  "At the Table",
   "Underwater",
   "Fight it Alone",
   "Your Own Light",
-  "Billboard",
-  "At the Table",
   "Dark Side",
-  "Eternity at State",
-  "Follow the Fractures",
-  "St George",
   "You Know Me Better",
-  "Professor",
+  "Eternity at State",
   "Oliver",
 ];
 
