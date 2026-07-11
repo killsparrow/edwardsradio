@@ -9,7 +9,7 @@ const trackOrder: string[] = [
   "Fight it Alone",
   "Your Own Light",
   "Dark Side",
-  "You Know Me Better",
+  "Professor",
   "Eternity at State",
   "Oliver",
 ];
