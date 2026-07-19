@@ -37,22 +37,22 @@ export const metadata: Metadata = {
 const PLATFORMS = [
   {
     name: "Spotify",
-    url: "https://open.spotify.com/album/1wzVPCbhNceaLBb40yfDTq?si=G6FTvvi0R6me4GRsIp-8VQ",
+    url: "https://open.spotify.com/album/5lPnPCXCAuayLKm3UBHUrl?si=A18dhtTAQza-1I8BdBiSTQ",
     icon: FaSpotify,
   },
   {
     name: "Apple Music",
-    url: "https://music.apple.com/us/album/underwater/6783769873",
+    url: "https://music.apple.com/us/album/underwater/6790856729",
     icon: FaApple,
   },
   {
     name: "YouTube",
-    url: "https://youtube.com/playlist?list=OLAK5uy_mETfnMeMwsJmbFxOSnX3-eTNWc5uoDLE8&si=Ucc1DfHhzoHeYRiC",
+    url: "https://youtube.com/playlist?list=OLAK5uy_lEv9tH5-K5RhILrENf1j_hjzMIWYSIKtA&si=tnZ083ieHlKRQovm",
     icon: FaYoutube,
   },
   {
     name: "Tidal",
-    url: "https://tidal.com/artist/46892204/u",
+    url: "https://tidal.com/album/543035782/u",
     icon: SiTidal,
   },
   {
